@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyName>FSO.NorvinskSection1.Prepatch</AssemblyName>
+    <RootNamespace>FSO.NorvinskSection1.Prepatch</RootNamespace>
+    <Version>0.1.0</Version>
+    <Authors>Mae</Authors>
+    <Description>Prepatcher for FSO: Norvinsk Section 1 - registers custom bot WildSpawnType enum values via MoreBotsAPI.</Description>
+  </PropertyGroup>
+
+  <!-- 
+    SPT install path. Change this if SPT lives somewhere else.
+    Everything below references DLLs relative to this path.
+  -->
+  <PropertyGroup>
+    <SPTPath>C:\Games\SPT</SPTPath>
+  </PropertyGroup>
+
+  <!-- 
+    References to BepInEx, Unity, and EFT assemblies.
+    These DLLs live in the SPT install - we don't ship them.
+    Private=false means: don't copy these DLLs into our build output.
+  -->
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(SPTPath)\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(SPTPath)\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>$(SPTPath)\BepInEx\core\Mono.Cecil.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(SPTPath)\EscapeFromTarkov_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="MoreBotsPrepatch">
+      <HintPath>$(SPTPath)\BepInEx\patchers\MoreBotsPrepatch.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- 
+    Auto-deploy: after every successful build, copy the prepatcher DLL into
+    BepInEx's patchers folder. No subfolder — prepatchers live alongside each other
+    directly in patchers/.
+  -->
+  <Target Name="DeployPrepatcher" AfterTargets="Build">
+    <PropertyGroup>
+      <PrepatcherDeployDir>$(SPTPath)\BepInEx\patchers</PrepatcherDeployDir>
+    </PropertyGroup>
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(PrepatcherDeployDir)" />
+    <Message Text="--- Deployed $(AssemblyName).dll to $(PrepatcherDeployDir) ---" Importance="high" />
+  </Target>
+
+</Project>

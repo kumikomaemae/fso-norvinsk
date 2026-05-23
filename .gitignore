@@ -1,0 +1,24 @@
+# === Build outputs ===
+# These get regenerated on every build. Tracking them would pollute every diff.
+bin/
+obj/
+
+# === Visual Studio cache ===
+# IDE state, user-specific settings, ReSharper caches, etc.
+.vs/
+*.user
+*.suo
+
+# === Distributable artifacts ===
+# If we ever use the scaffold's zip-packaging target, ignore its outputs
+*.zip
+
+# === System junk ===
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# === Optional: scratchpad / experiments ===
+# Anything you want to keep around locally but not in git history
+scratch/
+*.tmp
