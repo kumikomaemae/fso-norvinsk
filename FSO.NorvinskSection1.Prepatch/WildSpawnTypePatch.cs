@@ -46,7 +46,7 @@ namespace FSO.NorvinskSection1.Prepatch
 
             // === 708300: Fledgling Fixer (Rookie) ===
             // Entry-level operatives. SMGs + flashbangs. Support role in patrols.
-            var rookie = new CustomWildSpawnType(708300, "fsoFixerRookie", "FSO", baseBrain, true, true);
+            var rookie = new CustomWildSpawnType(708300, "fsofixerrookie", "FSO", baseBrain, true, true);
             rookie.SetCountAsBossForStatistics(new bool?(false));
             rookie.SetShouldUseFenceNoBossAttack(false);
             rookie.SetExcludedDifficulties(normalOnly);
@@ -66,7 +66,7 @@ namespace FSO.NorvinskSection1.Prepatch
 
             // === 708301: Office Fixer (Operative) ===
             // Standard career fixers. Suppressed carbines, frags.
-            var operative = new CustomWildSpawnType(708301, "fsoFixerOperative", "FSO", baseBrain, true, true);
+            var operative = new CustomWildSpawnType(708301, "fsofixeroperative", "FSO", baseBrain, true, true);
             operative.SetCountAsBossForStatistics(new bool?(false));
             operative.SetShouldUseFenceNoBossAttack(false);
             operative.SetExcludedDifficulties(normalOnly);
@@ -86,7 +86,7 @@ namespace FSO.NorvinskSection1.Prepatch
 
             // === 708302: Field Specialist ===
             // Randomized role: marksman, breacher, or LMG suppression.
-            var specialist = new CustomWildSpawnType(708302, "fsoFixerSpecialist", "FSO", baseBrain, true, true);
+            var specialist = new CustomWildSpawnType(708302, "fsofixerspecialist", "FSO", baseBrain, true, true);
             specialist.SetCountAsBossForStatistics(new bool?(false));
             specialist.SetShouldUseFenceNoBossAttack(false);
             specialist.SetExcludedDifficulties(normalOnly);
@@ -106,7 +106,7 @@ namespace FSO.NorvinskSection1.Prepatch
 
             // === 708303: Senior Fixer (Lead) ===
             // Patrol leader. Tougher than standard operatives.
-            var lead = new CustomWildSpawnType(708303, "fsoFixerLead", "FSO", baseBrain, true, true);
+            var lead = new CustomWildSpawnType(708303, "fsofixerlead", "FSO", baseBrain, true, true);
             lead.SetCountAsBossForStatistics(new bool?(false));
             lead.SetShouldUseFenceNoBossAttack(false);
             lead.SetExcludedDifficulties(normalOnly);
@@ -126,7 +126,7 @@ namespace FSO.NorvinskSection1.Prepatch
 
             // === 708304: Inner Circle ===
             // Mae's personal team. Labs-only, Quest 5 finale. Maximum difficulty.
-            var innerCircle = new CustomWildSpawnType(708304, "fsoFixerInnerCircle", "FSO", baseBrain, true, true);
+            var innerCircle = new CustomWildSpawnType(708304, "fsofixerinnercircle", "FSO", baseBrain, true, true);
             innerCircle.SetCountAsBossForStatistics(new bool?(false));
             innerCircle.SetShouldUseFenceNoBossAttack(false);
             innerCircle.SetExcludedDifficulties(normalOnly);

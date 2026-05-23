@@ -1,3 +1,5 @@
+using System.Reflection;
+using MoreBotsServer.Services;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
 using SPTarkov.Server.Core.Models.Enums;
@@ -8,7 +10,6 @@ namespace FSO.NorvinskSection1.Server;
 
 /// <summary>
 /// Mod metadata. SPT 4.x discovers and registers our mod via this record at boot.
-/// Required even for the simplest mod — without it, the loader doesn't know we exist.
 /// </summary>
 public record ModMetadata : AbstractModMetadata
 {
@@ -16,7 +17,7 @@ public record ModMetadata : AbstractModMetadata
     public override string Name { get; init; } = "FSO: Norvinsk Section 1";
     public override string Author { get; init; } = "Mae";
     public override List<string>? Contributors { get; init; }
-    public override SemanticVersioning.Version Version { get; init; } = new("0.1.0");
+    public override SemanticVersioning.Version Version { get; init; } = new("0.2.0");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
     public override List<string>? Incompatibilities { get; init; }
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; }
@@ -26,23 +27,37 @@ public record ModMetadata : AbstractModMetadata
 }
 
 /// <summary>
-/// Server mod entry point.
-/// 
-/// TypePriority = PostDBModLoader + 1 means: load AFTER SPT finishes setting up its
-/// in-memory database. We need this because future phases (bots, traders, quests)
-/// will read and write DB entries — they can't run before the DB exists.
+/// Server mod entry point. Phase 2: registers five FSO bot types into the SPT bot database
+/// via MoreBotsAPI's CreateCustomBotTypes pipeline.
 /// </summary>
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
-public class Mod(ISptLogger<Mod> logger) : IOnLoad
+public class Mod(
+    ISptLogger<Mod> logger,
+    MoreBotsCustomBotTypeService customBotTypeService) : IOnLoad
 {
     public const string ModName = "FSO: Norvinsk Section 1";
-    public const string ModVersion = "0.1.0";
+    public const string ModVersion = "0.2.0";
 
-    public Task OnLoad()
+    public async Task OnLoad()
     {
         logger.Info($"[{ModName}] v{ModVersion} loading...");
-        logger.Info($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
-        logger.Info($"[{ModName}] Mod loaded successfully.");
-        return Task.CompletedTask;
+
+        // Tell MoreBotsAPI about our enum-name mapping (prepatcher already registered the enums client-side;
+        // this teaches the server side which enum IDs belong to which bot names).
+        customBotTypeService.AddCustomWildSpawnTypeNames(new Dictionary<int, string>
+        {
+            { 708300, "fsofixerrookie" },
+            { 708301, "fsofixeroperative" },
+            { 708302, "fsofixerspecialist" },
+            { 708303, "fsofixerlead" },
+            { 708304, "fsofixerinnercircle" }
+        });
+
+        // Scan db/bots/types/ in our mod folder, deserialize each .json as a BotType,
+        // register under the filename (lowercased) into databaseService.GetTables().Bots.Types.
+        await customBotTypeService.CreateCustomBotTypes(Assembly.GetExecutingAssembly());
+
+        logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
+        logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
     }
 }

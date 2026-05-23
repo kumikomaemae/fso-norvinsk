@@ -9,35 +9,23 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AssemblyName>FSO.NorvinskSection1.Server</AssemblyName>
     <RootNamespace>FSO.NorvinskSection1.Server</RootNamespace>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Mae</Authors>
     <Description>Server mod for FSO: Norvinsk Section 1 — registers Mae as a custom trader, defines bot data, quests, locales, and mail.</Description>
   </PropertyGroup>
 
-  <!-- 
-    Path to SPT server install. Used by the deploy target below.
-    Change this if SPT lives somewhere else.
-  -->
   <PropertyGroup>
     <SPTServerPath>C:\Games\SPT\SPT</SPTServerPath>
   </PropertyGroup>
 
-  <!-- 
-    SPT core libraries via NuGet (canonical 4.x pattern).
-    These resolve from the official SPTarkov NuGet feed; no local DLL paths required.
-    Version-pinned to 4.0.13 to match our target SPT version.
-  -->
+  <!-- SPT core libraries via NuGet. -->
   <ItemGroup>
     <PackageReference Include="SPTarkov.Server.Core" Version="4.0.13" />
     <PackageReference Include="SPTarkov.Common" Version="4.0.13" />
     <PackageReference Include="SPTarkov.DI" Version="4.0.13" />
   </ItemGroup>
 
-  <!-- 
-    Third-party mod reference: MoreBotsServer.
-    Not available on NuGet, so we use a file reference to the installed DLL.
-    Private=false means: don't copy this DLL into our build output (the user already has it).
-  -->
+  <!-- MoreBotsServer — file reference (not on NuGet). -->
   <ItemGroup>
     <Reference Include="MoreBotsServer">
       <HintPath>$(SPTServerPath)\user\mods\MoreBotsServer\MoreBotsServer.dll</HintPath>
@@ -46,16 +34,22 @@
   </ItemGroup>
 
   <!-- 
-    Auto-deploy: after every successful build, copy the built DLL into SPT's mods folder.
-    Eliminates the manual copy step between "build" and "test in-game."
+    Auto-deploy: after every successful build, copy the built DLL AND the db/ folder 
+    into SPT's mods folder. MoreBotsAPI reads JSON files from db/bots/types/ at runtime.
   -->
   <Target Name="DeployToSPT" AfterTargets="Build">
     <PropertyGroup>
       <DeployDir>$(SPTServerPath)\user\mods\$(AssemblyName)</DeployDir>
     </PropertyGroup>
+    <ItemGroup>
+      <_DbFiles Include="$(ProjectDir)db\**\*" />
+    </ItemGroup>
     <MakeDir Directories="$(DeployDir)" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DeployDir)" />
-    <Message Text="--- Deployed $(AssemblyName).dll to $(DeployDir) ---" Importance="high" />
+    <Copy SourceFiles="@(_DbFiles)" 
+          DestinationFolder="$(DeployDir)\db\%(RecursiveDir)" 
+          SkipUnchangedFiles="true" />
+    <Message Text="--- Deployed $(AssemblyName).dll + db/ to $(DeployDir) ---" Importance="high" />
   </Target>
 
 </Project>

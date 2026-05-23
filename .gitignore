@@ -18,6 +18,9 @@ Thumbs.db
 desktop.ini
 .DS_Store
 
+# === launchSettings ===
+**/Properties/launchSettings.json
+
 # === Optional: scratchpad / experiments ===
 # Anything you want to keep around locally but not in git history
 scratch/
