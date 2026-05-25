@@ -21,7 +21,7 @@ namespace FSO.NorvinskSection1.Prepatch
 
         // Singleton reference - lets other code in this assembly access the plugin instance
         // (especially useful for logging from static methods like our patch class).
-        public static Plugin Instance;
+        public static Plugin Instance = null!;
 
         public void Awake() => Instance = this;
     }
