@@ -7,16 +7,34 @@ Updated as Phase 2e progresses. **Single source of truth** — when in doubt, ch
 
 ### SMGs (Rookie tier)
 
-- **MP5SD** (suppressed): `5926bb2186f7744b1c6c6e60`
-- **MP5SD** [attachments] (these are required for the *standard* MP5SD to function):
-`5926f2e086f7745aae644231` (SD upper receiver)
-`5926d33d86f77410de68ebc0` (SD sound suppressor)
-`5926f34786f77469195bfe92` (SD polymer handguard)
-`5926d2be86f774134d668e4e` (MP5 drum rear sight)
-`5926d40686f7740f152b6b7e` (MP5 A3 old model stock)
-`5926c32286f774616e42de99` (MP5 cocking handle)
+- **MP5SD** preset: `59411abb86f77478f702b5d2`
+  - Base weapon: `5926bb2186f7744b1c6c6e60` (informational — included in preset)
+  - Attachments listed below are baked into the preset; do not need separate handling:
+    - `5926f2e086f7745aae644231` (SD upper receiver)
+    - `5926d33d86f77410de68ebc0` (SD sound suppressor)
+    - ... (etc — keep for reference)
 
-- **MP7**: `5ba26383d4351e00334c93d9`
+- **MP7 DEVGRU** preset: `5bd05f1186f774572f181678`
+  - Base weapon: `5ba26383d4351e00334c93d9` (informational — included in preset)
+  - Loadout: suppressed + scope + tactical lights + stock (matches FSO Rookie design intent)
+
+## Presets rule
+
+**Always use preset IDs for FSO weapons, NOT base weapon IDs.**
+
+When searching globals.json for a preset's outer key:
+
+- The OUTER key (what we use) is on the same line as the preset's opening `{`
+- Internal `_id` fields are inner-item IDs of the preset's attachments
+- The base weapon's tpl is in `_tpl` of the first inner item
+- The preset's display name is in `_name` near the end of the entry
+- The `_parent` field points to the inner-item ID of the base weapon WITHIN the preset, NOT the preset's parent
+
+To find an outer key when searching globals.json:
+
+1. Search for either the preset's `_name` or the base weapon's tpl
+2. Look UPWARD from the match for the dictionary key (line starting with `"<24_hex>":`)
+3. Verify by checking that line is immediately followed by `"_changeWeaponName"`, `"_encyclopedia"`, or `"_id"`
 
 ### Carbines (Operative tier)
 
@@ -43,7 +61,7 @@ Updated as Phase 2e progresses. **Single source of truth** — when in doubt, ch
 
 ### Grenade Launchers (Inner Circle)
 
-- **MIKOR M32A1**: `6275303a9f372d6ea97f9ec7 `
+- **MIKOR M32A1**: `6275303a9f372d6ea97f9ec7`
 
 ### Sidearms (all tiers)
 
