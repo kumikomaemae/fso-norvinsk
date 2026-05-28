@@ -2362,7 +2362,7 @@
 "equipment": {
       "ArmBand": {},
       "ArmorVest": {
-        "60a283193cb70855c43a381d": 1
+        "5e4abb5086f77406975c9342": 1
       },
       "Backpack": {
         "68947ab5a733b1602007e2fe": 1
@@ -2390,7 +2390,7 @@
         "5c0a794586f77461c458f892": 1
       },
       "TacticalVest": {
-        "68947a4be4bf255d1b0ca746": 1
+        "5d5d85c586f774279a21cbdb": 1
       }
     },
     "mods": {
@@ -2469,6 +2469,14 @@
         ],
         "helmet_top": [
           "654a90aff4f81a421b0a7c86"
+        ]
+      },
+      "5e4abb5086f77406975c9342": {
+        "Front_plate": [
+          "656fafe3498d1b7e3e071da4"
+        ],
+        "Back_plate": [
+          "656fafe3498d1b7e3e071da4"
         ]
       },
       "5ab8e4ed86f7742d8e50c7fa": {
