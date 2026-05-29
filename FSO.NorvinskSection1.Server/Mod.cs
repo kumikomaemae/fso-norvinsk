@@ -26,7 +26,10 @@ public record ModMetadata : AbstractModMetadata
     public override SemanticVersioning.Version Version { get; init; } = new("0.4.0");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
     public override List<string>? Incompatibilities { get; init; }
-    public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; }
+    public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
+{
+    { "com.morebotsapi.tacticaltoaster", new SemanticVersioning.Range(">=1.0.0") }
+};
     public override string? Url { get; init; } = "";
     public override bool? IsBundleMod { get; init; }
     public override string License { get; init; } = "MIT";
@@ -43,10 +46,11 @@ public record ModMetadata : AbstractModMetadata
 /// FSO has NO relationship to Goons (mutual ignore — bigger fish to fry).
 /// FSO has NO warn behavior — they're professionals on the clock, they don't posture.
 /// </summary>
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
+[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
 public class Mod(
     ISptLogger<Mod> logger,
     MoreBotsCustomBotTypeService customBotTypeService,
+    MoreBotsServer.MoreBotsAPI moreBotsApi,
     FactionService factionService,
     CustomLocationWaveService waveService,
     ConfigServer configServer
@@ -91,7 +95,7 @@ public class Mod(
             { 708304, BotInnerCircle },
         });
 
-        await customBotTypeService.CreateCustomBotTypes(Assembly.GetExecutingAssembly());
+        await moreBotsApi.LoadBots(Assembly.GetExecutingAssembly());
 
         RegisterFsoFaction();
         WireFactionRelationships();
