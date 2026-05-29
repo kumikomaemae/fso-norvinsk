@@ -5,8 +5,12 @@ using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
 using SPTarkov.Server.Core.Models.Eft.Common;
 using SPTarkov.Server.Core.Models.Enums;
+using SPTarkov.Server.Core.Models.Spt.Config;
 using SPTarkov.Server.Core.Models.Spt.Mod;
 using SPTarkov.Server.Core.Models.Utils;
+using SPTarkov.Server.Core.Servers;
+using SPTarkov.Server.Core.Services;
+using SPTarkov.Server.Core.Utils.Json;
 
 namespace FSO.NorvinskSection1.Server;
 
@@ -19,7 +23,7 @@ public record ModMetadata : AbstractModMetadata
     public override string Name { get; init; } = "FSO: Norvinsk Section 1";
     public override string Author { get; init; } = "Mae";
     public override List<string>? Contributors { get; init; }
-    public override SemanticVersioning.Version Version { get; init; } = new("0.3.0");
+    public override SemanticVersioning.Version Version { get; init; } = new("0.4.0");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
     public override List<string>? Incompatibilities { get; init; }
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; }
@@ -29,103 +33,377 @@ public record ModMetadata : AbstractModMetadata
 }
 
 /// <summary>
-/// Server mod entry point. Phase 2h: registers FSO faction relationships.
-/// 
-/// FSO is allied to player PMCs (USEC + Bear), hostile to Scavs and Scav-faction bosses,
-/// and deliberately has NO warn behavior toward anyone (in-character: they're professionals
-/// on the clock, they don't posture, they just work).
+/// Server mod entry point.
+///
+/// Phase 2h: registers FSO faction relationships.
+/// Phase 3: registers FSO spawn rules across 5 maps with 9 squad composition templates.
+///
+/// FSO is allied to player PMCs (USEC + Bear) and Rogues (anti-BD alignment).
+/// FSO is hostile to Scavs, Scav-faction bosses, and Cultists (active threats to civilians).
+/// FSO has NO relationship to Goons (mutual ignore — bigger fish to fry).
+/// FSO has NO warn behavior — they're professionals on the clock, they don't posture.
 /// </summary>
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
 public class Mod(
     ISptLogger<Mod> logger,
     MoreBotsCustomBotTypeService customBotTypeService,
-    FactionService factionService) : IOnLoad
+    FactionService factionService,
+    CustomLocationWaveService waveService,
+    ConfigServer configServer
+) : IOnLoad
 {
     public const string ModName = "FSO: Norvinsk Section 1";
-    public const string ModVersion = "0.3.0";
+    public const string ModVersion = "0.4.0";
     public const string FactionName = "fso";
 
-    // FSO's five tier WildSpawnType enum values (registered via the prepatcher).
     private static readonly List<WildSpawnType> FsoBotTypes = new()
     {
-        (WildSpawnType)708300,  // fsofixerrookie
-        (WildSpawnType)708301,  // fsofixeroperative
-        (WildSpawnType)708302,  // fsofixerspecialist
-        (WildSpawnType)708303,  // fsofixerlead
-        (WildSpawnType)708304,  // fsofixerinnercircle
+        (WildSpawnType)708300, // fsofixerrookie
+        (WildSpawnType)708301, // fsofixeroperative
+        (WildSpawnType)708302, // fsofixerspecialist
+        (WildSpawnType)708303, // fsofixerlead
+        (WildSpawnType)708304, // fsofixerinnercircle
     };
+
+    private const string BotRookie = "fsofixerrookie";
+    private const string BotOperative = "fsofixeroperative";
+    private const string BotSpecialist = "fsofixerspecialist";
+    private const string BotLead = "fsofixerlead";
+    private const string BotInnerCircle = "fsofixerinnercircle";
+
+    private const string MapStreets = "tarkovstreets";
+    private const string MapSandbox = "sandbox";
+    private const string MapSandboxHigh = "sandbox_high";
+    private const string MapCustoms = "bigmap";
+    private const string MapShoreline = "shoreline";
+    private const string MapLighthouse = "lighthouse";
 
     public async Task OnLoad()
     {
         logger.Info($"[{ModName}] v{ModVersion} loading...");
 
-        // Tell MoreBotsAPI about our enum-name mapping (prepatcher registered the enums client-side;
-        // this teaches the server side which enum IDs belong to which bot names).
         customBotTypeService.AddCustomWildSpawnTypeNames(new Dictionary<int, string>
         {
-            { 708300, "fsofixerrookie" },
-            { 708301, "fsofixeroperative" },
-            { 708302, "fsofixerspecialist" },
-            { 708303, "fsofixerlead" },
-            { 708304, "fsofixerinnercircle" }
+            { 708300, BotRookie },
+            { 708301, BotOperative },
+            { 708302, BotSpecialist },
+            { 708303, BotLead },
+            { 708304, BotInnerCircle },
         });
 
-        // Load bot data JSONs from db/bots/types/ into the SPT bot database.
         await customBotTypeService.CreateCustomBotTypes(Assembly.GetExecutingAssembly());
 
-        // Register FSO as a faction containing all five of our bot tiers.
         RegisterFsoFaction();
-
-        // Wire faction relationships.
         WireFactionRelationships();
+        EnsureSpawnKeysExist();
+        WireSpawnRules();
+        waveService.ApplyWaveChangesToAllMaps();
 
         logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
         logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
         logger.Info($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.");
-        logger.Info($"[{ModName}] Faction relationships wired: friendly with usec/bear, hostile to scavs + scavbosses.");
+        logger.Info($"[{ModName}] Faction relationships wired: friendly with usec/bear/rogues, hostile to scavs/scavbosses/sectants.");
+        logger.Info($"[{ModName}] Spawn rules wired across 5 maps with 9 squad composition templates.");
     }
 
-    /// <summary>
-    /// Add our FSO faction to MoreBotsAPI's faction dictionary.
-    /// FactionService doesn't expose an AddFaction() method, but its Factions dictionary
-    /// is publicly accessible for direct insertion.
-    /// </summary>
     private void RegisterFsoFaction()
     {
-        var fsoFaction = new Faction
-        {
-            Name = FactionName,
-            BotTypes = FsoBotTypes
-        };
+        var fsoFaction = new Faction { Name = FactionName, BotTypes = FsoBotTypes };
         factionService.Factions.Add(fsoFaction.Name, fsoFaction);
     }
 
-    /// <summary>
-    /// Configure FSO's relationships with vanilla EFT factions.
-    /// 
-    /// Friendly (both directions): usec, bear
-    ///   - covers PMC player too — since players spawn as PMC, "friendly to usec/bear" includes us
-    /// Enemy (both directions): scavs, scavbosses
-    ///   - FSO is the "good guys" of the design doc; hostile to Tarkov's lawless factions
-    /// Warn: NONE
-    ///   - in-character: FSO are professionals on the clock, they don't posture
-    ///   - mechanical: warn behavior can't distinguish player PMC from AI PMC, so warning
-    ///     PMCs would also warn the player. Skipping warn entirely keeps FSO non-intrusive.
-    /// </summary>
     private void WireFactionRelationships()
     {
-        // FSO won't attack player PMCs
         factionService.AddFriendlyByFaction(FactionName, "usec");
         factionService.AddFriendlyByFaction(FactionName, "bear");
-        // Player PMC bots won't attack FSO
         factionService.AddFriendlyByFaction("usec", FactionName);
         factionService.AddFriendlyByFaction("bear", FactionName);
 
-        // FSO will attack Scavs (regular Scavs) and Scav bosses (Reshala, Killa, Gluhar, etc.)
+        factionService.AddFriendlyByFaction(FactionName, "rogues");
+        factionService.AddFriendlyByFaction("rogues", FactionName);
+
         factionService.AddEnemyByFaction(FactionName, "scavs");
         factionService.AddEnemyByFaction(FactionName, "scavbosses");
-        // Scavs and Scav bosses will attack FSO
         factionService.AddEnemyByFaction("scavs", FactionName);
         factionService.AddEnemyByFaction("scavbosses", FactionName);
+
+        factionService.AddEnemyByFaction(FactionName, "sectants");
+        factionService.AddEnemyByFaction("sectants", FactionName);
+    }
+
+    private void EnsureSpawnKeysExist()
+    {
+        var locationConfig = configServer.GetConfig<LocationConfig>();
+        var bossWaves = locationConfig.CustomWaves.Boss;
+
+        var fsoMaps = new[]
+        {
+            MapStreets,
+            MapSandbox,
+            MapSandboxHigh,
+            MapCustoms,
+            MapShoreline,
+            MapLighthouse,
+        };
+
+        foreach (var map in fsoMaps)
+        {
+            if (!bossWaves.ContainsKey(map))
+            {
+                bossWaves[map] = new List<BossLocationSpawn>();
+            }
+        }
+    }
+
+    private void WireSpawnRules()
+    {
+        AddStreetsSpawns();
+        AddSandboxSpawns();
+        AddCustomsSpawns();
+        AddShorelineSpawns();
+        AddLighthouseSpawns();
+    }
+
+    private void AddStreetsSpawns()
+    {
+        var spawns = new[]
+        {
+            BuildPatrolAlpha("", "streets_01"),
+            BuildPatrolBravo("", "streets_02"),
+            BuildSweepPatrol("", "streets_03"),
+            BuildHeavyElement("", "streets_04"),
+            BuildAssaultTeam("", "streets_05"),
+            BuildCommandElement("", "streets_06"),
+            BuildEliteStrike("", "streets_07"),
+            BuildInnerCircleRecon("", "streets_08"),
+        };
+
+        foreach (var s in spawns)
+            waveService.AddBossWaveToMap(MapStreets, s);
+
+        logger.Success($"[{ModName}] Streets: registered {spawns.Length} spawn rules.");
+    }
+
+    private void AddSandboxSpawns()
+    {
+        var sandboxSpawns = new (string map, BossLocationSpawn spawn)[]
+        {
+            (MapSandbox, BuildPatrolAlpha("", "sandbox_01")),
+            (MapSandbox, BuildSweepPatrol("", "sandbox_02")),
+            (MapSandbox, BuildHeavyElement("", "sandbox_03")),
+            (MapSandbox, BuildEliteStrike("", "sandbox_04")),
+            (MapSandbox, BuildInnerCircleRecon("", "sandbox_05")),
+            (MapSandboxHigh, BuildPatrolAlpha("", "sandboxh_01")),
+            (MapSandboxHigh, BuildSweepPatrol("", "sandboxh_02")),
+            (MapSandboxHigh, BuildHeavyElement("", "sandboxh_03")),
+            (MapSandboxHigh, BuildEliteStrike("", "sandboxh_04")),
+            (MapSandboxHigh, BuildInnerCircleRecon("", "sandboxh_05")),
+        };
+
+        foreach (var (map, spawn) in sandboxSpawns)
+            waveService.AddBossWaveToMap(map, spawn);
+
+        logger.Success($"[{ModName}] Ground Zero (both tiers): registered {sandboxSpawns.Length} spawn rules.");
+    }
+
+    private void AddCustomsSpawns()
+    {
+        var customsZones = "ZoneDormitory,ZoneGasStation,ZoneScavBase";
+        var spawns = new[]
+        {
+            BuildPatrolAlpha(customsZones, "customs_01"),
+            BuildPatrolBravo(customsZones, "customs_02"),
+            BuildLightPatrol(customsZones, "customs_03"),
+            BuildSweepPatrol(customsZones, "customs_04"),
+        };
+
+        foreach (var s in spawns)
+            waveService.AddBossWaveToMap(MapCustoms, s);
+
+        logger.Success($"[{ModName}] Customs: registered {spawns.Length} spawn rules.");
+    }
+
+    private void AddShorelineSpawns()
+    {
+        var shorelineZones = "ZoneGreenHouses,ZonePort,ZoneSanatorium1,ZoneSanatorium2,ZoneSmuglers,ZoneMeteoStation";
+        var spawns = new[]
+        {
+            BuildPatrolAlpha(shorelineZones, "shoreline_01"),
+            BuildSweepPatrol(shorelineZones, "shoreline_02"),
+            BuildHeavyElement(shorelineZones, "shoreline_03"),
+            BuildAssaultTeam(shorelineZones, "shoreline_04"),
+        };
+
+        foreach (var s in spawns)
+            waveService.AddBossWaveToMap(MapShoreline, s);
+
+        logger.Success($"[{ModName}] Shoreline: registered {spawns.Length} spawn rules.");
+    }
+
+    private void AddLighthouseSpawns()
+    {
+        var lighthouseZones = "Zone_Island,Zone_TreatmentContainers,Zone_Chalet,Zone_Blockpost,Zone_RoofContainers";
+        var spawns = new[]
+        {
+            BuildLightPatrol(lighthouseZones, "lighthouse_01"),
+            BuildPatrolAlpha(lighthouseZones, "lighthouse_02"),
+        };
+
+        foreach (var s in spawns)
+            waveService.AddBossWaveToMap(MapLighthouse, s);
+
+        logger.Success($"[{ModName}] Lighthouse: registered {spawns.Length} spawn rules.");
+    }
+
+    private BossLocationSpawn BuildPatrolAlpha(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "patrol_alpha")
+            .WithBoss(BotSpecialist)
+            .WithPrimaryEscort(BotOperative, "3")
+            .WithSupport(BotRookie, "2")
+            .Build();
+    }
+
+    private BossLocationSpawn BuildPatrolBravo(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "patrol_bravo")
+            .WithBoss(BotLead)
+            .WithPrimaryEscort(BotOperative, "4")
+            .WithSupport(BotRookie, "1")
+            .Build();
+    }
+
+    private BossLocationSpawn BuildLightPatrol(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "light_patrol")
+            .WithBoss(BotSpecialist)
+            .WithPrimaryEscort(BotOperative, "2")
+            .WithSupport(BotRookie, "1")
+            .Build();
+    }
+
+    private BossLocationSpawn BuildSweepPatrol(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "sweep_patrol")
+            .WithBoss(BotLead)
+            .WithPrimaryEscort(BotOperative, "4")
+            .WithSupport(BotSpecialist, "1")
+            .Build();
+    }
+
+    private BossLocationSpawn BuildHeavyElement(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "heavy_element")
+            .WithBoss(BotLead)
+            .WithPrimaryEscort(BotOperative, "3")
+            .WithSupport(BotSpecialist, "2")
+            .Build();
+    }
+
+    private BossLocationSpawn BuildAssaultTeam(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "assault_team")
+            .WithBoss(BotLead)
+            .WithPrimaryEscort(BotOperative, "4")
+            .WithSupport(BotSpecialist, "2")
+            .Build();
+    }
+
+    private BossLocationSpawn BuildCommandElement(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "command_element")
+            .WithBoss(BotLead)
+            .WithPrimaryEscort(BotOperative, "2")
+            .WithSupportPair(BotSpecialist, "2", BotLead, "1")
+            .Build();
+    }
+
+    private BossLocationSpawn BuildEliteStrike(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "elite_strike")
+            .WithBoss(BotInnerCircle)
+            .WithPrimaryEscort(BotLead, "2")
+            .WithSupportPair(BotSpecialist, "2", BotInnerCircle, "1")
+            .Build();
+    }
+
+    private BossLocationSpawn BuildInnerCircleRecon(string zone, string sptIdSuffix)
+    {
+        return CompositionBase(zone, sptIdSuffix, "ic_recon")
+            .WithBoss(BotInnerCircle)
+            .WithPrimaryEscort(BotInnerCircle, "1")
+            .WithSupport(BotLead, "1")
+            .Build();
+    }
+
+    private static CompositionBuilder CompositionBase(string zone, string sptIdSuffix, string compositionName)
+    {
+        return new CompositionBuilder(zone, $"fso_{compositionName}_{sptIdSuffix}");
+    }
+
+    private sealed class CompositionBuilder
+    {
+        private readonly BossLocationSpawn _spawn;
+        private readonly List<BossSupport> _supports = new();
+
+        public CompositionBuilder(string zone, string sptId)
+        {
+            _spawn = new BossLocationSpawn
+            {
+                SptId = sptId,
+                BossChance = 100,
+                BossDifficulty = "normal",
+                BossEscortDifficulty = "normal",
+                BossZone = zone,
+                Time = -1,
+                Delay = 0,
+                ForceSpawn = false,
+                IgnoreMaxBots = false,
+                IsBossPlayer = false,
+                IsRandomTimeSpawn = false,
+                ShowOnTarkovMap = false,
+                ShowOnTarkovMapPvE = false,
+                SpawnMode = new List<string> { "regular", "pve" },
+                DependKarma = false,
+                DependKarmaPVE = false,
+                TriggerId = "",
+                TriggerName = "",
+                Supports = _supports,
+            };
+        }
+
+        public CompositionBuilder WithBoss(string botType)
+        {
+            _spawn.BossName = botType;
+            return this;
+        }
+
+        public CompositionBuilder WithPrimaryEscort(string botType, string amount)
+        {
+            _spawn.BossEscortType = botType;
+            _spawn.BossEscortAmount = amount;
+            return this;
+        }
+
+        public CompositionBuilder WithSupport(string botType, string amount)
+        {
+            _supports.Add(new BossSupport
+            {
+                BossEscortType = botType,
+                BossEscortAmount = amount,
+                BossEscortDifficulty = new ListOrT<string>(null, "normal"),
+            });
+            return this;
+        }
+
+        public CompositionBuilder WithSupportPair(string typeA, string amountA, string typeB, string amountB)
+        {
+            return WithSupport(typeA, amountA).WithSupport(typeB, amountB);
+        }
+
+        public BossLocationSpawn Build()
+        {
+            return _spawn;
+        }
     }
 }
