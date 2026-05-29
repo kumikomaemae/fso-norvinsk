@@ -166,16 +166,17 @@ public class Mod(
 
     private void AddStreetsSpawns()
     {
+        var streetsZones = "ZoneCarShowroom,ZoneSnipeCarShowroom,ZoneClimova,ZoneMvd";
         var spawns = new[]
         {
-            BuildPatrolAlpha("", "streets_01"),
-            BuildPatrolBravo("", "streets_02"),
-            BuildSweepPatrol("", "streets_03"),
-            BuildHeavyElement("", "streets_04"),
-            BuildAssaultTeam("", "streets_05"),
-            BuildCommandElement("", "streets_06"),
-            BuildEliteStrike("", "streets_07"),
-            BuildInnerCircleRecon("", "streets_08"),
+            BuildPatrolAlpha(streetsZones, "streets_01"),
+            BuildPatrolBravo(streetsZones, "streets_02"),
+            BuildSweepPatrol(streetsZones, "streets_03"),
+            BuildHeavyElement(streetsZones, "streets_04"),
+            BuildAssaultTeam(streetsZones, "streets_05"),
+            BuildCommandElement(streetsZones, "streets_06"),
+            BuildEliteStrike(streetsZones, "streets_07"),
+            BuildInnerCircleRecon(streetsZones, "streets_08"),
         };
 
         foreach (var s in spawns)
@@ -358,7 +359,7 @@ public class Mod(
                 Time = -1,
                 Delay = 0,
                 ForceSpawn = false,
-                IgnoreMaxBots = false,
+                IgnoreMaxBots = true,
                 IsBossPlayer = false,
                 IsRandomTimeSpawn = false,
                 ShowOnTarkovMap = false,
@@ -391,7 +392,7 @@ public class Mod(
             {
                 BossEscortType = botType,
                 BossEscortAmount = amount,
-                BossEscortDifficulty = new ListOrT<string>(null, "normal"),
+                BossEscortDifficulty = new ListOrT<string>(new List<string> { "normal" }, null),
             });
             return this;
         }
