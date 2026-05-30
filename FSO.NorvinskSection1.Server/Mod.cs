@@ -54,13 +54,14 @@ public class Mod(
     LoadoutService loadoutService,
     FactionService factionService,
     CustomLocationWaveService waveService,
-    LocationConfig locationConfig
+    ConfigServer configServer
 ) : IOnLoad
 {
     public const string ModName = "FSO: Norvinsk Section 1";
     public const string ModVersion = "0.4.0";
     public const string FactionName = "fso";
-
+    // config objects can't be constructor-injected on 4.0.13 — pull from ConfigServer
+    private readonly LocationConfig _locationConfig = configServer.GetConfig<LocationConfig>();
     private static readonly List<WildSpawnType> FsoBotTypes = new()
     {
         (WildSpawnType)708300, // fsofixerrookie
@@ -159,8 +160,8 @@ public class Mod(
 
      private void EnsureSpawnKeysExist()
     {
-        locationConfig.CustomWaves ??= new CustomWaves();
-        var bossWaves = locationConfig.CustomWaves.Boss;
+        _locationConfig.CustomWaves ??= new CustomWaves();
+        var bossWaves = _locationConfig.CustomWaves.Boss;
 
         var fsoMaps = new[]
         {
