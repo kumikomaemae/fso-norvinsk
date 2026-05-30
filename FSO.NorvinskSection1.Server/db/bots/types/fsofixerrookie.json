@@ -1,4 +1,4 @@
-﻿{
+{
     "appearance":  {
                        "body":  {
                                     "6753b532ab6de13791c4e840":  1
@@ -2091,40 +2091,8 @@
                                            },
                        "useSimpleAnimator":  false
                    },
-    "firstName":  [
-                      "Bong-bong",
-                      "Yum-yum",
-                      "Joshua",
-                      "Emilia",
-                      "Tim",
-                      "Mason",
-                      "Juliet",
-                      "Daniel",
-                      "Hunter",
-                      "Cooper",
-                      "Joy",
-                      "London",
-                      "Anthony",
-                      "Parker",
-                      "Julian",
-                      "Ria",
-                      "Angel",
-                      "Cedric",
-                      "Oliver",
-                      "Owen",
-                      "Adam",
-                      "Max",
-                      "Quinn",
-                      "Harry",
-                      "Xavier",
-                      "Ray",
-                      "Haru",
-                      "Ryn",
-                      "Noah",
-                      "Emma",
-                      "Bella",
-                      "Piper"
-                  ],
+    "firstName":["FSO"],
+  "lastName":["Bong-bong","Yum-yum","Joshua","Emilia","Tim","Mason","Juliet","Daniel","Hunter","Cooper","Joy","London","Anthony","Parker","Julian","Ria","Angel","Cedric","Oliver","Owen","Adam","Max","Quinn","Harry","Xavier","Ray","Haru","Ryn","Noah","Emma","Bella","Piper"],
     "generation":  {
                        "items":  {
                                      "healing":  {

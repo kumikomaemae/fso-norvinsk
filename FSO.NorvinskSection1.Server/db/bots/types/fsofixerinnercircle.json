@@ -1,4 +1,4 @@
-﻿{
+{
     "appearance":  {
                        "body":  {
                                     "6753b532ab6de13791c4e840":  1
@@ -2091,16 +2091,8 @@
                                            },
                        "useSimpleAnimator":  false
                    },
-    "firstName":  [
-                      "The Mae of Hatred",
-                      "The White Prince",
-                      "The Red Rebellion",
-                      "The Pink Idol",
-                      "The Purple Robin",
-                      "The Hollow Knight",
-                      "The Distorted Saint",
-                      "The Final Curtain"
-                  ],
+    "firstName":["FSO"],
+  "lastName":["The Mae of Hatred","The White Prince","The Red Rebellion","The Pink Idol","The Purple Robin","The Hollow Knight","The Distorted Saint","The Final Curtain"],
     "generation":  {
                        "items":  {
                                      "healing":  {

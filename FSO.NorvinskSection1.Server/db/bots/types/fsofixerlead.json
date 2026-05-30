@@ -1,4 +1,4 @@
-﻿{
+{
     "appearance":  {
                        "body":  {
                                     "6753b532ab6de13791c4e840":  1
@@ -2092,20 +2092,8 @@
                                            },
                        "useSimpleAnimator":  false
                    },
-    "firstName":  [
-                      "Binah",
-                      "Hokma",
-                      "Gebura",
-                      "Hod",
-                      "Angela",
-                      "Roland",
-                      "Angelica",
-                      "Xiao",
-                      "Don Quixote",
-                      "Ryoshu",
-                      "Faust",
-                      "Yi Sang"
-                  ],
+    "firstName":["FSO"],
+  "lastName":["Binah","Hokma","Gebura","Hod","Angela","Roland","Angelica","Xiao","Don Quixote","Ryoshu","Faust","Yi Sang"],
     "generation":  {
                        "items":  {
                                      "healing":  {

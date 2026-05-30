@@ -1,4 +1,4 @@
-﻿{
+{
     "appearance":  {
                        "body":  {
                                     "6753b532ab6de13791c4e840":  1
@@ -2091,23 +2091,8 @@
                                            },
                        "useSimpleAnimator":  false
                    },
-    "firstName":  [
-                      "Joker",
-                      "Skull",
-                      "Panther",
-                      "Mona",
-                      "Fox",
-                      "Queen",
-                      "Oracle",
-                      "Forehead",
-                      "Crow",
-                      "Violet",
-                      "Lavenza",
-                      "Igor",
-                      "Arsene",
-                      "Takemi",
-                      "Becky"
-                  ],
+    "firstName":["FSO"],
+  "lastName":["Joker","Skull","Panther","Mona","Fox","Queen","Oracle","Forehead","Crow","Violet","Lavenza","Igor","Arsene","Takemi","Becky"],
     "generation":  {
                        "items":  {
                                      "healing":  {
