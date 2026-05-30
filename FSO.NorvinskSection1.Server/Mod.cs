@@ -54,7 +54,7 @@ public class Mod(
     LoadoutService loadoutService,
     FactionService factionService,
     CustomLocationWaveService waveService,
-    ConfigServer configServer
+    LocationConfig locationConfig
 ) : IOnLoad
 {
     public const string ModName = "FSO: Norvinsk Section 1";
@@ -159,7 +159,6 @@ public class Mod(
 
     private void EnsureSpawnKeysExist()
     {
-        var locationConfig = configServer.GetConfig<LocationConfig>();
         var bossWaves = locationConfig.CustomWaves.Boss;
 
         var fsoMaps = new[]

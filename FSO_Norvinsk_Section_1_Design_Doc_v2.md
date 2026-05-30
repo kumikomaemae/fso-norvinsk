@@ -1,4 +1,5 @@
 # FSO: Norvinsk Section 1
+
 ## Design Document v2.0 — LOCKED
 
 **Project Type:** Private SPT mod (gift, never published)
@@ -217,12 +218,14 @@ All tiers share visual identity: **dark suit, dark tie, white shirt, dark slacks
 ### Patrol Composition (rough guidelines)
 
 Standard patrol on Streets:
+
 - 1× Lead (guaranteed)
 - 2–3× Operatives
 - 1–2× Rookies
 - 0–1× Specialist (rolls per spawn)
 
 Labs raid (Quest 5 active):
+
 - Multiple Inner Circle deployments
 - 3–5 Inner Circle per breach group
 - 1+ LMG carrier per group
@@ -253,6 +256,7 @@ Labs raid (Quest 5 active):
 **Objective:** Locate a marked container, retrieve sealed envelope, hand over to Mae
 
 **Narrative:**
+
 - Mae introduces herself as Section Manager
 - Establishes the Office is in Norvinsk on contract
 - Envelope contains "client correspondence" — she doesn't reveal who from
@@ -260,6 +264,7 @@ Labs raid (Quest 5 active):
 - First coffee complaint
 
 **Rewards:**
+
 - Sizable USD payout
 - Meaningful XP
 - **+1 Charisma** (vanilla skill)
@@ -277,15 +282,18 @@ Labs raid (Quest 5 active):
 **Type:** Eliminate (faction-flexible target)
 **Maps:** Any (no map restriction since raiders don't spawn naturally on Streets)
 **Objective:** Eliminate X hostile faction members (RUAF, BD, goons, OR raiders count — player's choice of where/who)
+
 - Example: 8 of any listed faction, with optional bonus tier for RUAF specifically
 
 **Narrative:**
+
 - "Half this work is just clearing space."
 - The Office's contract requires reduced hostile interference in operational zones
 - Mae hints "the actual contract" is more interesting than this
 - Coffee complaint: ran out of beans, switched to instant
 
 **Rewards:**
+
 - Boosted USD payout
 - High XP
 - Suppressed weapon (custom preset name — **placeholder for Lobotomy Corporation playthrough reference**, finalize during writing phase)
@@ -303,6 +311,7 @@ Labs raid (Quest 5 active):
 **Objective:** Find and retrieve **TerraGroup "Blue Folders" Materials** from a Streets location, survive raid, hand over
 
 **Narrative:**
+
 - Mae reveals: client is **LCCB** (first explicit PM lore drop)
 - "The LCCB has been following something. They think TerraGroup might have acquired an artifact. I don't ask too many questions. They pay on time."
 - First mention of the **Golden Bough** — Mae says she doesn't fully know what it is, just what LCCB thinks it might be
@@ -310,6 +319,7 @@ Labs raid (Quest 5 active):
 - Coffee update: found a proper espresso setup, "operating at peak capacity"
 
 **Rewards:**
+
 - Boosted USD
 - Mid-to-high tier gear
 - First coffee-themed barter unlock at LL2
@@ -325,6 +335,7 @@ Labs raid (Quest 5 active):
 **Objective:** Eliminate X Black Division members (any map). Optional: retrieve a BD armor/rig item (WTT-Content Backport BD piece)
 
 **Narrative:**
+
 - **THE REVEAL:** Mae confirms BD is TerraGroup's internal force, dispatched to clean up investigators
 - Section 1 has taken casualties
 - Mae isn't panicked. She's *quieter*. Professionalism gets brittle.
@@ -333,6 +344,7 @@ Labs raid (Quest 5 active):
 - Heavy coffee reference: someone in the office found her a proper espresso setup, she's "operating at peak capacity again"
 
 **Rewards:**
+
 - High USD
 - High-tier gear (likely top-tier suppressed weapon)
 - **Black Labs keycard + standard Labs access keycard** (plus possibly a third special keycard)
@@ -347,23 +359,28 @@ Labs raid (Quest 5 active):
 **Type:** Reach + Eliminate + Survive (Labs raid)
 **Map:** Labs ONLY
 **Objective:**
+
 1. Reach the keycard room matching the Quest 4 keycard
 2. Eliminate **10–20 Raiders + 5 Black Division soldiers**
 3. Survive and extract
+
 - Progress saves across raid attempts (SPT default behavior for kill counters)
 
 **Spawn Conditions (quest-active):**
+
 - Inner Circle (708304) spawns at elevated rates on Labs
 - BD spawn rate boosted on Labs (via BlackDiv mod's existing Labs config)
 - Inner Circle hostility = WEAPONS FREE except for player/contract roster
 
 **Narrative:**
+
 - Mae's pre-quest dialog: acknowledges this is the endgame
 - Authorizes Inner Circle deployment: "they were on call. They're on the way."
 - The fight is **intense** — fixers and BD clashing around the player while objectives are completed
 - Post-quest dialog: brief warmth-through-deadpan moment, played off as "this operation's got me feeling exhausted, need more coffee"
 
 **Rewards:**
+
 - Massive USD payout
 - Top-tier gear stockpile (LEDXs, Far-Forward Signal Amplifier Unit, multiple Bitcoins, multiple Labs keycards)
 - LL4 unlocked
@@ -398,6 +415,7 @@ in a separate text file, with no pressure on timing]"
 **Subject:** "Off-contract."
 **Sender:** Mae
 **Body structure:**
+
 - Acknowledges what the Labs op took out of everyone
 - Confirms the contract is complete; LCCB is satisfied
 - Pivots — drops the professional voice briefly
@@ -469,6 +487,7 @@ Total expected: ~15 files to write/configure across all phases.
 ## 8. Implementation Phases
 
 ### Phase 1 — Skeleton Scaffold
+
 - Empty mod folder structure created
 - Prepatcher project with stub bot registration (one bot, no behavior yet)
 - Server mod with basic load
@@ -476,6 +495,7 @@ Total expected: ~15 files to write/configure across all phases.
 - **Deliverable:** "Hello, world" mod that doesn't crash
 
 ### Phase 2 — Bots
+
 - All 5 bot types implemented via prepatcher + JSON
 - Hostility configured per the table above
 - Test by manually setting spawn chance to 100% on one map
@@ -483,6 +503,7 @@ Total expected: ~15 files to write/configure across all phases.
 - **Deliverable:** Fixers patrolling Streets, friendly to player, hostile to scavs
 
 ### Phase 3 — Trader
+
 - Mae as custom trader
 - Portrait, basic assortment (10–15 items), dialog scaffolding
 - Always-available config
@@ -490,6 +511,7 @@ Total expected: ~15 files to write/configure across all phases.
 - **Deliverable:** Functional trader with placeholder dialog
 
 ### Phase 4 — Armband
+
 - Custom FSO armband item
 - Available via Mae's assortment at LL2
 - Tested in player inventory
@@ -497,6 +519,7 @@ Total expected: ~15 files to write/configure across all phases.
 - **Deliverable:** v1 armband shipped
 
 ### Phase 5 — Quests 1–4
+
 - All four quest definitions
 - Locale entries for dialog
 - Quest assort entries for LL unlocks
@@ -504,6 +527,7 @@ Total expected: ~15 files to write/configure across all phases.
 - **Deliverable:** 80% of the gameplay loop functional
 
 ### Phase 6 — The Finale (Quest 5 + Inner Circle)
+
 - Quest 5 definition with custom objectives
 - Inner Circle bot configured (708304)
 - Labs spawn config for quest-active state
@@ -512,6 +536,7 @@ Total expected: ~15 files to write/configure across all phases.
 - **Deliverable:** Climactic finale functional
 
 ### Phase 7 — Anniversary Writing
+
 - Mae's writing-phase pass on all dialog (final voice)
 - The mail message body
 - The Watch description (with inscription written separately by Mae)
@@ -520,6 +545,7 @@ Total expected: ~15 files to write/configure across all phases.
 - **Deliverable:** The love letter is complete
 
 ### Phase 8 — Polish + Secret Playtest
+
 - Full solo playthrough by Mae (NOT with Damjan present)
 - Bug fixes, balance tweaks, dialog polish
 - Final test of the complete arc
@@ -527,6 +553,7 @@ Total expected: ~15 files to write/configure across all phases.
 - **Deliverable:** v1.0 stable
 
 ### Day-Of (June 1, 2026)
+
 - Install on Damjan's client
 - He logs in, sees Mae in his trader list
 - The journey begins
@@ -536,11 +563,13 @@ Total expected: ~15 files to write/configure across all phases.
 ## 9. Dependencies & Stack Notes
 
 ### Required (must be installed on both player and Damjan)
+
 - **MoreBotsAPI** (already installed) — bot framework
 - **SkillsExtended** (already installed) — USEC Negotiations skill for rewards
 - **DrakiaXYZ-Waypoints** (already installed) — required for proper bot navmesh
 
 ### Compatible (already in stack, used as reference / not modified)
+
 - **TacticalToaster-UNTARGH** — reference implementation
 - **BlackDiv** — quest target faction (uses its existing Labs config)
 - **RUAFComeHome** — hostility target
@@ -549,10 +578,12 @@ Total expected: ~15 files to write/configure across all phases.
 - **Fika** (2.2.5+) — multiplayer sync via standard bot spawn system
 
 ### Optional / Future
+
 - Voice Acting Framework — Mae voice lines (v2 update)
 - Custom Stickers — Q2 reward sticker (if available in stack)
 
 ### Development Environment
+
 - Visual Studio Community 2022 (confirmed installed)
 - .NET 9 SDK (check during Phase 1)
 - dotnet CLI (confirmed installed)
