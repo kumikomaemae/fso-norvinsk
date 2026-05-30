@@ -157,8 +157,9 @@ public class Mod(
         factionService.AddEnemyByFaction("sectants", FactionName);
     }
 
-    private void EnsureSpawnKeysExist()
+     private void EnsureSpawnKeysExist()
     {
+        locationConfig.CustomWaves ??= new CustomWaves();
         var bossWaves = locationConfig.CustomWaves.Boss;
 
         var fsoMaps = new[]

@@ -66,7 +66,13 @@ public class FsoTraderHelper(
     /// </summary>
     public void AddTraderToLocales(TraderBase baseJson, string firstName, string description)
     {
-        var globalLocales = databaseService.GetTables().Locales.Global;
+        var globalLocales = databaseService.GetTables().Locales?.Global;
+        if (globalLocales is null)
+        {
+            logger.Warning("[FSO] Global locales unavailable \u2014 skipping Mae's locale registration.");
+            return;
+        }
+
         MongoId traderId = baseJson.Id;
         var fullName = baseJson.Name ?? firstName;
         var nickName = baseJson.Nickname ?? firstName;
@@ -74,6 +80,11 @@ public class FsoTraderHelper(
 
         foreach (var (_, lazyLoadedLocale) in globalLocales)
         {
+            if (lazyLoadedLocale is null)
+            {
+                continue;
+            }
+
             lazyLoadedLocale.AddTransformer(localeData =>
             {
                 localeData[$"{traderId} FullName"]    = fullName;
