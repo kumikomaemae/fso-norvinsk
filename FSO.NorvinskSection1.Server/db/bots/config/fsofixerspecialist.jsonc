@@ -7,20 +7,21 @@
   "mustHaveUniqueName": true,
   "durability": {
     "armor": {
-      "maxDelta": 12,
+      "maxDelta": 0,
       "minDelta": 0,
-      "minLimitPercent": 20,
-      "lowestMaxPercent": 75,
+      "minLimitPercent": 100,
+      "lowestMaxPercent": 100,
       "highestMaxPercent": 100
     },
     "weapon": {
       "highestMax": 100,
-      "lowestMax": 88,
-      "maxDelta": 12,
+      "lowestMax": 100,
+      "maxDelta": 0,
       "minDelta": 0,
-      "minLimitPercent": 20
+      "minLimitPercent": 100
     }
   },
+
   "itemSpawnLimits": {},
   "equipment": {
     "faceShieldIsActiveChancePercent": 100,
