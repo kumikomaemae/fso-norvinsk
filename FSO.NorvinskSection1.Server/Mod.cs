@@ -50,7 +50,8 @@ public record ModMetadata : AbstractModMetadata
 public class Mod(
     ISptLogger<Mod> logger,
     MoreBotsCustomBotTypeService customBotTypeService,
-    MoreBotsServer.MoreBotsAPI moreBotsApi,
+    MoreBotsCustomBotConfigService customBotConfigService,
+    LoadoutService loadoutService,
     FactionService factionService,
     CustomLocationWaveService waveService,
     ConfigServer configServer
@@ -83,32 +84,46 @@ public class Mod(
     private const string MapLighthouse = "lighthouse";
 
     public async Task OnLoad()
+{
+    logger.Info($"[{ModName}] v{ModVersion} loading...");
+    var asm = Assembly.GetExecutingAssembly();
+
+    // Map custom WildSpawnType int values to role names so faction
+    // relationship lookups can resolve our custom bots.
+    customBotTypeService.AddCustomWildSpawnTypeNames(new Dictionary<int, string>
     {
-        logger.Info($"[{ModName}] v{ModVersion} loading...");
+        { 708300, BotRookie },
+        { 708301, BotOperative },
+        { 708302, BotSpecialist },
+        { 708303, BotLead },
+        { 708304, BotInnerCircle },
+    });
 
-        customBotTypeService.AddCustomWildSpawnTypeNames(new Dictionary<int, string>
-        {
-            { 708300, BotRookie },
-            { 708301, BotOperative },
-            { 708302, BotSpecialist },
-            { 708303, BotLead },
-            { 708304, BotInnerCircle },
-        });
+    // --- Bot registration (replaces moreBotsApi.LoadBots) ---
+    // 1. Register the 5 custom bot types from db/bots/types/*.json
+    await customBotTypeService.CreateCustomBotTypes(asm);
+    // 2. Register per-tier configs from db/bots/config/*.jsonc, keyed by
+    //    filename. THIS is what LoadBots was failing to do correctly.
+    await customBotConfigService.LoadCustomBotConfigs(asm);
+    // 3. Apply custom loadouts from db/bots/loadouts/*.json.
+    //    No-op until loadout files exist, so safe to call now.
+    await loadoutService.LoadLoadouts(asm);
 
-        await moreBotsApi.LoadBots(Assembly.GetExecutingAssembly());
+    // --- Faction setup ---
+    RegisterFsoFaction();
+    WireFactionRelationships();
 
-        RegisterFsoFaction();
-        WireFactionRelationships();
-        EnsureSpawnKeysExist();
-        WireSpawnRules();
-        waveService.ApplyWaveChangesToAllMaps();
+    // --- Spawn rules ---
+    EnsureSpawnKeysExist();
+    WireSpawnRules();
+    waveService.ApplyWaveChangesToAllMaps();
 
-        logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
-        logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
-        logger.Info($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.");
-        logger.Info($"[{ModName}] Faction relationships wired: friendly with usec/bear/rogues, hostile to scavs/scavbosses/sectants.");
-        logger.Info($"[{ModName}] Spawn rules wired across 5 maps with 9 squad composition templates.");
-    }
+    logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
+    logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
+    logger.Info($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.");
+    logger.Info($"[{ModName}] Faction relationships wired: friendly with usec/bear/rogues, hostile to scavs/scavbosses/sectants.");
+    logger.Info($"[{ModName}] Spawn rules wired across 5 maps with 9 squad composition templates.");
+}
 
     private void RegisterFsoFaction()
     {
