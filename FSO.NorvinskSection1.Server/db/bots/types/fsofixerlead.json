@@ -2366,7 +2366,21 @@
                                                              "68947a4be4bf255d1b0ca746":  1
                                                          }
                                     },
-                      "mods":  {
+                      "mods": {
+    "68947a4be4bf255d1b0ca746": {
+      "Front_plate": ["656fafe3498d1b7e3e071da4"],
+      "Back_plate": ["656fafe3498d1b7e3e071da4"],
+      "Left_side_plate": ["64afdb577bb3bfe8fe03fd1d"],
+      "Right_side_plate": ["64afdb577bb3bfe8fe03fd1d"],
+      "Soft_armor_front": ["68a5eaab48f18317750a0b92"],
+      "Soft_armor_back": ["68a5ea26200341f12e08de79"],
+      "Soft_armor_left": ["68a5eb4c200341f12e08e7d1"],
+      "soft_armor_right": ["68a5eba93acdf023050b1c15"],
+      "Collar": ["68a5ea756e534ad0110eca16"],
+      "Shoulder_l": ["68a5eb16c4e56258880dfe96"],
+      "Shoulder_r": ["68a5eb856e534ad0110efa05"],
+      "Groin": ["68a5eadd2c125bac5a097cbf"]
+    },
                                    "6871284e9a353bb50606f3ed":  {
                                                                     "mod_muzzle":  [
                                                                                        "68712ce2251b8d4c6c04ec1f"
