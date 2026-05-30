@@ -35,9 +35,9 @@
                                   },
                     "equipmentMods":  {
                                           "mod_equipment_000":  2,
-                                          "right_side_plate":  9,
+                                          "right_side_plate": 100,
                                           "front_plate":  100,
-                                          "left_side_plate":  9,
+                                          "left_side_plate": 100,
                                           "mod_equipment_002":  0,
                                           "back_plate":  100,
                                           "mod_equipment_001":  4,
@@ -2362,7 +2362,13 @@
                                                              "5d5d85c586f774279a21cbdb":  1
                                                          }
                                     },
-                      "mods":  {
+                      "mods": {
+    "5e4abb5086f77406975c9342": {
+      "Front_plate": ["656fafe3498d1b7e3e071da4"],
+      "Back_plate": ["656fafe3498d1b7e3e071da4"],
+      "Soft_armor_front": ["6575e71760703324250610c3"],
+      "Soft_armor_back": ["6575e72660703324250610c7"]
+    },
                                    "5926bb2186f7744b1c6c6e60":  {
                                                                     "mod_magazine":  [
                                                                                          "5926c3b286f774640d189b6b"

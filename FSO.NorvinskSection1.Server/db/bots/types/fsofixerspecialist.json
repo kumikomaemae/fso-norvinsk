@@ -35,9 +35,9 @@
                                   },
                     "equipmentMods":  {
                                           "mod_equipment_000":  2,
-                                          "right_side_plate":  9,
+                                          "right_side_plate": 100,
                                           "front_plate":  100,
-                                          "left_side_plate":  9,
+                                          "left_side_plate": 100,
                                           "mod_equipment_002":  0,
                                           "back_plate":  100,
                                           "mod_equipment_001":  4,
@@ -2367,7 +2367,21 @@
                                                              "5e9db13186f7742f845ee9d3":  1
                                                          }
                                     },
-                      "mods":  {
+                      "mods": {
+    "60a283193cb70855c43a381d": {
+      "Front_plate": ["656fafe3498d1b7e3e071da4"],
+      "Back_plate": ["656fafe3498d1b7e3e071da4"],
+      "Left_side_plate": ["64afdb577bb3bfe8fe03fd1d"],
+      "Right_side_plate": ["64afdb577bb3bfe8fe03fd1d"],
+      "Soft_armor_front": ["6575d561b15fef3dd4051670"],
+      "Soft_armor_back": ["6575d56b16c2762fba005818"],
+      "Soft_armor_left": ["6575d57a16c2762fba00581c"],
+      "soft_armor_right": ["6575d589b15fef3dd4051674"],
+      "Collar": ["6575d598b15fef3dd4051678"],
+      "Shoulder_l": ["6575d5b316c2762fba005824"],
+      "Shoulder_r": ["6575d5bd16c2762fba005828"],
+      "Groin": ["6575d5a616c2762fba005820"]
+    },
                                    "5df8ce05b11454561e39243b":  {
                                                                     "mod_pistol_grip":  [
                                                                                             "59db3a1d86f77429e05b4e92"
