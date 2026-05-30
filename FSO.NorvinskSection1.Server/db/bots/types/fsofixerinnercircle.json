@@ -16,12 +16,34 @@
                                      "6747aa53299a1dadafd0f5c0":  1
                                  }
                    },
-    "chances":  {
+    "chances": {
+    "mods": {
+      "mod_barrel": 100,
+      "mod_barrel_000": 100,
+      "mod_foregrip": 100,
+      "mod_hammer": 100,
+      "mod_handguard": 100,
+      "mod_magazine": 100,
+      "mod_mount_000": 100,
+      "mod_mount_001": 100,
+      "mod_mount_002": 100,
+      "mod_muzzle": 100,
+      "mod_pistol_grip": 100,
+      "mod_reciever": 100,
+      "mod_scope": 100,
+      "mod_scope_000": 100,
+      "mod_sight_front": 100,
+      "mod_sight_rear": 100,
+      "mod_stock": 100,
+      "mod_stock_000": 100,
+      "mod_tactical": 100,
+      "mod_trigger": 100
+    },
                     "equipment":  {
                                       "SecondPrimaryWeapon":  0,
                                       "TacticalVest":  100,
                                       "Earpiece":  100,
-                                      "Eyewear":  86,
+                                      "Eyewear": 0,
                                       "Backpack":  100,
                                       "Headwear":  100,
                                       "ArmBand":  0,
