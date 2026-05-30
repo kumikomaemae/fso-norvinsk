@@ -69,7 +69,14 @@ public class Mod(
         (WildSpawnType)708303, // fsofixerlead
         (WildSpawnType)708304, // fsofixerinnercircle
     };
-
+    // --- Spawn tuning (FPS / density control) ---
+    // Per-squad spawn chance (0-100). Lower = fewer FSO squads per raid = better FPS + more variety.
+    // ~40 -> Customs(4 squads) averages ~9 Fixers; Streets(9) ~18; Lighthouse(2) ~5.
+    public const int FsoSpawnChance = 40;
+    // true  = FSO spawn ON TOP OF the normal bot cap (reliable presence, additive load).
+    // false = FSO respect the map's bot cap (hard ceiling on total bots / best FPS, but FSO may not always appear).
+    public const bool FsoIgnoreMaxBots = true;
+    
     private const string BotRookie = "fsofixerrookie";
     private const string BotOperative = "fsofixeroperative";
     private const string BotSpecialist = "fsofixerspecialist";
@@ -371,14 +378,14 @@ public class Mod(
             _spawn = new BossLocationSpawn
             {
                 SptId = sptId,
-                BossChance = 100,
+                BossChance = Mod.FsoSpawnChance,
                 BossDifficulty = "normal",
                 BossEscortDifficulty = "normal",
                 BossZone = zone,
                 Time = -1,
                 Delay = 0,
                 ForceSpawn = false,
-                IgnoreMaxBots = true,
+                IgnoreMaxBots = Mod.FsoIgnoreMaxBots,
                 IsBossPlayer = false,
                 IsRandomTimeSpawn = false,
                 ShowOnTarkovMap = false,
