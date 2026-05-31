@@ -67,7 +67,7 @@
             "conditions": [
               {
                 "conditionType": "Kills",
-                "id": "bdkill_q4_inner",
+                "id": "b1e4139910e6176a56ae52f9",
                 "target": "Savage",
                 "savageRole": [
                   "blackDivLead",
@@ -107,13 +107,13 @@
       "Started": [],
       "Success": [
         {
-          "id": "q4_rew_0",
+          "id": "9ec3340ff094eb67030eaf5e",
           "index": 0,
           "type": "Experience",
           "value": 95000
         },
         {
-          "id": "q4_rew_1",
+          "id": "46db4e60b36fd3010b6534fa",
           "index": 1,
           "type": "TraderStanding",
           "target": "6a1ac8598933e3f023895bd3",
@@ -156,42 +156,42 @@
           ]
         },
         {
-          "id": "q4_rew_4",
+          "id": "d84cf594a8d18d6880f200a7",
           "index": 4,
           "type": "Skill",
           "target": "AimDrills",
           "value": 500
         },
         {
-          "id": "q4_rew_5",
+          "id": "ecea55f9ba421629bd2403d2",
           "index": 5,
           "type": "Skill",
           "target": "MagDrills",
           "value": 500
         },
         {
-          "id": "q4_rew_6",
+          "id": "9416a21229423287d625c98a",
           "index": 6,
           "type": "Skill",
           "target": "Perception",
           "value": 500
         },
         {
-          "id": "q4_rew_7",
+          "id": "ea87390c348458d3e582a1ed",
           "index": 7,
           "type": "Skill",
           "target": "HeavyVests",
           "value": 500
         },
         {
-          "id": "q4_rew_8",
+          "id": "ae549732dadd6d329ec6c663",
           "index": 8,
           "type": "Skill",
           "target": "Charisma",
           "value": 500
         },
         {
-          "id": "q4_rew_9",
+          "id": "c89e91ca1e9e23a95567b70c",
           "index": 9,
           "type": "Skill",
           "target": "Endurance",

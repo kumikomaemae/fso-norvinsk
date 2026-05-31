@@ -67,7 +67,7 @@
             "conditions": [
               {
                 "conditionType": "Kills",
-                "id": "raiderkill_q5_inner",
+                "id": "15c2ea1e564aeaa91bbf35fd",
                 "target": "Savage",
                 "savageRole": [
                   "pmcBot"
@@ -115,7 +115,7 @@
             "conditions": [
               {
                 "conditionType": "Kills",
-                "id": "bdkill_q5_inner",
+                "id": "912e6a6da931e3e3a2f8b3da",
                 "target": "Savage",
                 "savageRole": [
                   "blackDivLead",
@@ -155,13 +155,13 @@
       "Started": [],
       "Success": [
         {
-          "id": "q5_rew_0",
+          "id": "a95f1ea97cd70825cf41f93d",
           "index": 0,
           "type": "Experience",
           "value": 180000
         },
         {
-          "id": "q5_rew_1",
+          "id": "b65b9fa9151c5396085dac03",
           "index": 1,
           "type": "TraderStanding",
           "target": "6a1ac8598933e3f023895bd3",
@@ -186,42 +186,42 @@
           ]
         },
         {
-          "id": "q5_rew_3",
+          "id": "4b6e3cfc6febfc772222560a",
           "index": 3,
           "type": "Skill",
           "target": "ShadowConnections",
           "value": 1000
         },
         {
-          "id": "q5_rew_4",
+          "id": "429654aa068d2626658c896b",
           "index": 4,
           "type": "Skill",
           "target": "UsecNegotiations",
           "value": 1000
         },
         {
-          "id": "q5_rew_5",
+          "id": "45073afc3347d721f8c776d7",
           "index": 5,
           "type": "Skill",
           "target": "Charisma",
           "value": 1000
         },
         {
-          "id": "q5_rew_6",
+          "id": "fea91c098342521a31c4a221",
           "index": 6,
           "type": "Skill",
           "target": "HeavyVests",
           "value": 1000
         },
         {
-          "id": "q5_rew_7",
+          "id": "516f645e124e89dafa726a30",
           "index": 7,
           "type": "Skill",
           "target": "AimDrills",
           "value": 1000
         },
         {
-          "id": "q5_rew_8",
+          "id": "19d1db68170b7ea8681dfc85",
           "index": 8,
           "type": "Skill",
           "target": "MagDrills",

@@ -74,13 +74,13 @@
       "Started": [],
       "Success": [
         {
-          "id": "q3_rew_0",
+          "id": "5dccc4aa962fb6da7833dd99",
           "index": 0,
           "type": "Experience",
           "value": 55000
         },
         {
-          "id": "q3_rew_1",
+          "id": "98e46b1c1be39d6e8d7d9f91",
           "index": 1,
           "type": "TraderStanding",
           "target": "6a1ac8598933e3f023895bd3",
@@ -105,35 +105,35 @@
           ]
         },
         {
-          "id": "q3_rew_3",
+          "id": "8cf95025dc0f571e1319fac8",
           "index": 3,
           "type": "Skill",
           "target": "Charisma",
           "value": 300
         },
         {
-          "id": "q3_rew_4",
+          "id": "2ac40d076459260be1546e9d",
           "index": 4,
           "type": "Skill",
           "target": "UsecNegotiations",
           "value": 300
         },
         {
-          "id": "q3_rew_5",
+          "id": "55a39c9f5608ad6c8b905b07",
           "index": 5,
           "type": "Skill",
           "target": "Perception",
           "value": 300
         },
         {
-          "id": "q3_rew_6",
+          "id": "3d9b096b8b4b6dc62b6759d5",
           "index": 6,
           "type": "Skill",
           "target": "Intellect",
           "value": 300
         },
         {
-          "id": "q3_rew_7",
+          "id": "5968de20aefcd9011da89ea6",
           "index": 7,
           "type": "Skill",
           "target": "AttentionSearch",
