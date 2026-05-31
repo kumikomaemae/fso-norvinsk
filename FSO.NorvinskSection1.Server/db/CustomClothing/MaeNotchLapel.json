@@ -1,0 +1,44 @@
+[
+  {
+    "type": "top",
+    "suiteId": "80dbdc8d280202b5fbfaee92",
+    "outfitId": "5ac78805d312d85327371d5a",
+    "topId": "fd05cff1c0051730bc3e75c6",
+    "handsId": "768655f88377c14e6a9fea63",
+    "locales": {
+      "en": {
+        "name": "FSO Fixer Suit (Black)",
+        "description": "FSO: Section 1"
+      }
+    },
+    "topBundlePath": "Tops/artem_top_10.bundle",
+    "handsBundlePath": "Hands/artem_atomhands.bundle",
+    "traderId": "6a1ac8598933e3f023895bd3",
+    "loyaltyLevel": 1,
+    "profileLevel": 1,
+    "standing": 0,
+    "currencyId": "5696686a4bdc2da3298b456a",
+    "price": 67,
+    "questRequirements": ["217e6ba5ff7f1752ff218687"]
+  },
+  {
+    "type": "bottom",
+    "suiteId": "1f1876ebfb5340677874f3fb",
+    "outfitId": "ae6e0b9c53e3f8ab3543fdf0",
+    "bottomId": "a25bccef14069956c00d6974",
+    "locales": {
+      "en": {
+        "name": "FSO Fixer Suit Pants",
+        "description": "FSO: Section 1"
+      }
+    },
+    "bottomBundlePath": "Pants/artem_pants_8.bundle",
+    "traderId": "6a1ac8598933e3f023895bd3",
+    "loyaltyLevel": 1,
+    "profileLevel": 1,
+    "standing": 0,
+    "currencyId": "5696686a4bdc2da3298b456a",
+    "price": 67,
+    "questRequirements": ["217e6ba5ff7f1752ff218687"]
+  }
+]

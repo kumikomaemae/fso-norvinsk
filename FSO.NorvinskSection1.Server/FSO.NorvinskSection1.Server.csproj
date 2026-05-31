@@ -18,12 +18,16 @@
     <SPTServerPath>C:\Games\SPT\SPT</SPTServerPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="FSOGameStartHook.cs" />
+  </ItemGroup>
+
   <!-- SPT core libraries via NuGet. -->
   <ItemGroup>
     <PackageReference Include="SPTarkov.Server.Core" Version="4.0.13" />
     <PackageReference Include="SPTarkov.Common" Version="4.0.13" />
     <PackageReference Include="SPTarkov.DI" Version="4.0.13" />
-  </ItemGroup>
+    </ItemGroup>
 
   <!-- MoreBotsServer — file reference (not on NuGet). -->
   <ItemGroup>
@@ -31,6 +35,19 @@
       <HintPath>$(SPTServerPath)\user\mods\MoreBotsServer\MoreBotsServer.dll</HintPath>
       <Private>false</Private>
     </Reference>
+  </ItemGroup>
+
+  <!-- Vagabond — file reference. -->
+  <ItemGroup>
+  <Reference Include="Vagabond.Common">
+      <HintPath>$(SPTServerPath)\user\mods\Vagabond\Vagabond.Common.dll</HintPath>
+      <Private>false</Private>
+  </Reference>
+  </ItemGroup>
+
+<!-- WTT-CommonLib — NuGet PackageReference. -->
+  <ItemGroup>
+    <PackageReference Include="WTT-ServerCommonLib" Version="2.0.20" />
   </ItemGroup>
 
   <!-- 
@@ -43,13 +60,13 @@
     </PropertyGroup>
     <ItemGroup>
       <_DbFiles Include="$(ProjectDir)db\**\*" />
+      <_BundleFiles Include="$(ProjectDir)bundles\**\*" />
     </ItemGroup>
     <MakeDir Directories="$(DeployDir)" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DeployDir)" />
-    <Copy SourceFiles="@(_DbFiles)" 
-          DestinationFolder="$(DeployDir)\db\%(RecursiveDir)" 
-          SkipUnchangedFiles="true" />
-    <Message Text="--- Deployed $(AssemblyName).dll + db/ to $(DeployDir) ---" Importance="high" />
+    <Copy SourceFiles="@(_DbFiles)" DestinationFolder="$(DeployDir)\db\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="@(_BundleFiles)" DestinationFolder="$(DeployDir)\bundles\%(RecursiveDir)" SkipUnchangedFiles="true" />
+    <Message Text="--- Deployed $(AssemblyName).dll + db/ + bundles/ to $(DeployDir) ---" Importance="high" />
   </Target>
 
 </Project>

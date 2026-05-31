@@ -23,5 +23,5 @@ desktop.ini
 
 # === Optional: scratchpad / experiments ===
 # Anything you want to keep around locally but not in git history
-scratch/
-*.tmp
+scratch/*.tmp
+FSO.NorvinskSection1.Server/FSOGameStartHook.cs

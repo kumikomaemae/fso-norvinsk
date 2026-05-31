@@ -42,13 +42,13 @@
     "currency": "USD",
     "nextResupply": 1631489044,
     "repair": {
-        "availability": false,
-        "currency": "5449016a4bdc2d6f028b456f",
-        "currency_coefficient": 1,
-        "excluded_category": [],
-        "excluded_id_list": [],
-        "price_rate": 0,
-        "quality": "0.7"
+    "availability": true,
+    "currency": "5449016a4bdc2d6f028b456f",
+    "currency_coefficient": 1,
+    "excluded_category": [],
+    "excluded_id_list": [],
+    "price_rate": 0,
+    "quality": "0.0"
     },
     "insurance": {
         "availability": false

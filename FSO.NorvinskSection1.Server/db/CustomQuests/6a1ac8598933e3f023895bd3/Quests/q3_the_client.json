@@ -1,0 +1,146 @@
+{
+  "5811f04bdf941e9f4b01dcaf": {
+    "_id": "5811f04bdf941e9f4b01dcaf",
+    "QuestName": "Section 1: The Client",
+    "name": "5811f04bdf941e9f4b01dcaf name",
+    "description": "5811f04bdf941e9f4b01dcaf description",
+    "note": "",
+    "startedMessageText": "5811f04bdf941e9f4b01dcaf startedMessageText",
+    "successMessageText": "5811f04bdf941e9f4b01dcaf successMessageText",
+    "failMessageText": "5811f04bdf941e9f4b01dcaf failMessageText",
+    "acceptPlayerMessage": "5811f04bdf941e9f4b01dcaf acceptPlayerMessage",
+    "declinePlayerMessage": "5811f04bdf941e9f4b01dcaf declinePlayerMessage",
+    "completePlayerMessage": "5811f04bdf941e9f4b01dcaf completePlayerMessage",
+    "changeQuestMessageText": "5811f04bdf941e9f4b01dcaf changeQuestMessageText",
+    "trader": "6a1ac8598933e3f023895bd3",
+    "traderId": "6a1ac8598933e3f023895bd3",
+    "location": "any",
+    "image": "/files/quest/icon/FSO_1thumbnail",
+    "type": "PickUp",
+    "QuestType": "PickUp",
+    "isKey": false,
+    "restartable": false,
+    "instantComplete": false,
+    "secretQuest": false,
+    "canShowNotificationsInGame": true,
+    "side": "Pmc",
+    "acceptanceAndFinishingSource": "eft",
+    "progressSource": "eft",
+    "gameModes": [],
+    "arenaLocations": [],
+    "rankingModes": [],
+    "status": 0,
+    "conditions": {
+      "AvailableForStart": [
+        {
+          "conditionType": "Quest",
+          "id": "bd4acb7e9e7fff722b8f87d4",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "target": "b114f93d063681aba12ebd4e",
+          "status": [
+            4
+          ],
+          "availableAfter": 0,
+          "dispersion": 0,
+          "globalQuestCounterId": "",
+          "visibilityConditions": []
+        }
+      ],
+      "AvailableForFinish": [
+        {
+          "conditionType": "HandoverItem",
+          "id": "b51a0af7158318002eef9355",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "target": [
+            "6389c8c5dbfd5e4b95197e6b"
+          ],
+          "value": 1,
+          "onlyFoundInRaid": true,
+          "isEncoded": false,
+          "dogtagLevel": 0,
+          "maxDurability": 100,
+          "minDurability": 0,
+          "globalQuestCounterId": "",
+          "visibilityConditions": []
+        }
+      ],
+      "Fail": []
+    },
+    "rewards": {
+      "Started": [],
+      "Success": [
+        {
+          "id": "q3_rew_0",
+          "index": 0,
+          "type": "Experience",
+          "value": 55000
+        },
+        {
+          "id": "q3_rew_1",
+          "index": 1,
+          "type": "TraderStanding",
+          "target": "6a1ac8598933e3f023895bd3",
+          "value": 0.12
+        },
+        {
+          "id": "cd407c7d7d82a59f39882216",
+          "index": 2,
+          "type": "Item",
+          "target": "76a427aae02d2c6d3f4d4689",
+          "value": 95000,
+          "unknown": false,
+          "findInRaid": false,
+          "items": [
+            {
+              "_id": "76a427aae02d2c6d3f4d4689",
+              "_tpl": "5696686a4bdc2da3298b456a",
+              "upd": {
+                "StackObjectsCount": 95000
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3_rew_3",
+          "index": 3,
+          "type": "Skill",
+          "target": "Charisma",
+          "value": 300
+        },
+        {
+          "id": "q3_rew_4",
+          "index": 4,
+          "type": "Skill",
+          "target": "UsecNegotiations",
+          "value": 300
+        },
+        {
+          "id": "q3_rew_5",
+          "index": 5,
+          "type": "Skill",
+          "target": "Perception",
+          "value": 300
+        },
+        {
+          "id": "q3_rew_6",
+          "index": 6,
+          "type": "Skill",
+          "target": "Intellect",
+          "value": 300
+        },
+        {
+          "id": "q3_rew_7",
+          "index": 7,
+          "type": "Skill",
+          "target": "AttentionSearch",
+          "value": 300
+        }
+      ],
+      "Fail": []
+    }
+  }
+}

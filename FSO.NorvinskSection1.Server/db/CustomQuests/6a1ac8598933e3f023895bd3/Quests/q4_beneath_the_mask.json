@@ -1,0 +1,204 @@
+{
+  "c6adfbbc9ed34ef836d81ee1": {
+    "_id": "c6adfbbc9ed34ef836d81ee1",
+    "QuestName": "Section 1: Beneath The Mask",
+    "name": "c6adfbbc9ed34ef836d81ee1 name",
+    "description": "c6adfbbc9ed34ef836d81ee1 description",
+    "note": "",
+    "startedMessageText": "c6adfbbc9ed34ef836d81ee1 startedMessageText",
+    "successMessageText": "c6adfbbc9ed34ef836d81ee1 successMessageText",
+    "failMessageText": "c6adfbbc9ed34ef836d81ee1 failMessageText",
+    "acceptPlayerMessage": "c6adfbbc9ed34ef836d81ee1 acceptPlayerMessage",
+    "declinePlayerMessage": "c6adfbbc9ed34ef836d81ee1 declinePlayerMessage",
+    "completePlayerMessage": "c6adfbbc9ed34ef836d81ee1 completePlayerMessage",
+    "changeQuestMessageText": "c6adfbbc9ed34ef836d81ee1 changeQuestMessageText",
+    "trader": "6a1ac8598933e3f023895bd3",
+    "traderId": "6a1ac8598933e3f023895bd3",
+    "location": "any",
+    "image": "/files/quest/icon/FSO_1thumbnail",
+    "type": "Elimination",
+    "QuestType": "Elimination",
+    "isKey": false,
+    "restartable": false,
+    "instantComplete": false,
+    "secretQuest": false,
+    "canShowNotificationsInGame": true,
+    "side": "Pmc",
+    "acceptanceAndFinishingSource": "eft",
+    "progressSource": "eft",
+    "gameModes": [],
+    "arenaLocations": [],
+    "rankingModes": [],
+    "status": 0,
+    "conditions": {
+      "AvailableForStart": [
+        {
+          "conditionType": "Quest",
+          "id": "d690f26ef5bc1f00d81777ff",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "target": "5811f04bdf941e9f4b01dcaf",
+          "status": [
+            4
+          ],
+          "availableAfter": 0,
+          "dispersion": 0,
+          "globalQuestCounterId": "",
+          "visibilityConditions": []
+        }
+      ],
+      "AvailableForFinish": [
+        {
+          "conditionType": "CounterCreator",
+          "id": "15724778f37b48857d7917f1",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "value": 5,
+          "type": "Elimination",
+          "oneSessionOnly": false,
+          "doNotResetIfCounterCompleted": false,
+          "isResetOnConditionFailed": false,
+          "isNecessary": true,
+          "globalQuestCounterId": "",
+          "counter": {
+            "id": "062b00cfe346b5b311724d3d",
+            "conditions": [
+              {
+                "conditionType": "Kills",
+                "id": "bdkill_q4_inner",
+                "target": "Savage",
+                "savageRole": [
+                  "blackDivLead",
+                  "blackDivAssault",
+                  "blackDivBreacher",
+                  "blackDivSupport"
+                ],
+                "value": 1,
+                "compareMethod": ">=",
+                "dynamicLocale": false,
+                "resetOnSessionEnd": false,
+                "bodyPart": [],
+                "daytime": {
+                  "from": 0,
+                  "to": 0
+                },
+                "distance": {
+                  "compareMethod": ">=",
+                  "value": 0
+                },
+                "enemyEquipmentExclusive": [],
+                "enemyEquipmentInclusive": [],
+                "enemyHealthEffects": [],
+                "weapon": [],
+                "weaponCaliber": [],
+                "weaponModsExclusive": [],
+                "weaponModsInclusive": []
+              }
+            ]
+          },
+          "visibilityConditions": []
+        }
+      ],
+      "Fail": []
+    },
+    "rewards": {
+      "Started": [],
+      "Success": [
+        {
+          "id": "q4_rew_0",
+          "index": 0,
+          "type": "Experience",
+          "value": 95000
+        },
+        {
+          "id": "q4_rew_1",
+          "index": 1,
+          "type": "TraderStanding",
+          "target": "6a1ac8598933e3f023895bd3",
+          "value": 0.13
+        },
+        {
+          "id": "a9cef6ce0cc5511f399f34e0",
+          "index": 2,
+          "type": "Item",
+          "target": "16960aabafe610f0526fde1d",
+          "value": 160000,
+          "unknown": false,
+          "findInRaid": false,
+          "items": [
+            {
+              "_id": "16960aabafe610f0526fde1d",
+              "_tpl": "5696686a4bdc2da3298b456a",
+              "upd": {
+                "StackObjectsCount": 160000
+              }
+            }
+          ]
+        },
+        {
+          "id": "92ba1c1e2cdb3bbc46635c28",
+          "index": 3,
+          "type": "Item",
+          "target": "733c965cb27f6d38eebeef3e",
+          "value": 1,
+          "unknown": false,
+          "findInRaid": false,
+          "items": [
+            {
+              "_id": "733c965cb27f6d38eebeef3e",
+              "_tpl": "5c94bbff86f7747ee735c08f",
+              "upd": {
+                "StackObjectsCount": 1
+              }
+            }
+          ]
+        },
+        {
+          "id": "q4_rew_4",
+          "index": 4,
+          "type": "Skill",
+          "target": "AimDrills",
+          "value": 500
+        },
+        {
+          "id": "q4_rew_5",
+          "index": 5,
+          "type": "Skill",
+          "target": "MagDrills",
+          "value": 500
+        },
+        {
+          "id": "q4_rew_6",
+          "index": 6,
+          "type": "Skill",
+          "target": "Perception",
+          "value": 500
+        },
+        {
+          "id": "q4_rew_7",
+          "index": 7,
+          "type": "Skill",
+          "target": "HeavyVests",
+          "value": 500
+        },
+        {
+          "id": "q4_rew_8",
+          "index": 8,
+          "type": "Skill",
+          "target": "Charisma",
+          "value": 500
+        },
+        {
+          "id": "q4_rew_9",
+          "index": 9,
+          "type": "Skill",
+          "target": "Endurance",
+          "value": 500
+        }
+      ],
+      "Fail": []
+    }
+  }
+}

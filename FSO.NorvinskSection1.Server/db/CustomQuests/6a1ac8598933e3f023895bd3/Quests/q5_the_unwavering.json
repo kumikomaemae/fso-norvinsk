@@ -1,0 +1,234 @@
+{
+  "1e2d4fbd357f2d0554ea6208": {
+    "_id": "1e2d4fbd357f2d0554ea6208",
+    "QuestName": "Section 1: The Unwavering",
+    "name": "1e2d4fbd357f2d0554ea6208 name",
+    "description": "1e2d4fbd357f2d0554ea6208 description",
+    "note": "",
+    "startedMessageText": "1e2d4fbd357f2d0554ea6208 startedMessageText",
+    "successMessageText": "1e2d4fbd357f2d0554ea6208 successMessageText",
+    "failMessageText": "1e2d4fbd357f2d0554ea6208 failMessageText",
+    "acceptPlayerMessage": "1e2d4fbd357f2d0554ea6208 acceptPlayerMessage",
+    "declinePlayerMessage": "1e2d4fbd357f2d0554ea6208 declinePlayerMessage",
+    "completePlayerMessage": "1e2d4fbd357f2d0554ea6208 completePlayerMessage",
+    "changeQuestMessageText": "1e2d4fbd357f2d0554ea6208 changeQuestMessageText",
+    "trader": "6a1ac8598933e3f023895bd3",
+    "traderId": "6a1ac8598933e3f023895bd3",
+    "location": "laboratory",
+    "image": "/files/quest/icon/FSO_1thumbnail",
+    "type": "Elimination",
+    "QuestType": "Elimination",
+    "isKey": false,
+    "restartable": false,
+    "instantComplete": false,
+    "secretQuest": false,
+    "canShowNotificationsInGame": true,
+    "side": "Pmc",
+    "acceptanceAndFinishingSource": "eft",
+    "progressSource": "eft",
+    "gameModes": [],
+    "arenaLocations": [],
+    "rankingModes": [],
+    "status": 0,
+    "conditions": {
+      "AvailableForStart": [
+        {
+          "conditionType": "Quest",
+          "id": "f0c0ab5b8cbc3c57bfe22849",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "target": "c6adfbbc9ed34ef836d81ee1",
+          "status": [
+            4
+          ],
+          "availableAfter": 0,
+          "dispersion": 0,
+          "globalQuestCounterId": "",
+          "visibilityConditions": []
+        }
+      ],
+      "AvailableForFinish": [
+        {
+          "conditionType": "CounterCreator",
+          "id": "dd1a9c4f55d01a2506713ee6",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "value": 15,
+          "type": "Elimination",
+          "oneSessionOnly": false,
+          "doNotResetIfCounterCompleted": false,
+          "isResetOnConditionFailed": false,
+          "isNecessary": true,
+          "globalQuestCounterId": "",
+          "counter": {
+            "id": "2f24570e1690dc2e00564552",
+            "conditions": [
+              {
+                "conditionType": "Kills",
+                "id": "raiderkill_q5_inner",
+                "target": "Savage",
+                "savageRole": [
+                  "pmcBot"
+                ],
+                "value": 1,
+                "compareMethod": ">=",
+                "dynamicLocale": false,
+                "resetOnSessionEnd": false,
+                "bodyPart": [],
+                "daytime": {
+                  "from": 0,
+                  "to": 0
+                },
+                "distance": {
+                  "compareMethod": ">=",
+                  "value": 0
+                },
+                "enemyEquipmentExclusive": [],
+                "enemyEquipmentInclusive": [],
+                "enemyHealthEffects": [],
+                "weapon": [],
+                "weaponCaliber": [],
+                "weaponModsExclusive": [],
+                "weaponModsInclusive": []
+              }
+            ]
+          },
+          "visibilityConditions": []
+        },
+        {
+          "conditionType": "CounterCreator",
+          "id": "a30a95735582a2230f766c72",
+          "index": 1,
+          "parentId": "",
+          "dynamicLocale": false,
+          "value": 5,
+          "type": "Elimination",
+          "oneSessionOnly": false,
+          "doNotResetIfCounterCompleted": false,
+          "isResetOnConditionFailed": false,
+          "isNecessary": true,
+          "globalQuestCounterId": "",
+          "counter": {
+            "id": "f28e51cfa31b488e975c4dbd",
+            "conditions": [
+              {
+                "conditionType": "Kills",
+                "id": "bdkill_q5_inner",
+                "target": "Savage",
+                "savageRole": [
+                  "blackDivLead",
+                  "blackDivAssault",
+                  "blackDivBreacher",
+                  "blackDivSupport"
+                ],
+                "value": 1,
+                "compareMethod": ">=",
+                "dynamicLocale": false,
+                "resetOnSessionEnd": false,
+                "bodyPart": [],
+                "daytime": {
+                  "from": 0,
+                  "to": 0
+                },
+                "distance": {
+                  "compareMethod": ">=",
+                  "value": 0
+                },
+                "enemyEquipmentExclusive": [],
+                "enemyEquipmentInclusive": [],
+                "enemyHealthEffects": [],
+                "weapon": [],
+                "weaponCaliber": [],
+                "weaponModsExclusive": [],
+                "weaponModsInclusive": []
+              }
+            ]
+          },
+          "visibilityConditions": []
+        }
+      ],
+      "Fail": []
+    },
+    "rewards": {
+      "Started": [],
+      "Success": [
+        {
+          "id": "q5_rew_0",
+          "index": 0,
+          "type": "Experience",
+          "value": 180000
+        },
+        {
+          "id": "q5_rew_1",
+          "index": 1,
+          "type": "TraderStanding",
+          "target": "6a1ac8598933e3f023895bd3",
+          "value": 0.2
+        },
+        {
+          "id": "466262a7b9d8f0e1f361c12d",
+          "index": 2,
+          "type": "Item",
+          "target": "0f58a361f4ef41634294ef80",
+          "value": 320000,
+          "unknown": false,
+          "findInRaid": false,
+          "items": [
+            {
+              "_id": "0f58a361f4ef41634294ef80",
+              "_tpl": "5696686a4bdc2da3298b456a",
+              "upd": {
+                "StackObjectsCount": 320000
+              }
+            }
+          ]
+        },
+        {
+          "id": "q5_rew_3",
+          "index": 3,
+          "type": "Skill",
+          "target": "ShadowConnections",
+          "value": 1000
+        },
+        {
+          "id": "q5_rew_4",
+          "index": 4,
+          "type": "Skill",
+          "target": "UsecNegotiations",
+          "value": 1000
+        },
+        {
+          "id": "q5_rew_5",
+          "index": 5,
+          "type": "Skill",
+          "target": "Charisma",
+          "value": 1000
+        },
+        {
+          "id": "q5_rew_6",
+          "index": 6,
+          "type": "Skill",
+          "target": "HeavyVests",
+          "value": 1000
+        },
+        {
+          "id": "q5_rew_7",
+          "index": 7,
+          "type": "Skill",
+          "target": "AimDrills",
+          "value": 1000
+        },
+        {
+          "id": "q5_rew_8",
+          "index": 8,
+          "type": "Skill",
+          "target": "MagDrills",
+          "value": 1000
+        }
+      ],
+      "Fail": []
+    }
+  }
+}

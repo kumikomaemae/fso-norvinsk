@@ -1,0 +1,113 @@
+{
+  "217e6ba5ff7f1752ff218687": {
+    "_id": "217e6ba5ff7f1752ff218687",
+    "name": "217e6ba5ff7f1752ff218687 name",
+    "description": "217e6ba5ff7f1752ff218687 description",
+    "startedMessageText": "217e6ba5ff7f1752ff218687 startedMessageText",
+    "successMessageText": "217e6ba5ff7f1752ff218687 successMessageText",
+    "failMessageText": "217e6ba5ff7f1752ff218687 failMessageText",
+    "acceptPlayerMessage": "217e6ba5ff7f1752ff218687 acceptPlayerMessage",
+    "declinePlayerMessage": "217e6ba5ff7f1752ff218687 declinePlayerMessage",
+    "completePlayerMessage": "217e6ba5ff7f1752ff218687 completePlayerMessage",
+    "QuestName": "Welcome To Section 1",
+    "trader": "6a1ac8598933e3f023895bd3",
+    "traderId": "6a1ac8598933e3f023895bd3",
+    "location": "any",
+    "image": "/files/quest/icon/FSO_1thumbnail",
+    "type": "PickUp",
+    "isKey": false,
+    "restartable": false,
+    "instantComplete": false,
+    "secretQuest": false,
+    "canShowNotificationsInGame": true,
+    "side": "Pmc",
+    "QuestType": "PickUp",
+    "conditions": {
+      "AvailableForStart": [
+        {
+          "conditionType": "Level",
+          "id": "1d0148a599fa84ce1bed5765",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "compareMethod": ">=",
+          "value": 1,
+          "globalQuestCounterId": ""
+        }
+      ],
+      "AvailableForFinish": [
+        {
+          "conditionType": "HandoverItem",
+          "id": "16491cf28bbe9d2da977d3e7",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "target": ["62a0a16d0b9d3c46de5b6e97"],
+          "value": "2",
+          "onlyFoundInRaid": true,
+          "dogtagLevel": 0,
+          "maxDurability": 100,
+          "minDurability": 0,
+          "visibilityConditions": []
+        }
+      ],
+      "Fail": []
+    },
+    "rewards": {
+      "Started": [],
+      "Success": [
+        {
+          "id": "b91f7da0fcd047a7d57cbedc",
+          "index": 0,
+          "type": "Experience",
+          "value": "18000",
+          "target": ""
+        },
+        {
+          "id": "8a7cd0dd52e244250e04066e",
+          "index": 1,
+          "type": "TraderStanding",
+          "target": "6a1ac8598933e3f023895bd3",
+          "value": "0.12"
+        },
+        {
+          "id": "994bfcbad928485d22917708",
+          "index": 2,
+          "type": "TraderStanding",
+          "target": "66bf757f27d0b097db0acea5",
+          "value": "0.25"
+        },
+        {
+          "id": "5e6670ceff9d035ebe2af7a9",
+          "index": 3,
+          "type": "Skill",
+          "target": "Charisma",
+          "value": "300"
+        },
+        {
+          "id": "b28387da127abc6ad56de616",
+          "index": 4,
+          "type": "Skill",
+          "target": "UsecNegotiations",
+          "value": "300"
+        },
+        {
+          "id": "5136cc8fd98db237b2421c8d",
+          "index": 5,
+          "type": "Item",
+          "target": "a1d9f1e2c3b4a5968778695a",
+          "value": "25000",
+          "findInRaid": false,
+          "items": [
+            {
+              "_id": "a1d9f1e2c3b4a5968778695a",
+              "_tpl": "5696686a4bdc2da3298b456a",
+              "upd": { "StackObjectsCount": 25000 }
+            }
+          ]
+        }
+      ],
+      "Fail": []
+    }
+  }
+}

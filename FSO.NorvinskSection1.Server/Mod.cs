@@ -27,9 +27,9 @@ public record ModMetadata : AbstractModMetadata
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
     public override List<string>? Incompatibilities { get; init; }
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
-{
-    { "com.morebotsapi.tacticaltoaster", new SemanticVersioning.Range(">=1.0.0") }
-};
+    {
+        { "com.morebotsapi.tacticaltoaster", new SemanticVersioning.Range(">=1.0.0") }
+    };
     public override string? Url { get; init; } = "";
     public override bool? IsBundleMod { get; init; }
     public override string License { get; init; } = "MIT";
@@ -40,9 +40,10 @@ public record ModMetadata : AbstractModMetadata
 ///
 /// Phase 2h: registers FSO faction relationships.
 /// Phase 3: registers FSO spawn rules across 5 maps with 9 squad composition templates.
+/// Phase 4 (Q5 finale): adds Labs spawns — Inner Circle (and forced Black Division) for the all-out-war finale.
 ///
 /// FSO is allied to player PMCs (USEC + Bear) and Rogues (anti-BD alignment).
-/// FSO is hostile to Scavs, Scav-faction bosses, and Cultists (active threats to civilians).
+/// FSO is hostile to Scavs, Scav-faction bosses, Cultists, Black Division, and RUAF (+ Remnant).
 /// FSO has NO relationship to Goons (mutual ignore — bigger fish to fry).
 /// FSO has NO warn behavior — they're professionals on the clock, they don't posture.
 /// </summary>
@@ -60,8 +61,10 @@ public class Mod(
     public const string ModName = "FSO: Norvinsk Section 1";
     public const string ModVersion = "0.4.0";
     public const string FactionName = "fso";
+
     // config objects can't be constructor-injected on 4.0.13 — pull from ConfigServer
     private readonly LocationConfig _locationConfig = configServer.GetConfig<LocationConfig>();
+
     private static readonly List<WildSpawnType> FsoBotTypes = new()
     {
         (WildSpawnType)708300, // fsofixerrookie
@@ -70,19 +73,24 @@ public class Mod(
         (WildSpawnType)708303, // fsofixerlead
         (WildSpawnType)708304, // fsofixerinnercircle
     };
+
     // --- Spawn tuning (FPS / density control) ---
     // Per-squad spawn chance (0-100). Lower = fewer FSO squads per raid = better FPS + more variety.
     // ~40 -> Customs(4 squads) averages ~9 Fixers; Streets(9) ~18; Lighthouse(2) ~5.
     public const int FsoSpawnChance = 40;
-    // true  = FSO spawn ON TOP OF the normal bot cap (reliable presence, additive load).
+
+    // true = FSO spawn ON TOP OF the normal bot cap (reliable presence, additive load).
     // false = FSO respect the map's bot cap (hard ceiling on total bots / best FPS, but FSO may not always appear).
     public const bool FsoIgnoreMaxBots = true;
-    
+
     private const string BotRookie = "fsofixerrookie";
     private const string BotOperative = "fsofixeroperative";
     private const string BotSpecialist = "fsofixerspecialist";
     private const string BotLead = "fsofixerlead";
     private const string BotInnerCircle = "fsofixerinnercircle";
+
+    // Black Division trooper role (confirmed from BlackDivServer) — used for the Q5 forced Labs spawns.
+    private const string BotBlackDivAssault = "blackDivAssault";
 
     private const string MapStreets = "tarkovstreets";
     private const string MapSandbox = "sandbox";
@@ -90,48 +98,49 @@ public class Mod(
     private const string MapCustoms = "bigmap";
     private const string MapShoreline = "shoreline";
     private const string MapLighthouse = "lighthouse";
+    private const string MapLaboratory = "laboratory"; // Q5 finale
 
     public async Task OnLoad()
-{
-    logger.Info($"[{ModName}] v{ModVersion} loading...");
-    var asm = Assembly.GetExecutingAssembly();
-
-    // Map custom WildSpawnType int values to role names so faction
-    // relationship lookups can resolve our custom bots.
-    customBotTypeService.AddCustomWildSpawnTypeNames(new Dictionary<int, string>
     {
-        { 708300, BotRookie },
-        { 708301, BotOperative },
-        { 708302, BotSpecialist },
-        { 708303, BotLead },
-        { 708304, BotInnerCircle },
-    });
+        logger.Info($"[{ModName}] v{ModVersion} loading...");
+        var asm = Assembly.GetExecutingAssembly();
 
-    // --- Bot registration (replaces moreBotsApi.LoadBots) ---
-    // 1. Register the 5 custom bot types from db/bots/types/*.json
-    await customBotTypeService.CreateCustomBotTypes(asm);
-    // 2. Register per-tier configs from db/bots/config/*.jsonc, keyed by
-    //    filename. THIS is what LoadBots was failing to do correctly.
-    await customBotConfigService.LoadCustomBotConfigs(asm);
-    // 3. Apply custom loadouts from db/bots/loadouts/*.json.
-    //    No-op until loadout files exist, so safe to call now.
-    await loadoutService.LoadLoadouts(asm);
+        // Map custom WildSpawnType int values to role names so faction
+        // relationship lookups can resolve our custom bots.
+        customBotTypeService.AddCustomWildSpawnTypeNames(new Dictionary<int, string>
+        {
+            { 708300, BotRookie },
+            { 708301, BotOperative },
+            { 708302, BotSpecialist },
+            { 708303, BotLead },
+            { 708304, BotInnerCircle },
+        });
 
-    // --- Faction setup ---
-    RegisterFsoFaction();
-    WireFactionRelationships();
+        // --- Bot registration (replaces moreBotsApi.LoadBots) ---
+        // 1. Register the 5 custom bot types from db/bots/types/*.json
+        await customBotTypeService.CreateCustomBotTypes(asm);
+        // 2. Register per-tier configs from db/bots/config/*.jsonc, keyed by
+        // filename. THIS is what LoadBots was failing to do correctly.
+        await customBotConfigService.LoadCustomBotConfigs(asm);
+        // 3. Apply custom loadouts from db/bots/loadouts/*.json.
+        // No-op until loadout files exist, so safe to call now.
+        await loadoutService.LoadLoadouts(asm);
 
-    // --- Spawn rules ---
-    EnsureSpawnKeysExist();
-    WireSpawnRules();
-    waveService.ApplyWaveChangesToAllMaps();
+        // --- Faction setup ---
+        RegisterFsoFaction();
+        WireFactionRelationships();
 
-    logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
-    logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
-    logger.Info($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.");
-    logger.Info($"[{ModName}] Faction relationships wired: friendly with usec/bear/rogues, hostile to scavs/scavbosses/sectants.");
-    logger.Info($"[{ModName}] Spawn rules wired across 5 maps with 9 squad composition templates.");
-}
+        // --- Spawn rules ---
+        EnsureSpawnKeysExist();
+        WireSpawnRules();
+        waveService.ApplyWaveChangesToAllMaps();
+
+        logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
+        logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
+        logger.Info($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.");
+        logger.Info($"[{ModName}] Faction relationships wired: friendly with usec/bear/rogues, hostile to scavs/scavbosses/sectants/blackdiv/ruaf/remnant.");
+        logger.Info($"[{ModName}] Spawn rules wired across 6 maps with 9 squad composition templates (+ Labs finale).");
+    }
 
     private void RegisterFsoFaction()
     {
@@ -141,6 +150,7 @@ public class Mod(
 
     private void WireFactionRelationships()
     {
+        // --- Allies ---
         factionService.AddFriendlyByFaction(FactionName, "usec");
         factionService.AddFriendlyByFaction(FactionName, "bear");
         factionService.AddFriendlyByFaction("usec", FactionName);
@@ -149,6 +159,7 @@ public class Mod(
         factionService.AddFriendlyByFaction(FactionName, "rogues");
         factionService.AddFriendlyByFaction("rogues", FactionName);
 
+        // --- Hostiles: Scavs + Scav bosses + Cultists ---
         factionService.AddEnemyByFaction(FactionName, "scavs");
         factionService.AddEnemyByFaction(FactionName, "scavbosses");
         factionService.AddEnemyByFaction("scavs", FactionName);
@@ -156,9 +167,19 @@ public class Mod(
 
         factionService.AddEnemyByFaction(FactionName, "sectants");
         factionService.AddEnemyByFaction("sectants", FactionName);
+
+        // --- Black Division (TerraGroup's cleanup crew — the Q4/Q5 enemy) ---
+        factionService.AddEnemyByFaction(FactionName, "blackdiv");
+        factionService.AddEnemyByFaction("blackdiv", FactionName);
+
+        // --- RUAF + its Remnant subfaction ---
+        factionService.AddEnemyByFaction(FactionName, "ruaf");
+        factionService.AddEnemyByFaction("ruaf", FactionName);
+        factionService.AddEnemyByFaction(FactionName, "remnant");
+        factionService.AddEnemyByFaction("remnant", FactionName);
     }
 
-     private void EnsureSpawnKeysExist()
+    private void EnsureSpawnKeysExist()
     {
         _locationConfig.CustomWaves ??= new CustomWaves();
         var bossWaves = _locationConfig.CustomWaves.Boss;
@@ -171,6 +192,7 @@ public class Mod(
             MapCustoms,
             MapShoreline,
             MapLighthouse,
+            MapLaboratory,
         };
 
         foreach (var map in fsoMaps)
@@ -189,6 +211,7 @@ public class Mod(
         AddCustomsSpawns();
         AddShorelineSpawns();
         AddLighthouseSpawns();
+        AddLabsSpawns();
     }
 
     private void AddStreetsSpawns()
@@ -283,6 +306,39 @@ public class Mod(
         logger.Success($"[{ModName}] Lighthouse: registered {spawns.Length} spawn rules.");
     }
 
+    // ============================================================
+    // Q5 FINALE — ALL-OUT WAR on Labs.
+    // FSO Inner Circle (the murder task force) at 100%, in force.
+    // PLUS forced Black Division at 100% (so we don't need to touch BD's own config + relaunch,
+    // which would break the Q5 tension/buildup).
+    // Labs zones confirmed from BlackDivServer's SpawnController.
+    // ============================================================
+    private void AddLabsSpawns()
+    {
+        var labsZones = "BotZoneFloor2,BotZoneFloor1,BotZoneBasement";
+
+        // --- FSO Inner Circle: multiple big squads, 100% ---
+        var fsoSpawns = new[]
+        {
+            BuildLabsInnerCircle(labsZones, "labs_ic_01"),
+            BuildLabsInnerCircle(labsZones, "labs_ic_02"),
+            BuildLabsInnerCircle(labsZones, "labs_ic_03"),
+        };
+        foreach (var s in fsoSpawns)
+            waveService.AddBossWaveToMap(MapLaboratory, s);
+
+        // --- Forced Black Division: the enemy they're there to murder, 100% ---
+        var bdSpawns = new[]
+        {
+            BuildLabsBlackDiv(labsZones, "labs_bd_01"),
+            BuildLabsBlackDiv(labsZones, "labs_bd_02"),
+        };
+        foreach (var s in bdSpawns)
+            waveService.AddBossWaveToMap(MapLaboratory, s);
+
+        logger.Success($"[{ModName}] Labs: registered {fsoSpawns.Length} Inner Circle + {bdSpawns.Length} Black Division spawns (Q5 ALL-OUT WAR, 100%).");
+    }
+
     private BossLocationSpawn BuildPatrolAlpha(string zone, string sptIdSuffix)
     {
         return CompositionBase(zone, sptIdSuffix, "patrol_alpha")
@@ -362,6 +418,32 @@ public class Mod(
             .WithPrimaryEscort(BotInnerCircle, "1")
             .WithSupport(BotLead, "1")
             .Build();
+    }
+
+    // FSO Inner Circle squad — BIG, 100%. Boss + 2 escort + 3 support = 6 Inner Circle per squad.
+    private BossLocationSpawn BuildLabsInnerCircle(string zone, string sptIdSuffix)
+    {
+        var spawn = CompositionBase(zone, sptIdSuffix, "labs_inner_circle")
+            .WithBoss(BotInnerCircle)
+            .WithPrimaryEscort(BotInnerCircle, "2")
+            .WithSupport(BotInnerCircle, "3")
+            .Build();
+        spawn.BossChance = 100;     // force 100% for the finale
+        spawn.IgnoreMaxBots = true; // guarantee they appear
+        return spawn;
+    }
+
+    // Forced Black Division squad on Labs — using BD's confirmed role name "blackDivAssault".
+    // Boss + 4 escort = 5 BD per squad. Two squads = ~10 BD to fight. War.
+    private BossLocationSpawn BuildLabsBlackDiv(string zone, string sptIdSuffix)
+    {
+        var spawn = CompositionBase(zone, sptIdSuffix, "labs_blackdiv")
+            .WithBoss(BotBlackDivAssault)
+            .WithPrimaryEscort(BotBlackDivAssault, "4")
+            .Build();
+        spawn.BossChance = 100;
+        spawn.IgnoreMaxBots = true;
+        return spawn;
     }
 
     private static CompositionBuilder CompositionBase(string zone, string sptIdSuffix, string compositionName)

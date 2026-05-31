@@ -13,9 +13,7 @@ namespace FSO.NorvinskSection1.Server;
 
 /// <summary>
 /// Registers the FSO Section Manager, "Mae", as a custom trader.
-/// Mirrors WTT-Artem's flow, SPT core only (WTT-CommonLib gets wired in for items + quests).
-/// Reads db/trader/base.json + db/trader/assort.json, routes her avatar from
-/// db/trader/res/<id>.jpg, registers her, wires locales, lists her on the flea.
+/// SPT core for trader registration; WTT-CommonLib loads her quests.
 /// </summary>
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
 public class FsoTrader(
@@ -24,26 +22,19 @@ public class FsoTrader(
     ImageRouter imageRouter,
     ConfigServer configServer,
     TimeUtil timeUtil,
-    FsoTraderHelper traderHelper
+    FsoTraderHelper traderHelper,
+    WTTServerCommonLib.WTTServerCommonLib wttCommon
 ) : IOnLoad
 {
-    /// <summary>Mae's trader id (MongoID). Also her res/ image filename + locale key prefix.</summary>
     public const string TraderId = "6a1ac8598933e3f023895bd3";
 
     private const string TraderFirstName = "Mae";
 
-    /// <summary>Shown on her trader card. Kept matched to base.json "description". Final wording = writing phase.</summary>
     private const string TraderDescription =
         "FSO Section Manager. Runs the Office's regional contract for the LCCB \u2014 " +
         "investigation, cleanup, and whatever the contract demands. Works by comms and " +
         "couriers; you won't find her in the field. Coffee's hot, figuratively. Don't die.";
 
-    // THE FIX: pull configs from ConfigServer — do NOT inject TraderConfig/RagfairConfig
-    // as constructor params. On SPT 4.0.13 the DI container won't resolve config objects
-    // through the ctor: it compiles, then crashes the server at boot with a
-    // Microsoft.Extensions.DependencyInjection resolution error. GetConfig<T>() is the
-    // working path. The ~4 "ConfigServer obsolete" warnings this brings back are harmless
-    // on 4.0.13 (direct injection only becomes valid in 4.1).
     private readonly TraderConfig _traderConfig = configServer.GetConfig<TraderConfig>();
     private readonly RagfairConfig _ragfairConfig = configServer.GetConfig<RagfairConfig>();
 
@@ -54,8 +45,7 @@ public class FsoTrader(
         // 1. Load Mae's trader definition.
         var traderBase = modHelper.GetJsonDataFromFile<TraderBase>(pathToMod, "db/trader/base.json")!;
 
-        // 2. Route her avatar. base.json Avatar = "/files/trader/avatar/<id>.jpg";
-        //    AddRoute strips ".jpg" and points the route at the real file on disk.
+        // 2. Route her avatar.
         var traderImagePath = System.IO.Path.Combine(pathToMod, $"db/trader/res/{TraderId}.jpg");
         imageRouter.AddRoute(traderBase.Avatar!.Replace(".jpg", ""), traderImagePath);
 
@@ -72,11 +62,21 @@ public class FsoTrader(
         traderHelper.AddTraderWithEmptyAssortToDb(traderBase);
         traderHelper.AddTraderToLocales(traderBase, TraderFirstName, TraderDescription);
 
-        // 6. Load + apply the real assort (filled in 3b — 128 items, the coffee ladder).
+        // 6. Load + apply the real assort.
         var assort = modHelper.GetJsonDataFromFile<TraderAssort>(pathToMod, "db/trader/assort.json")!;
         traderHelper.OverwriteTraderAssort(traderBase.Id, assort);
 
+        // 7. Load Mae's custom quests from db/CustomQuests/<traderId>/ via WTT-CommonLib.
+        await wttCommon.CustomQuestService.CreateCustomQuests(Assembly.GetExecutingAssembly());
+
+        // 8. Register Mae's custom clothing from db/CustomClothing/ via WTT-CommonLib.
+        //    Gives her a suits collection (stops the GetTraderSuits crash loop) and
+        //    sells the FSO Fixer Suit, unlocked by completing Quest 1.
+        await wttCommon.CustomClothingService.CreateCustomClothing(Assembly.GetExecutingAssembly());
+
+        // 9. Register custom global locales (kill-feed faction name, etc.) from db/CustomLocales/
+        await wttCommon.CustomLocaleService.CreateCustomLocales(Assembly.GetExecutingAssembly());
+
         logger.Success("[FSO] Trader 'Mae' registered \u2014 the Office is open. Coffee's hot.");
-        await Task.CompletedTask;
     }
 }

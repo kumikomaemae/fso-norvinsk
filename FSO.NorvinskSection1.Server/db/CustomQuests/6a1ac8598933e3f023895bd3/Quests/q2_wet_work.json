@@ -1,0 +1,302 @@
+{
+  "b114f93d063681aba12ebd4e": {
+    "_id": "b114f93d063681aba12ebd4e",
+    "QuestName": "Section 1: Wet Work",
+    "name": "b114f93d063681aba12ebd4e name",
+    "description": "b114f93d063681aba12ebd4e description",
+    "note": "",
+    "startedMessageText": "b114f93d063681aba12ebd4e startedMessageText",
+    "successMessageText": "b114f93d063681aba12ebd4e successMessageText",
+    "failMessageText": "b114f93d063681aba12ebd4e failMessageText",
+    "acceptPlayerMessage": "b114f93d063681aba12ebd4e acceptPlayerMessage",
+    "declinePlayerMessage": "b114f93d063681aba12ebd4e declinePlayerMessage",
+    "completePlayerMessage": "b114f93d063681aba12ebd4e completePlayerMessage",
+    "changeQuestMessageText": "b114f93d063681aba12ebd4e changeQuestMessageText",
+    "trader": "6a1ac8598933e3f023895bd3",
+    "traderId": "6a1ac8598933e3f023895bd3",
+    "location": "any",
+    "image": "/files/quest/icon/FSO_1thumbnail",
+    "type": "Elimination",
+    "QuestType": "Elimination",
+    "isKey": false,
+    "restartable": false,
+    "instantComplete": false,
+    "secretQuest": false,
+    "canShowNotificationsInGame": true,
+    "side": "Pmc",
+    "acceptanceAndFinishingSource": "eft",
+    "progressSource": "eft",
+    "gameModes": [],
+    "arenaLocations": [],
+    "rankingModes": [],
+    "status": 0,
+    "conditions": {
+      "AvailableForStart": [
+        {
+          "conditionType": "Quest",
+          "id": "feef2c1b719e12aebab7e097",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "target": "217e6ba5ff7f1752ff218687",
+          "status": [
+            4
+          ],
+          "availableAfter": 0,
+          "dispersion": 0,
+          "globalQuestCounterId": "",
+          "visibilityConditions": []
+        }
+      ],
+      "AvailableForFinish": [
+        {
+          "conditionType": "CounterCreator",
+          "id": "2df0de2cbac238fd066d617d",
+          "index": 0,
+          "parentId": "",
+          "dynamicLocale": false,
+          "value": 4,
+          "type": "Elimination",
+          "oneSessionOnly": false,
+          "doNotResetIfCounterCompleted": false,
+          "isResetOnConditionFailed": false,
+          "isNecessary": true,
+          "globalQuestCounterId": "",
+          "counter": {
+            "id": "9bcffa73e62b1c0a186d05fb",
+            "conditions": [
+              {
+                "conditionType": "Kills",
+                "id": "74b78b4dbb9c446af26f0fff",
+                "target": "Savage",
+                "savageRole": [
+                  "bossBully",
+                  "bossGluhar",
+                  "bossKilla",
+                  "bossKillaAgro",
+                  "bossKojaniy",
+                  "bossSanitar",
+                  "bossTagilla",
+                  "bossTagillaAgro",
+                  "bossBoar",
+                  "bossBoarSniper",
+                  "bossKolontay",
+                  "bossZryachiy",
+                  "bossPartisan"
+                ],
+                "value": 1,
+                "compareMethod": ">=",
+                "dynamicLocale": false,
+                "resetOnSessionEnd": false,
+                "bodyPart": [],
+                "daytime": {
+                  "from": 0,
+                  "to": 0
+                },
+                "distance": {
+                  "compareMethod": ">=",
+                  "value": 0
+                },
+                "enemyEquipmentExclusive": [],
+                "enemyEquipmentInclusive": [],
+                "enemyHealthEffects": [],
+                "weapon": [],
+                "weaponCaliber": [],
+                "weaponModsExclusive": [],
+                "weaponModsInclusive": []
+              }
+            ]
+          },
+          "visibilityConditions": []
+        },
+        {
+          "conditionType": "CounterCreator",
+          "id": "e2a071ebe30a57be43d6848f",
+          "index": 1,
+          "parentId": "",
+          "dynamicLocale": false,
+          "value": 8,
+          "type": "Elimination",
+          "oneSessionOnly": false,
+          "doNotResetIfCounterCompleted": false,
+          "isResetOnConditionFailed": false,
+          "isNecessary": false,
+          "globalQuestCounterId": "",
+          "counter": {
+            "id": "c449893d81929b751d4a1225",
+            "conditions": [
+              {
+                "conditionType": "Kills",
+                "id": "9cc88dc028d0c9e9299afebd",
+                "target": "Savage",
+                "savageRole": [
+                  "followerBully",
+                  "followerGluharAssault",
+                  "followerGluharScout",
+                  "followerGluharSecurity",
+                  "followerGluharSnipe",
+                  "followerKojaniy",
+                  "followerSanitar",
+                  "followerTagilla",
+                  "followerBoar",
+                  "followerBoarClose1",
+                  "followerBoarClose2",
+                  "followerKolontayAssault",
+                  "followerKolontaySecurity",
+                  "followerStormtrooper"
+                ],
+                "value": 1,
+                "compareMethod": ">=",
+                "dynamicLocale": false,
+                "resetOnSessionEnd": false,
+                "bodyPart": [],
+                "daytime": {
+                  "from": 0,
+                  "to": 0
+                },
+                "distance": {
+                  "compareMethod": ">=",
+                  "value": 0
+                },
+                "enemyEquipmentExclusive": [],
+                "enemyEquipmentInclusive": [],
+                "enemyHealthEffects": [],
+                "weapon": [],
+                "weaponCaliber": [],
+                "weaponModsExclusive": [],
+                "weaponModsInclusive": []
+              }
+            ]
+          },
+          "visibilityConditions": []
+        }
+      ],
+      "Fail": []
+    },
+    "rewards": {
+      "Started": [],
+      "Success": [
+        {
+          "id": "cf5a0d6bb02716de34d2669b",
+          "index": 0,
+          "type": "Experience",
+          "value": 35000,
+          "unknown": false,
+          "findInRaid": false
+        },
+        {
+          "id": "84f648605c4d28c853867bce",
+          "index": 1,
+          "type": "TraderStanding",
+          "target": "6a1ac8598933e3f023895bd3",
+          "value": 0.1,
+          "unknown": false,
+          "findInRaid": false
+        },
+        {
+          "id": "2a577320507ee6f6338b36de",
+          "index": 2,
+          "type": "Item",
+          "target": "c20b017e26b56a902f202dc1",
+          "value": 54000,
+          "unknown": false,
+          "findInRaid": false,
+          "items": [
+            {
+              "_id": "c20b017e26b56a902f202dc1",
+              "_tpl": "5696686a4bdc2da3298b456a",
+              "upd": {
+                "StackObjectsCount": 54000
+              }
+            }
+          ]
+        },
+        {
+          "id": "a7a1086b68eb26eb86914d37",
+          "index": 3,
+          "type": "Item",
+          "target": "145c45382cd6a3e37275dd46",
+          "value": 1,
+          "unknown": false,
+          "findInRaid": false,
+          "items": [
+            {
+              "_id": "145c45382cd6a3e37275dd46",
+              "_tpl": "6a0ce40499dfd9edaca1daa9",
+              "upd": {
+                "Repairable": {
+                  "Durability": 100,
+                  "MaxDurability": 100
+                },
+                "FireMode": {
+                  "FireMode": "single"
+                }
+              }
+            },
+            {
+              "_id": "3bc629daee24a87b8ee49f7f",
+              "_tpl": "6a0ced4599dfd9edaca1daaa",
+              "parentId": "145c45382cd6a3e37275dd46",
+              "slotId": "mod_magazine"
+            },
+            {
+              "_id": "ebe21d57171772d18675ea5f",
+              "_tpl": "6a0f60b0fab0e58846b70bc2",
+              "parentId": "145c45382cd6a3e37275dd46",
+              "slotId": "mod_sight_rear",
+              "upd": {
+                "Sight": {
+                  "ScopesCurrentCalibPointIndexes": [
+                    0
+                  ],
+                  "ScopesSelectedModes": [
+                    0
+                  ],
+                  "SelectedScope": 0,
+                  "ScopeZoomValue": 0
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "5a2465564e11ebb94fadfa48",
+          "index": 4,
+          "type": "Skill",
+          "target": "AimDrills",
+          "value": 200,
+          "unknown": false,
+          "findInRaid": false
+        },
+        {
+          "id": "551db99084cd26ac3a1317cd",
+          "index": 5,
+          "type": "Skill",
+          "target": "MagDrills",
+          "value": 200,
+          "unknown": false,
+          "findInRaid": false
+        },
+        {
+          "id": "f5d49e01a49ed0ba5bca4840",
+          "index": 6,
+          "type": "Skill",
+          "target": "Charisma",
+          "value": 100,
+          "unknown": false,
+          "findInRaid": false
+        },
+        {
+          "id": "f51c643122aa5dbe0d31e229",
+          "index": 7,
+          "type": "Skill",
+          "target": "UsecNegotiations",
+          "value": 100,
+          "unknown": false,
+          "findInRaid": false
+        }
+      ],
+      "Fail": []
+    }
+  }
+}
