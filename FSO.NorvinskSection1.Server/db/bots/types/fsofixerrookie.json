@@ -416,7 +416,7 @@
                                                  "COVER_SELF_ALWAYS_IF_DAMAGED":  false,
                                                  "DAMAGE_REDUCTION_TIME_SEC":  20,
                                                  "DANGER_POINT_CHOOSE_COEF":  1,
-                                                 "DEFAULT_BEAR_BEHAVIOUR":  "AlwaysFriends",
+                                                 "DEFAULT_BEAR_BEHAVIOUR":  "AlwaysEnemies",
                                                  "DEFAULT_SAVAGE_BEHAVIOUR":  "AlwaysEnemies",
                                                  "DEFAULT_USEC_BEHAVIOUR":  "AlwaysFriends",
                                                  "DIST_TO_ENEMY_YO_CAN_HEAL":  30,
@@ -909,7 +909,7 @@
                                                  "COVER_SELF_ALWAYS_IF_DAMAGED":  false,
                                                  "DAMAGE_REDUCTION_TIME_SEC":  20,
                                                  "DANGER_POINT_CHOOSE_COEF":  1,
-                                                 "DEFAULT_BEAR_BEHAVIOUR":  "AlwaysFriends",
+                                                 "DEFAULT_BEAR_BEHAVIOUR":  "AlwaysEnemies",
                                                  "DEFAULT_SAVAGE_BEHAVIOUR":  "AlwaysEnemies",
                                                  "DEFAULT_USEC_BEHAVIOUR":  "AlwaysFriends",
                                                  "DIST_TO_ENEMY_YO_CAN_HEAL":  30,
@@ -1402,7 +1402,7 @@
                                                        "COVER_SELF_ALWAYS_IF_DAMAGED":  false,
                                                        "DAMAGE_REDUCTION_TIME_SEC":  20,
                                                        "DANGER_POINT_CHOOSE_COEF":  1,
-                                                       "DEFAULT_BEAR_BEHAVIOUR":  "AlwaysFriends",
+                                                       "DEFAULT_BEAR_BEHAVIOUR":  "AlwaysEnemies",
                                                        "DEFAULT_SAVAGE_BEHAVIOUR":  "AlwaysEnemies",
                                                        "DEFAULT_USEC_BEHAVIOUR":  "AlwaysFriends",
                                                        "DIST_TO_ENEMY_YO_CAN_HEAL":  30,
@@ -1909,7 +1909,7 @@
                                                    "COVER_SELF_ALWAYS_IF_DAMAGED":  false,
                                                    "DAMAGE_REDUCTION_TIME_SEC":  20,
                                                    "DANGER_POINT_CHOOSE_COEF":  1,
-                                                   "DEFAULT_BEAR_BEHAVIOUR":  "AlwaysFriends",
+                                                   "DEFAULT_BEAR_BEHAVIOUR":  "AlwaysEnemies",
                                                    "DEFAULT_SAVAGE_BEHAVIOUR":  "AlwaysEnemies",
                                                    "DEFAULT_USEC_BEHAVIOUR":  "AlwaysFriends",
                                                    "DIST_TO_ENEMY_YO_CAN_HEAL":  30,
@@ -1963,8 +1963,7 @@
                                                    "TIME_TO_RUN_TO_COVER_CAUSE_SHOOT_SEC":  15,
                                                    "WARN_BOT_TYPES":  [
                                                                           "assault",
-                                                                          "assaultGroup",
-                                                                          "pmcUSEC"
+                                                                          "assaultGroup"
                                                                       ]
                                                },
                                       "Move":  {
