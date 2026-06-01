@@ -39,14 +39,19 @@ public record ModMetadata : AbstractModMetadata
 /// <summary>
 /// Server mod entry point.
 ///
-/// Phase 2h: registers FSO faction relationships.
-/// Phase 3: registers FSO spawn rules across 6 maps with reusable squad composition templates.
-/// Phase 4 (Q5 finale): adds Labs spawns — FSO Inner Circle. Black Division on Labs is handled by BD's own mod.
+/// - Registers the 5 FSO Fixer bot tiers (types + configs) via MoreBotsAPI.
+/// - Wires FSO faction relationships (see WireFactionRelationships).
+/// - Registers FSO spawn rules across 6 maps with reusable squad composition templates.
+///   All FSO spawn ids carry the "hunt" keyword so MoreBotsAPI's HuntManager arms them as
+///   active hunters (the client plugin registers which roles they hunt) — they roam + seek
+///   enemies instead of loitering at spawn.
+/// - Q5 finale (Labs): spawns FSO Inner Circle + Black Division (BD's own Labs spawn is
+///   gate/exfil-triggered and Vagabond removes those triggers, so we spawn BD ourselves).
 ///
-/// FSO is allied to player PMCs (USEC + Bear) and Rogues (anti-BD alignment).
-/// FSO is hostile to Scavs, Scav-faction bosses, Cultists, Black Division, and RUAF (+ Remnant).
-/// FSO has NO relationship to Goons (mutual ignore — bigger fish to fry).
-/// FSO has NO warn behavior — they're professionals on the clock, they don't posture.
+/// ROE: FSO are friendly to the player's USEC side (you + Damjan) and to themselves; NEUTRAL
+/// to Rogues/Goons (bigger fish to fry); HOSTILE to everything else — BEAR, Scavs, Raiders,
+/// Cultists, all scav bosses, and the Black Division / RUAF / Remnant factions. FSO have no
+/// warn behavior — they're professionals on the clock, they don't posture.
 /// </summary>
 // Load order: we run at TypePriority 400008 (a safe late slot in the post-DB phase — for
 // reference, BlackDiv runs at 400007 and PostDBModLoader is ~400000). Running late is safe:
@@ -79,17 +84,16 @@ public class Mod(
         (WildSpawnType)708304, // fsofixerinnercircle
     };
 
-    // Black Division's custom WildSpawnType values (from BlackDiv.WildSpawnTypeExtensions).
-    // BD registers its bot TYPES with MoreBotsAPI but does NOT register a MoreBotsAPI FACTION,
-    // so any AddEnemyByFaction("blackdiv", ...) call silently no-ops. We register the faction
-    // grouping ourselves (below) so our hostility calls resolve.
+    // Black Division / RUAF / Remnant custom WildSpawnType values (from their
+    // WildSpawnTypeExtensions). These mods register their own MoreBotsAPI FACTIONS, so our
+    // AddFactionIfMissing calls below simply skip them (and our hostility wiring resolves
+    // against their existing factions). These int lists are kept only as a fallback grouping
+    // in case those mods aren't loaded — harmless when they are.
     private static readonly List<WildSpawnType> BlackDivBotTypes = new()
     {
         (WildSpawnType)848420, (WildSpawnType)848421, (WildSpawnType)848422,
         (WildSpawnType)848423, (WildSpawnType)848424,
     };
-
-    // RUAF + Remnant custom WildSpawnType values (from RUAFComeHome.WildSpawnTypeExtensions).
     private static readonly List<WildSpawnType> RuafBotTypes = new()
     {
         (WildSpawnType)848400, (WildSpawnType)848401, (WildSpawnType)848402,
@@ -150,10 +154,10 @@ public class Mod(
         // 1. Register the 5 custom bot types from db/bots/types/*.json
         await customBotTypeService.CreateCustomBotTypes(asm);
         // 2. Register per-tier configs from db/bots/config/*.jsonc, keyed by
-        // filename. THIS is what LoadBots was failing to do correctly.
+        //    filename. THIS is what LoadBots was failing to do correctly.
         await customBotConfigService.LoadCustomBotConfigs(asm);
         // 3. Apply custom loadouts from db/bots/loadouts/*.json.
-        // No-op until loadout files exist, so safe to call now.
+        //    No-op until loadout files exist, so safe to call now.
         await loadoutService.LoadLoadouts(asm);
 
         // --- Faction setup ---
@@ -175,7 +179,6 @@ public class Mod(
         logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
         logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
         logger.Info($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.");
-        logger.Info($"[{ModName}] Faction relationships wired: friendly usec + self, neutral rogues, hostile to everything else (bear/scavs/raiders/cultists/all bosses/partisan/smugglers/bloodhounds/infected/blackdiv/ruaf/remnant).");
         logger.Info($"[{ModName}] Spawn rules wired across 6 maps (Streets, Ground Zero, Customs, Shoreline, Lighthouse, Labs).");
     }
 
@@ -183,9 +186,10 @@ public class Mod(
     {
         AddFactionIfMissing(FactionName, FsoBotTypes);
 
-        // BD / RUAF / Remnant register bot TYPES with MoreBotsAPI but NOT factions — so our
-        // hostility calls against these names were silently failing (TryGetValue miss). We
-        // register the faction groupings ourselves (their WildSpawnType ints) so they resolve.
+        // BD / RUAF / Remnant register their OWN MoreBotsAPI factions, so these calls normally
+        // find the faction already present and skip (logged "already registered"). We still call
+        // them as a fallback in case those mods aren't installed — then we register the grouping
+        // ourselves so our hostility wiring against those names resolves.
         AddFactionIfMissing("blackdiv", BlackDivBotTypes);
         AddFactionIfMissing("ruaf", RuafBotTypes);
         AddFactionIfMissing("remnant", RemnantBotTypes);
@@ -236,80 +240,52 @@ public class Mod(
         }
     }
 
+    private static readonly List<string> FsoTypeNames = new()
+    {
+        "fsofixerrookie", "fsofixeroperative", "fsofixerspecialist",
+        "fsofixerlead", "fsofixerinnercircle",
+    };
+    private static readonly List<string> BlackDivTypeNames = new()
+    { "blackdivlead", "blackdivassault", "blackdivbreacher", "blackdivsupport" };
+    private static readonly List<string> RuafTypeNames = new()
+    { "ruafrifleman", "ruafriflemansenior", "ruafautorifleman", "ruafgrenadier", "ruafmarksman", "ruafmachinegunner" };
+    private static readonly List<string> RemnantTypeNames = new() { "remnantrifleman" };
+
     private void WireFactionRelationships()
     {
-        // ============================================================
-        // FSO ROE: hostile to EVERYTHING except player USEC (you/Damjan) and Rogues (neutral).
-        // BSG never made the player its own faction, so USEC must stay friendly — making USEC
-        // hostile would shoot you too. BEAR is fair game (you're not BEAR). Rogues are left
-        // out of BOTH lists = neutral (no explicit friend or enemy wiring).
-        // Individual bosses are listed DIRECTLY (not via the scavbosses subfaction) because
-        // the subfaction grouping was observed not to expand reliably (kaban/kolontay ignored).
-        // ============================================================
+        // FSO ROE: hostile to everything except player USEC (you/Damjan) and Rogues (neutral).
+        // Pass FSO's TYPE-NAME STRINGS as arg1 (the direct-dictionary overload) — this is the
+        // reliable path BlackDiv uses. Passing the custom faction name "fso" as arg1 routes
+        // through a fragile custom-enum lookup that was silently failing (the hostility bug).
 
-        // --- Allies: player USEC (you + Damjan) ---
-        factionService.AddFriendlyByFaction(FactionName, "usec");
-        factionService.AddFriendlyByFaction("usec", FactionName);
+        // "savage" umbrella = scavs + ALL scav bosses + smugglers + bloodhounds + raiders
+        // (GetAllBotTypes recurses subfactions — confirmed). One entry covers them all.
+        string[] builtinEnemies = { "savage", "cultists", "infected", "bear" };
 
-        // --- Allies: FSO friendly to itself (prevents cross-squad infighting from
-        // side-based AlwaysEnemies behavior) ---
-        factionService.AddFriendlyByFaction(FactionName, FactionName);
+        // (A) FSO hostile TO enemies — type-string overload (RELIABLE).
+        foreach (var e in builtinEnemies)
+            factionService.AddEnemyByFaction(FsoTypeNames, e);
+        factionService.AddEnemyByFaction(FsoTypeNames, "blackdiv");
+        factionService.AddEnemyByFaction(FsoTypeNames, "ruaf");
+        factionService.AddEnemyByFaction(FsoTypeNames, "remnant");
 
-        // --- Rogues: NEUTRAL — intentionally omitted from both friendly and enemy lists. ---
+        // (B) Enemies hostile TO FSO. Built-ins resolve fine as arg1. For the custom factions,
+        // pass THEIR type strings as arg1 (reliable) rather than the custom faction name.
+        foreach (var e in builtinEnemies)
+            factionService.AddEnemyByFaction(e, FactionName);
+        factionService.AddEnemyByFaction(BlackDivTypeNames, FactionName);
+        factionService.AddEnemyByFaction(RuafTypeNames, FactionName);
+        factionService.AddEnemyByFaction(RemnantTypeNames, FactionName);
 
-        // --- Hostiles: PMC BEAR (lore enemy; safe — you're USEC) ---
-        factionService.AddEnemyByFaction(FactionName, "bear");
-        factionService.AddEnemyByFaction("bear", FactionName);
+        // Allies: player USEC (you + Damjan) + FSO self (anti-infighting). Rogues omitted = neutral.
+        factionService.AddFriendlyByFaction(FsoTypeNames, "usec");
+        factionService.AddFriendlyByFaction(FsoTypeNames, FactionName);
 
-        // --- Hostiles: Scavs ---
-        factionService.AddEnemyByFaction(FactionName, "scavs");
-        factionService.AddEnemyByFaction("scavs", FactionName);
+        // Revenge: FSO avenge fallen FSO AND avenge the player (allies who watch your back).
+        factionService.AddRevengeByFaction(FsoTypeNames, FactionName);
+        factionService.AddRevengeByFaction(FsoTypeNames, "usec");
 
-        // --- Hostiles: Raiders (pmcBot) — the Q5 kill target ---
-        factionService.AddEnemyByFaction(FactionName, "raiders");
-        factionService.AddEnemyByFaction("raiders", FactionName);
-
-        // --- Hostiles: Cultists (was the broken "sectants") ---
-        factionService.AddEnemyByFaction(FactionName, "cultists");
-        factionService.AddEnemyByFaction("cultists", FactionName);
-
-        // --- Hostiles: Scav bosses (listed individually — subfaction grouping was unreliable) ---
-        factionService.AddEnemyByFaction(FactionName, "scavbosses"); // umbrella (harmless overlap)
-        factionService.AddEnemyByFaction("scavbosses", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "killaTagilla");
-        factionService.AddEnemyByFaction("killaTagilla", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "kabanKolontay");
-        factionService.AddEnemyByFaction("kabanKolontay", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "reshala");
-        factionService.AddEnemyByFaction("reshala", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "shturman");
-        factionService.AddEnemyByFaction("shturman", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "gluhar");
-        factionService.AddEnemyByFaction("gluhar", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "sanitar");
-        factionService.AddEnemyByFaction("sanitar", FactionName);
-
-        // --- Hostiles: other savage-side + event factions ---
-        factionService.AddEnemyByFaction(FactionName, "partisan");
-        factionService.AddEnemyByFaction("partisan", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "smugglers");
-        factionService.AddEnemyByFaction("smugglers", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "bloodhounds");
-        factionService.AddEnemyByFaction("bloodhounds", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "infected");
-        factionService.AddEnemyByFaction("infected", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "misc"); // shooterBTR + gifter (edge-case, harmless)
-        factionService.AddEnemyByFaction("misc", FactionName);
-
-        // --- Hostiles: Black Division (the Q4/Q5 enemy). Registered in RegisterFsoFaction. ---
-        factionService.AddEnemyByFaction(FactionName, "blackdiv");
-        factionService.AddEnemyByFaction("blackdiv", FactionName);
-
-        // --- Hostiles: RUAF + Remnant. Registered in RegisterFsoFaction. ---
-        factionService.AddEnemyByFaction(FactionName, "ruaf");
-        factionService.AddEnemyByFaction("ruaf", FactionName);
-        factionService.AddEnemyByFaction(FactionName, "remnant");
-        factionService.AddEnemyByFaction("remnant", FactionName);
+        logger.Info($"[{ModName}] Faction relationships wired (BD-pattern, type-string overload): FSO hostile to savage/cultists/infected/bear/blackdiv/ruaf/remnant, friendly self+usec, neutral rogues, revenge on FSO+player deaths.");
     }
 
     private void EnsureSpawnKeysExist()
@@ -345,9 +321,10 @@ public class Mod(
         AddShorelineSpawns();
         AddLighthouseSpawns();
         AddLabsSpawns();
-        // NOTE: Black Division spawns are handled by BD's OWN mod (its spawner works fine —
-        // adds BD to Labs + timed hunts to all maps). We do NOT spawn BD ourselves; doing so
-        // was redundant and conflicted. BD's bots appear via their own controller.
+        // NOTE: On the standard maps, Black Division spawns via BD's OWN mod (its spawner adds
+        // BD + timed hunts there and works fine — we don't touch those). We ONLY spawn BD on
+        // Labs ourselves (see AddLabsSpawns), because BD's Labs spawn is gate-triggered and
+        // Vagabond removes those triggers.
     }
 
     private void AddStreetsSpawns()
@@ -445,9 +422,10 @@ public class Mod(
     // ============================================================
     // Q5 FINALE — the Labs battle.
     // FSO Inner Circle (Mae's task force) deploys to Labs, weapons-free, to help the player
-    // fight through to the Golden Bough. Black Division (the enemy) is spawned by BD's OWN
-    // mod (its spawner adds BD to Labs). Inner Circle count is kept MODERATE so we don't
-    // flood the Labs bot cap and squeeze BD out — the war is FSO + BD's own spawn together.
+    // fight through to the Golden Bough. We spawn BOTH sides here: FSO Inner Circle AND Black
+    // Division — because BD's OWN Labs spawn is gate/exfil-triggered and Vagabond removes those
+    // triggers, so BD never appears on Labs on its own. Inner Circle count is kept MODERATE so
+    // the Labs bot cap has room for the BD spawn — the war is FSO + BD side by side.
     // Labs zones confirmed from BlackDivServer's SpawnController.
     // ============================================================
     private void AddLabsSpawns()
@@ -464,9 +442,8 @@ public class Mod(
             waveService.AddBossWaveToMap(MapLaboratory, s);
 
         // --- Black Division on Labs (the Q5 enemy) ---
-        // We spawn BD ourselves as a START spawn because BD's OWN Labs spawn is gate/exfil-
-        // triggered, and Vagabond removes the Labs exfils — so BD's native Labs spawn never
-        // fires here. This places BD in the Labs floor zones from raid start (the all-out-war).
+        // START spawn (Time = -1) so BD is present from raid start — see the method comment
+        // and the AddLabsSpawns header for why we spawn BD ourselves on Labs.
         var bdSpawns = new[]
         {
             BuildLabsBlackDivision(labsZones, "labs_bd_01"),
@@ -481,6 +458,8 @@ public class Mod(
     // FSO-side Black Division squad for Labs. Uses BD's proven structure (comma-list escort
     // amounts = several BD of varying sizes), camelCase name matching BD's own spawn code,
     // 100% chance + IgnoreMaxBots so they reliably appear regardless of the Labs cap.
+    // NOTE: the spawn id intentionally does NOT contain "hunt" — these are Black Division, not
+    // FSO, and BD's hunt behavior is managed by BD's own mod, not ours.
     private BossLocationSpawn BuildLabsBlackDivision(string zone, string sptIdSuffix)
     {
         return new BossLocationSpawn
@@ -600,14 +579,17 @@ public class Mod(
             .WithPrimaryEscort(BotInnerCircle, "2")
             .WithSupport(BotInnerCircle, "2")
             .Build();
-        spawn.BossChance = 100;     // force 100% for the finale
+        spawn.BossChance = 100; // force 100% for the finale
         spawn.IgnoreMaxBots = true; // guarantee they appear
         return spawn;
     }
 
+    // All FSO spawn ids carry the "hunt" keyword (fso_hunt_...) so MoreBotsAPI's HuntManager
+    // arms these bots as active hunters — without "hunt" in Id_spawn, the hunt component is
+    // never attached and they'd just loiter at their spawn zone.
     private static CompositionBuilder CompositionBase(string zone, string sptIdSuffix, string compositionName)
     {
-        return new CompositionBuilder(zone, $"fso_{compositionName}_{sptIdSuffix}");
+        return new CompositionBuilder(zone, $"fso_hunt_{compositionName}_{sptIdSuffix}");
     }
 
     private sealed class CompositionBuilder
