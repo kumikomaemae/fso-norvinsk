@@ -186,42 +186,42 @@
           ]
         },
         {
-          "id": "4b6e3cfc6febfc772222560a",
+          "id": "60c03a22addfc43c05139d67",
           "index": 3,
           "type": "Skill",
           "target": "ShadowConnections",
           "value": 1000
         },
         {
-          "id": "429654aa068d2626658c896b",
+          "id": "d43d11fee36beb6e09c087f1",
           "index": 4,
           "type": "Skill",
           "target": "UsecNegotiations",
           "value": 1000
         },
         {
-          "id": "45073afc3347d721f8c776d7",
+          "id": "92bb22b823b9f224fbf81236",
           "index": 5,
           "type": "Skill",
           "target": "Charisma",
           "value": 1000
         },
         {
-          "id": "fea91c098342521a31c4a221",
+          "id": "8b7b56c12ec40579e42ea5f9",
           "index": 6,
           "type": "Skill",
           "target": "HeavyVests",
           "value": 1000
         },
         {
-          "id": "516f645e124e89dafa726a30",
+          "id": "878ed83843f914bcf505bd0a",
           "index": 7,
           "type": "Skill",
           "target": "AimDrills",
           "value": 1000
         },
         {
-          "id": "19d1db68170b7ea8681dfc85",
+          "id": "220924d56d251ab931fba161",
           "index": 8,
           "type": "Skill",
           "target": "MagDrills",

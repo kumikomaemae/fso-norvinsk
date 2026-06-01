@@ -105,38 +105,38 @@
           ]
         },
         {
-          "id": "8cf95025dc0f571e1319fac8",
+          "id": "ee209946d83301ddf0785559",
           "index": 3,
           "type": "Skill",
           "target": "Charisma",
           "value": 300
         },
         {
-          "id": "2ac40d076459260be1546e9d",
+          "id": "fb99b1d284524b4b8919faf9",
           "index": 4,
           "type": "Skill",
           "target": "UsecNegotiations",
           "value": 300
         },
         {
-          "id": "55a39c9f5608ad6c8b905b07",
+          "id": "a66f1a59a7559374ee40b97f",
           "index": 5,
           "type": "Skill",
           "target": "Perception",
           "value": 300
         },
         {
-          "id": "3d9b096b8b4b6dc62b6759d5",
+          "id": "3aeb3be1bb8431731c227faf",
           "index": 6,
           "type": "Skill",
-          "target": "Intellect",
+          "target": "ShadowConnections",
           "value": 300
         },
         {
-          "id": "5968de20aefcd9011da89ea6",
+          "id": "9706413301c07cdd449a7120",
           "index": 7,
           "type": "Skill",
-          "target": "AttentionSearch",
+          "target": "MagDrills",
           "value": 300
         }
       ],

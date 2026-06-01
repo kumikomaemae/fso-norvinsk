@@ -1,3 +1,4 @@
+using System;
 using System.Reflection;
 using MoreBotsServer.Models;
 using MoreBotsServer.Services;
@@ -39,15 +40,19 @@ public record ModMetadata : AbstractModMetadata
 /// Server mod entry point.
 ///
 /// Phase 2h: registers FSO faction relationships.
-/// Phase 3: registers FSO spawn rules across 5 maps with 9 squad composition templates.
-/// Phase 4 (Q5 finale): adds Labs spawns — Inner Circle (and forced Black Division) for the all-out-war finale.
+/// Phase 3: registers FSO spawn rules across 6 maps with reusable squad composition templates.
+/// Phase 4 (Q5 finale): adds Labs spawns — FSO Inner Circle. Black Division on Labs is handled by BD's own mod.
 ///
 /// FSO is allied to player PMCs (USEC + Bear) and Rogues (anti-BD alignment).
 /// FSO is hostile to Scavs, Scav-faction bosses, Cultists, Black Division, and RUAF (+ Remnant).
 /// FSO has NO relationship to Goons (mutual ignore — bigger fish to fry).
 /// FSO has NO warn behavior — they're professionals on the clock, they don't posture.
 /// </summary>
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
+// Load order: we run at TypePriority 400008 (a safe late slot in the post-DB phase — for
+// reference, BlackDiv runs at 400007 and PostDBModLoader is ~400000). Running late is safe:
+// all our DI services are constructed before any OnLoad, so nothing we do depends on running
+// before another mod, and our spawn/config edits just need the DB loaded.
+[Injectable(TypePriority = 400008)]
 public class Mod(
     ISptLogger<Mod> logger,
     MoreBotsCustomBotTypeService customBotTypeService,
@@ -89,7 +94,11 @@ public class Mod(
     private const string BotLead = "fsofixerlead";
     private const string BotInnerCircle = "fsofixerinnercircle";
 
-    // Black Division trooper role (confirmed from BlackDivServer) — used for the Q5 forced Labs spawns.
+    // Black Division trooper role. Casing matches BD's own SpawnController (BossName =
+    // "blackDivAssault") — the spawn system accepts this exact camelCase. We spawn BD on
+    // Labs ourselves because Vagabond removes the Labs exfils, and BD's own Labs spawn is
+    // gate/exfil-TRIGGERED — those triggers don't exist under Vagabond, so BD's native Labs
+    // spawn never fires. (BD's HUNT spawns on other maps work fine; we don't touch those.)
     private const string BotBlackDivAssault = "blackDivAssault";
 
     private const string MapStreets = "tarkovstreets";
@@ -135,17 +144,58 @@ public class Mod(
         WireSpawnRules();
         waveService.ApplyWaveChangesToAllMaps();
 
+        // --- Labs finale tuning ---
+        // We spawn FSO Inner Circle + Black Division on Labs ourselves (see AddLabsSpawns) —
+        // BD's own Labs spawn is gate-triggered and Vagabond removes those triggers, so it
+        // never fires. We also raise the Labs bot cap so FSO + BD + raiders all fit. Labs is
+        // fully indoor / low-load, and bot AI runs on the host's CPU, so this is safe.
+        RaiseLabsBotCap();
+
         logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
         logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
         logger.Info($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.");
         logger.Info($"[{ModName}] Faction relationships wired: friendly with usec/bear/rogues, hostile to scavs/scavbosses/sectants/blackdiv/ruaf/remnant.");
-        logger.Info($"[{ModName}] Spawn rules wired across 6 maps with 9 squad composition templates (+ Labs finale).");
+        logger.Info($"[{ModName}] Spawn rules wired across 6 maps (Streets, Ground Zero, Customs, Shoreline, Lighthouse, Labs).");
     }
 
     private void RegisterFsoFaction()
     {
         var fsoFaction = new Faction { Name = FactionName, BotTypes = FsoBotTypes };
         factionService.Factions.Add(fsoFaction.Name, fsoFaction);
+    }
+
+
+    // Raise the Labs bot cap a moderate amount so FSO Inner Circle + Black Division + raiders
+    // all fit. Labs is fully indoor and low-load; bot AI runs on the host CPU, so this is safe.
+    private void RaiseLabsBotCap()
+    {
+        try
+        {
+            var botConfig = configServer.GetConfig<BotConfig>();
+            var caps = botConfig?.MaxBotCap;
+            if (caps == null)
+            {
+                logger.Info($"[{ModName}] Labs cap-raise: MaxBotCap not available (skipped).");
+                return;
+            }
+
+            const int LabsCapBump = 8;
+            if (caps.TryGetValue(MapLaboratory, out var current))
+            {
+                caps[MapLaboratory] = current + LabsCapBump;
+                logger.Success($"[{ModName}] Labs cap-raise: {current} -> {caps[MapLaboratory]} (+{LabsCapBump}).");
+            }
+            else
+            {
+                // No explicit Labs entry — set a sensible value outright.
+                caps[MapLaboratory] = 20;
+                logger.Success($"[{ModName}] Labs cap-raise: no existing entry, set to {caps[MapLaboratory]}.");
+            }
+        }
+        catch (Exception e)
+        {
+            logger.Warning($"[{ModName}] Labs cap-raise skipped (non-fatal): {e.Message}");
+        }
     }
 
     private void WireFactionRelationships()
@@ -212,6 +262,9 @@ public class Mod(
         AddShorelineSpawns();
         AddLighthouseSpawns();
         AddLabsSpawns();
+        // NOTE: Black Division spawns are handled by BD's OWN mod (its spawner works fine —
+        // adds BD to Labs + timed hunts to all maps). We do NOT spawn BD ourselves; doing so
+        // was redundant and conflicted. BD's bots appear via their own controller.
     }
 
     private void AddStreetsSpawns()
@@ -307,36 +360,71 @@ public class Mod(
     }
 
     // ============================================================
-    // Q5 FINALE — ALL-OUT WAR on Labs.
-    // FSO Inner Circle (the murder task force) at 100%, in force.
-    // PLUS forced Black Division at 100% (so we don't need to touch BD's own config + relaunch,
-    // which would break the Q5 tension/buildup).
+    // Q5 FINALE — the Labs battle.
+    // FSO Inner Circle (Mae's task force) deploys to Labs, weapons-free, to help the player
+    // fight through to the Golden Bough. Black Division (the enemy) is spawned by BD's OWN
+    // mod (its spawner adds BD to Labs). Inner Circle count is kept MODERATE so we don't
+    // flood the Labs bot cap and squeeze BD out — the war is FSO + BD's own spawn together.
     // Labs zones confirmed from BlackDivServer's SpawnController.
     // ============================================================
     private void AddLabsSpawns()
     {
         var labsZones = "BotZoneFloor2,BotZoneFloor1,BotZoneBasement";
 
-        // --- FSO Inner Circle: multiple big squads, 100% ---
+        // --- FSO Inner Circle on Labs (Q5 finale) ---
         var fsoSpawns = new[]
         {
             BuildLabsInnerCircle(labsZones, "labs_ic_01"),
             BuildLabsInnerCircle(labsZones, "labs_ic_02"),
-            BuildLabsInnerCircle(labsZones, "labs_ic_03"),
         };
         foreach (var s in fsoSpawns)
             waveService.AddBossWaveToMap(MapLaboratory, s);
 
-        // --- Forced Black Division: the enemy they're there to murder, 100% ---
+        // --- Black Division on Labs (the Q5 enemy) ---
+        // We spawn BD ourselves as a START spawn because BD's OWN Labs spawn is gate/exfil-
+        // triggered, and Vagabond removes the Labs exfils — so BD's native Labs spawn never
+        // fires here. This places BD in the Labs floor zones from raid start (the all-out-war).
         var bdSpawns = new[]
         {
-            BuildLabsBlackDiv(labsZones, "labs_bd_01"),
-            BuildLabsBlackDiv(labsZones, "labs_bd_02"),
+            BuildLabsBlackDivision(labsZones, "labs_bd_01"),
+            BuildLabsBlackDivision(labsZones, "labs_bd_02"),
         };
         foreach (var s in bdSpawns)
             waveService.AddBossWaveToMap(MapLaboratory, s);
 
-        logger.Success($"[{ModName}] Labs: registered {fsoSpawns.Length} Inner Circle + {bdSpawns.Length} Black Division spawns (Q5 ALL-OUT WAR, 100%).");
+        logger.Success($"[{ModName}] Labs: registered {fsoSpawns.Length} Inner Circle + {bdSpawns.Length} Black Division spawns (Q5 finale).");
+    }
+
+    // FSO-side Black Division squad for Labs. Uses BD's proven structure (comma-list escort
+    // amounts = several BD of varying sizes), camelCase name matching BD's own spawn code,
+    // 100% chance + IgnoreMaxBots so they reliably appear regardless of the Labs cap.
+    private BossLocationSpawn BuildLabsBlackDivision(string zone, string sptIdSuffix)
+    {
+        return new BossLocationSpawn
+        {
+            SptId = $"fso_labs_blackdiv_{sptIdSuffix}",
+            BossName = BotBlackDivAssault,
+            BossChance = 100,
+            BossDifficulty = "normal",
+            BossEscortType = BotBlackDivAssault,
+            BossEscortAmount = "2,2,3,3,4",
+            BossEscortDifficulty = "normal",
+            BossZone = zone,
+            Time = -1,
+            Delay = 0,
+            ForceSpawn = true,
+            IgnoreMaxBots = true,
+            IsBossPlayer = false,
+            IsRandomTimeSpawn = false,
+            ShowOnTarkovMap = false,
+            ShowOnTarkovMapPvE = false,
+            SpawnMode = new List<string> { "regular", "pve" },
+            DependKarma = false,
+            DependKarmaPVE = false,
+            TriggerId = "",
+            TriggerName = "",
+            Supports = new List<BossSupport>(),
+        };
     }
 
     private BossLocationSpawn BuildPatrolAlpha(string zone, string sptIdSuffix)
@@ -420,29 +508,17 @@ public class Mod(
             .Build();
     }
 
-    // FSO Inner Circle squad — BIG, 100%. Boss + 2 escort + 3 support = 6 Inner Circle per squad.
+    // FSO Inner Circle squad: boss + 2 escort + 2 support = 5 per squad. 2 squads = ~10 on Labs.
+    // Kept moderate (was 6/squad) so the Labs bot cap has room for BD's own spawn.
     private BossLocationSpawn BuildLabsInnerCircle(string zone, string sptIdSuffix)
     {
         var spawn = CompositionBase(zone, sptIdSuffix, "labs_inner_circle")
             .WithBoss(BotInnerCircle)
             .WithPrimaryEscort(BotInnerCircle, "2")
-            .WithSupport(BotInnerCircle, "3")
+            .WithSupport(BotInnerCircle, "2")
             .Build();
         spawn.BossChance = 100;     // force 100% for the finale
         spawn.IgnoreMaxBots = true; // guarantee they appear
-        return spawn;
-    }
-
-    // Forced Black Division squad on Labs — using BD's confirmed role name "blackDivAssault".
-    // Boss + 4 escort = 5 BD per squad. Two squads = ~10 BD to fight. War.
-    private BossLocationSpawn BuildLabsBlackDiv(string zone, string sptIdSuffix)
-    {
-        var spawn = CompositionBase(zone, sptIdSuffix, "labs_blackdiv")
-            .WithBoss(BotBlackDivAssault)
-            .WithPrimaryEscort(BotBlackDivAssault, "4")
-            .Build();
-        spawn.BossChance = 100;
-        spawn.IgnoreMaxBots = true;
         return spawn;
     }
 

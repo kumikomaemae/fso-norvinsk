@@ -156,45 +156,45 @@
           ]
         },
         {
-          "id": "d84cf594a8d18d6880f200a7",
+          "id": "75fa6f8bde9f0a4f0d4f5673",
           "index": 4,
           "type": "Skill",
           "target": "AimDrills",
           "value": 500
         },
         {
-          "id": "ecea55f9ba421629bd2403d2",
+          "id": "05b6853164eee0bed2284c64",
           "index": 5,
           "type": "Skill",
           "target": "MagDrills",
           "value": 500
         },
         {
-          "id": "9416a21229423287d625c98a",
+          "id": "6b959df9fe7f72187dcb9417",
           "index": 6,
           "type": "Skill",
           "target": "Perception",
           "value": 500
         },
         {
-          "id": "ea87390c348458d3e582a1ed",
+          "id": "4096ce72f4a52ac7f69971c5",
           "index": 7,
           "type": "Skill",
           "target": "HeavyVests",
           "value": 500
         },
         {
-          "id": "ae549732dadd6d329ec6c663",
+          "id": "fc4df64cd3edbf4fff27a5c0",
           "index": 8,
           "type": "Skill",
           "target": "Charisma",
           "value": 500
         },
         {
-          "id": "c89e91ca1e9e23a95567b70c",
+          "id": "08004c2f456a19b44fe7adde",
           "index": 9,
           "type": "Skill",
-          "target": "Endurance",
+          "target": "ShadowConnections",
           "value": 500
         }
       ],
