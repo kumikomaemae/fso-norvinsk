@@ -12,6 +12,7 @@ using SPTarkov.Server.Core.Models.Utils;
 using SPTarkov.Server.Core.Servers;
 using SPTarkov.Server.Core.Services;
 using SPTarkov.Server.Core.Utils.Json;
+using WTTServerCommonLib.Services;
 
 namespace FSO.NorvinskSection1.Server;
 
@@ -65,7 +66,9 @@ public class Mod(
     LoadoutService loadoutService,
     FactionService factionService,
     CustomLocationWaveService waveService,
-    ConfigServer configServer
+    ConfigServer configServer,
+    WTTCustomItemServiceExtended wttItemService,
+    WTTCustomAchievementService wttAchievementService
 ) : IOnLoad
 {
     public const string ModName = "FSO: Norvinsk Section 1";
@@ -159,6 +162,21 @@ public class Mod(
         // 3. Apply custom loadouts from db/bots/loadouts/*.json.
         //    No-op until loadout files exist, so safe to call now.
         await loadoutService.LoadLoadouts(asm);
+
+        // --- Custom content (WTT-ServerCommonLib) ---
+        // Register FSO's custom items from db/CustomItems/*.json (the Hero King's
+        // Rebellious Wristwatch — the Q5 anniversary reward). The watch uses no mod
+        // slots / calibers / secure filters, so the deferred processors aren't needed.
+        // NOTE: WTT-ServerCommonLib logs its own success at Debug level (hidden at INFO),
+        // so we add our own Info confirmations here for visibility in the server log.
+        logger.Info($"[{ModName}] Loading custom items from db/CustomItems...");
+        await wttItemService.CreateCustomItems(asm);
+        // Register FSO's custom achievements from db/CustomAchievements/ (the "Savior"
+        // achievement — its CustomizationDirect rewards grant the ForHumanity menu
+        // environment + the for_humanity dogtag when the achievement is awarded on Q5).
+        logger.Info($"[{ModName}] Loading custom achievements from db/CustomAchievements...");
+        await wttAchievementService.CreateCustomAchievements(asm);
+        logger.Success($"[{ModName}] Custom content loaded: the watch + the Savior achievement.");
 
         // --- Faction setup ---
         RegisterFsoFaction();

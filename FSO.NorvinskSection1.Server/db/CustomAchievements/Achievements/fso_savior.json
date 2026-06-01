@@ -1,0 +1,53 @@
+[
+  {
+    "id": "67a17e3c1d2f4b8a9c5e0d01",
+    "imageUrl": "/files/achievement/fso_savior_icon.png",
+    "assetPath": "",
+    "rewards": [
+      {
+        "id": "67a17e3c1d2f4b8a9c5e0d02",
+        "unknown": false,
+        "gameMode": [],
+        "availableInGameEditions": [],
+        "illustrationConfig": null,
+        "isHidden": false,
+        "target": "68fb63c9be7aff394b01681a",
+        "type": "CustomizationDirect"
+      },
+      {
+        "id": "67a17e3c1d2f4b8a9c5e0d03",
+        "unknown": false,
+        "gameMode": [],
+        "availableInGameEditions": [],
+        "illustrationConfig": null,
+        "isHidden": false,
+        "target": "68dfb00742e96f583d042bd2",
+        "type": "CustomizationDirect"
+      }
+    ],
+    "conditions": {
+      "availableForFinish": [
+        {
+          "id": "67a17e3c1d2f4b8a9c5e0d04",
+          "index": 0,
+          "dynamicLocale": false,
+          "visibilityConditions": [],
+          "globalQuestCounterId": "",
+          "parentId": "",
+          "conditionType": "Block"
+        }
+      ],
+      "fail": []
+    },
+    "instantComplete": true,
+    "showNotificationsInGame": true,
+    "showProgress": false,
+    "prefab": "",
+    "rarity": "Legendary",
+    "hidden": true,
+    "showConditions": false,
+    "progressBarEnabled": false,
+    "side": "Pmc",
+    "index": 19050
+  }
+]

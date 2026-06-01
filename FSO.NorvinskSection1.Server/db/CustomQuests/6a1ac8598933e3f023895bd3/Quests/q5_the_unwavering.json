@@ -226,6 +226,52 @@
           "type": "Skill",
           "target": "MagDrills",
           "value": 1000
+        },
+        {
+          "id": "f0e6c8df9ebeb5b4207cebff",
+          "index": 9,
+          "type": "Achievement",
+          "target": "67a17e3c1d2f4b8a9c5e0d01",
+          "unknown": false,
+          "findInRaid": false
+        },
+        {
+          "id": "1efe47be32c4c176165144e3",
+          "index": 10,
+          "type": "Item",
+          "target": "7812445d467d9586082ec289",
+          "value": 1,
+          "unknown": false,
+          "findInRaid": true,
+          "items": [
+            {
+              "_id": "7812445d467d9586082ec289",
+              "_tpl": "32b273651df2ebc453f137de",
+              "upd": {
+                "StackObjectsCount": 1,
+                "SpawnedInSession": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "0a36c3da95ed6998f559a833",
+          "index": 11,
+          "type": "Item",
+          "target": "a164fe636d42c642e542f755",
+          "value": 1,
+          "unknown": false,
+          "findInRaid": true,
+          "items": [
+            {
+              "_id": "a164fe636d42c642e542f755",
+              "_tpl": "68d41fde2937f3f17c04864d",
+              "upd": {
+                "StackObjectsCount": 1,
+                "SpawnedInSession": true
+              }
+            }
+          ]
         }
       ],
       "Fail": []

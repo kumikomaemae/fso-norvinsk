@@ -1,0 +1,31 @@
+{
+  "32b273651df2ebc453f137de": {
+    "itemTplToClone": "59faf7ca86f7740dbe19f6c2",
+    "parentId": "57864a3d24597754843f8721",
+    "handbookParentId": "5b5f78e986f77447ed5636b1",
+    "overrideProperties": {
+      "ExaminedByDefault": true,
+      "BackgroundColor": "violet"
+    },
+    "locales": {
+      "en": {
+        "name": "Hero King's Rebellious Wristwatch",
+        "shortName": "HisWatch",
+        "description": "The Hero King foretold in fantasy owned an engraved wristwatch radiating with the sense of a rebel from another world.\n\nTheir stories tell tales of triumph, of victory, of pursuing one's inner self. You overcame all obstacles, unwaveringly, and with that, accomplished something that you can truly be proud of. As you wear this, fantasy will live on, and so too, will our love.\n\noff-contract. don't ask. -M"
+      }
+    },
+    "fleaPriceRoubles": 0,
+    "handbookPriceRoubles": 0,
+    "addtoInventorySlots": [],
+    "addtoModSlots": false,
+    "addtoTraders": false,
+    "addtoBots": false,
+    "addtoStaticLootContainers": false,
+    "staticLootContainers": [],
+    "addtoItemBlacklist": true,
+    "masteries": false,
+    "addWeaponPreset": false,
+    "weaponPresets": [],
+    "traders": {}
+  }
+}
