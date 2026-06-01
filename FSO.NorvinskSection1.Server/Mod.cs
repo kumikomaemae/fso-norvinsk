@@ -24,7 +24,7 @@ public record ModMetadata : AbstractModMetadata
     public override string Name { get; init; } = "FSO: Norvinsk Section 1";
     public override string Author { get; init; } = "Mae";
     public override List<string>? Contributors { get; init; }
-    public override SemanticVersioning.Version Version { get; init; } = new("0.5.0");
+    public override SemanticVersioning.Version Version { get; init; } = new("0.5.1");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
     public override List<string>? Incompatibilities { get; init; }
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
@@ -69,7 +69,7 @@ public class Mod(
 ) : IOnLoad
 {
     public const string ModName = "FSO: Norvinsk Section 1";
-    public const string ModVersion = "0.5.0";
+    public const string ModVersion = "0.5.1";
     public const string FactionName = "fso";
 
     // config objects can't be constructor-injected on 4.0.13 — pull from ConfigServer
