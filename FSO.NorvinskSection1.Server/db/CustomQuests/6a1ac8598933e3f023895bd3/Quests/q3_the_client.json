@@ -122,14 +122,14 @@
           "id": "a66f1a59a7559374ee40b97f",
           "index": 5,
           "type": "Skill",
-          "target": "Perception",
+          "target": "AimDrills",
           "value": 300
         },
         {
           "id": "3aeb3be1bb8431731c227faf",
           "index": 6,
           "type": "Skill",
-          "target": "ShadowConnections",
+          "target": "Shadowconnections",
           "value": 300
         },
         {

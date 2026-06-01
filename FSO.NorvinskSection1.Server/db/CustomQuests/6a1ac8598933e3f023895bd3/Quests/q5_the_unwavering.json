@@ -189,7 +189,7 @@
           "id": "60c03a22addfc43c05139d67",
           "index": 3,
           "type": "Skill",
-          "target": "ShadowConnections",
+          "target": "Shadowconnections",
           "value": 1000
         },
         {
