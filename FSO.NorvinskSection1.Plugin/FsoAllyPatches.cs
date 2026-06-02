@@ -114,6 +114,11 @@ namespace FSO.NorvinskSection1.Plugin // <-- match your Plugin.cs namespace
 
         public static void Register()
         {
+            // Idempotent within a raid: FsoMatchStartedPatch calls ResetForNewRaid() then Register()
+            // once per raid, so this normally proceeds — but the guard means a stray second call
+            // can't double-register the hunt roles. (Also makes _registeredThisRaid a read field,
+            // silencing CS0414.)
+            if (_registeredThisRaid) return;
             try
             {
                 // Resolve HuntManager.Instance (MonoBehaviourSingleton<HuntManager>) via reflection.

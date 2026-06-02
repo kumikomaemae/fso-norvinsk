@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>FSO.NorvinskSection1.Prepatch</AssemblyName>
     <RootNamespace>FSO.NorvinskSection1.Prepatch</RootNamespace>
-    <Version>0.1.0</Version>
+    <Version>0.6.0</Version>
     <Authors>Mae</Authors>
     <Description>Prepatcher for FSO: Norvinsk Section 1 - registers custom bot WildSpawnType enum values via MoreBotsAPI.</Description>
   </PropertyGroup>

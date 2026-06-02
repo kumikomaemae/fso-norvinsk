@@ -87,6 +87,7 @@ public class FsoTraderHelper(
 
             lazyLoadedLocale.AddTransformer(localeData =>
             {
+                localeData ??= new Dictionary<string, string>();   // null-guard so the analyzer stops fretting
                 localeData[$"{traderId} FullName"]    = fullName;
                 localeData[$"{traderId} FirstName"]   = firstName;
                 localeData[$"{traderId} Nickname"]    = nickName;

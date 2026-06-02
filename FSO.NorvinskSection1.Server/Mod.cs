@@ -8,6 +8,7 @@ using SPTarkov.Server.Core.Models.Eft.Common;
 using SPTarkov.Server.Core.Models.Enums;
 using SPTarkov.Server.Core.Models.Spt.Config;
 using SPTarkov.Server.Core.Models.Spt.Mod;
+using SPTarkov.Server.Core.Models.Logging;
 using SPTarkov.Server.Core.Models.Utils;
 using SPTarkov.Server.Core.Servers;
 using SPTarkov.Server.Core.Services;
@@ -25,7 +26,7 @@ public record ModMetadata : AbstractModMetadata
     public override string Name { get; init; } = "FSO: Norvinsk Section 1";
     public override string Author { get; init; } = "Mae";
     public override List<string>? Contributors { get; init; }
-    public override SemanticVersioning.Version Version { get; init; } = new("0.5.1");
+    public override SemanticVersioning.Version Version { get; init; } = new("0.6.0");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
     public override List<string>? Incompatibilities { get; init; }
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
@@ -72,7 +73,7 @@ public class Mod(
 ) : IOnLoad
 {
     public const string ModName = "FSO: Norvinsk Section 1";
-    public const string ModVersion = "0.5.1";
+    public const string ModVersion = "0.6.0";
     public const string FactionName = "fso";
 
     // config objects can't be constructor-injected on 4.0.13 — pull from ConfigServer
@@ -139,7 +140,7 @@ public class Mod(
 
     public async Task OnLoad()
     {
-        logger.Info($"[{ModName}] v{ModVersion} loading...");
+        logger.LogWithColor($"[{ModName}] v{ModVersion} loading...", LogTextColor.Magenta);
         var asm = Assembly.GetExecutingAssembly();
 
         // Map custom WildSpawnType int values to role names so faction
@@ -169,12 +170,12 @@ public class Mod(
         // slots / calibers / secure filters, so the deferred processors aren't needed.
         // NOTE: WTT-ServerCommonLib logs its own success at Debug level (hidden at INFO),
         // so we add our own Info confirmations here for visibility in the server log.
-        logger.Info($"[{ModName}] Loading custom items from db/CustomItems...");
+        logger.LogWithColor($"[{ModName}] Loading custom items from db/CustomItems...", LogTextColor.Magenta);
         await wttItemService.CreateCustomItems(asm);
         // Register FSO's custom achievements from db/CustomAchievements/ (the "Savior"
         // achievement — its CustomizationDirect rewards grant the ForHumanity menu
         // environment + the for_humanity dogtag when the achievement is awarded on Q5).
-        logger.Info($"[{ModName}] Loading custom achievements from db/CustomAchievements...");
+        logger.LogWithColor($"[{ModName}] Loading custom achievements from db/CustomAchievements...", LogTextColor.Magenta);
         await wttAchievementService.CreateCustomAchievements(asm);
         logger.Success($"[{ModName}] Custom content loaded: the watch + the Savior achievement.");
 
@@ -195,9 +196,9 @@ public class Mod(
         RaiseLabsBotCap();
 
         logger.Success($"[{ModName}] Section Manager Mae reporting. Coffee's hot. Standing by.");
-        logger.Info($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}");
-        logger.Info($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.");
-        logger.Info($"[{ModName}] Spawn rules wired across 6 maps (Streets, Ground Zero, Customs, Shoreline, Lighthouse, Labs).");
+        logger.LogWithColor($"[{ModName}] Loaded bot types: {string.Join(", ", customBotTypeService.LoadedBotTypes)}", LogTextColor.Magenta);
+        logger.LogWithColor($"[{ModName}] Faction '{FactionName}' registered with {FsoBotTypes.Count} bot tiers.", LogTextColor.Magenta);
+        logger.LogWithColor($"[{ModName}] Spawn rules wired across 6 maps (Streets, Ground Zero, Customs, Shoreline, Lighthouse, Labs).", LogTextColor.Magenta);
     }
 
     private void RegisterFsoFaction()
@@ -219,7 +220,7 @@ public class Mod(
     {
         if (factionService.Factions.ContainsKey(name))
         {
-            logger.Info($"[{ModName}] Faction '{name}' already registered — leaving as-is.");
+            logger.LogWithColor($"[{ModName}] Faction '{name}' already registered — leaving as-is.", LogTextColor.Magenta);
             return;
         }
         factionService.Factions.Add(name, new Faction { Name = name, BotTypes = botTypes });
@@ -235,7 +236,7 @@ public class Mod(
             var caps = botConfig?.MaxBotCap;
             if (caps == null)
             {
-                logger.Info($"[{ModName}] Labs cap-raise: MaxBotCap not available (skipped).");
+                logger.LogWithColor($"[{ModName}] Labs cap-raise: MaxBotCap not available (skipped).", LogTextColor.Magenta);
                 return;
             }
 
@@ -303,7 +304,7 @@ public class Mod(
         factionService.AddRevengeByFaction(FsoTypeNames, FactionName);
         factionService.AddRevengeByFaction(FsoTypeNames, "usec");
 
-        logger.Info($"[{ModName}] Faction relationships wired (BD-pattern, type-string overload): FSO hostile to savage/cultists/infected/bear/blackdiv/ruaf/remnant, friendly self+usec, neutral rogues, revenge on FSO+player deaths.");
+        logger.LogWithColor($"[{ModName}] Faction relationships wired (BD-pattern, type-string overload): FSO hostile to savage/cultists/infected/bear/blackdiv/ruaf/remnant, friendly self+usec, neutral rogues, revenge on FSO+player deaths.", LogTextColor.Magenta);
     }
 
     private void EnsureSpawnKeysExist()
@@ -501,8 +502,13 @@ public class Mod(
             SpawnMode = new List<string> { "regular", "pve" },
             DependKarma = false,
             DependKarmaPVE = false,
-            TriggerId = "",
-            TriggerName = "",
+            // Same hunt-event trigger as the FSO spawns: stamps "hunt" into Id_spawn so these
+            // Labs BD get MoreBotsAPI's hunt component and actively push the player/FSO during
+            // the Q5 finale instead of holding. BD's hunt ROLES are registered by BD's own mod
+            // (a shared HuntManager singleton), so spawning them here through the "hunt" botEvent
+            // is enough — they'll hunt using BD's own target list.
+            TriggerId = "hunt",
+            TriggerName = "botEvent",
             Supports = new List<BossSupport>(),
         };
     }
@@ -635,8 +641,15 @@ public class Mod(
                 SpawnMode = new List<string> { "regular", "pve" },
                 DependKarma = false,
                 DependKarmaPVE = false,
-                TriggerId = "",
-                TriggerName = "",
+                // HUNT FIX: the bot only gets MoreBotsAPI's hunt component if its runtime
+                // SpawnParams.Id_spawn contains "hunt" (HuntManager.OnBotCreated). That field is
+                // populated from the EVENT trigger, NOT from SptId. So we spawn via the "hunt"
+                // botEvent (which MoreBotsAPI fires at raid start in HuntManager.InitRaid) exactly
+                // the way UNTAR/BD do — TriggerName "botEvent" + TriggerId "hunt". SptId above is
+                // just our own label; it never reaches Id_spawn, which is why setting "hunt" there
+                // did nothing. With this, Fixers roam + seek the enemy roles the plugin registered.
+                TriggerId = "hunt",
+                TriggerName = "botEvent",
                 Supports = _supports,
             };
         }
