@@ -17,7 +17,7 @@ namespace FSO.NorvinskSection1.Prepatch
     {
         public const string PluginGuid = "com.fso.norvinsksection1.prepatch";
         public const string PluginName = "FSO: Norvinsk Section 1 Prepatch";
-        public const string PluginVersion = "0.6.0";
+        public const string PluginVersion = "1.0.0";
 
         // Singleton reference - lets other code in this assembly access the plugin instance
         // (especially useful for logging from static methods like our patch class).

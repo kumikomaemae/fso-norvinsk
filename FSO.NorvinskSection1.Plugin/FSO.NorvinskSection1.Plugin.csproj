@@ -6,7 +6,7 @@
     <Nullable>disable</Nullable>
     <AssemblyName>FSO.NorvinskSection1.Plugin</AssemblyName>
     <RootNamespace>FSO.NorvinskSection1.Plugin</RootNamespace>
-    <Version>0.6.0</Version>
+    <Version>1.0.0</Version>
     <Authors>Mae</Authors>
     <Description>Runtime plugin for FSO: Norvinsk Section 1 - makes Fixers allied to human players.</Description>
   </PropertyGroup>

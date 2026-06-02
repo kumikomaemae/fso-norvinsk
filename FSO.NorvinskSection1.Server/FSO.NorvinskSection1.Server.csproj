@@ -9,7 +9,7 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AssemblyName>FSO.NorvinskSection1.Server</AssemblyName>
     <RootNamespace>FSO.NorvinskSection1.Server</RootNamespace>
-    <Version>0.6.0</Version>
+    <Version>1.0.0</Version>
     <Authors>Mae</Authors>
     <Description>Server mod for FSO: Norvinsk Section 1 — registers Mae as a custom trader, defines bot data, quests, locales, and mail.</Description>
   </PropertyGroup>

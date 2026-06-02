@@ -14,7 +14,7 @@ namespace FSO.NorvinskSection1.Plugin
     {
         public const string PluginGuid = "com.fso.norvinsksection1.plugin";
         public const string PluginName = "FSO: Norvinsk Section 1";
-        public const string PluginVersion = "0.6.0";
+        public const string PluginVersion = "1.0.0";
 
         public static ManualLogSource Log = null!;
 
