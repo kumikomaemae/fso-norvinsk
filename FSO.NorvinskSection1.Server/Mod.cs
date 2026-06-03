@@ -502,13 +502,12 @@ public class Mod(
             SpawnMode = new List<string> { "regular", "pve" },
             DependKarma = false,
             DependKarmaPVE = false,
-            // Same hunt-event trigger as the FSO spawns: stamps "hunt" into Id_spawn so these
-            // Labs BD get MoreBotsAPI's hunt component and actively push the player/FSO during
-            // the Q5 finale instead of holding. BD's hunt ROLES are registered by BD's own mod
-            // (a shared HuntManager singleton), so spawning them here through the "hunt" botEvent
-            // is enough — they'll hunt using BD's own target list.
-            TriggerId = "hunt",
-            TriggerName = "botEvent",
+            // Empty trigger = NORMAL boss-wave, fires at RAID START (Time = -1, ForceSpawn = true,
+            // 100% chance) through SPT core. We dropped the "hunt" botEvent trigger the FSO spawns
+            // used — it depended on MoreBotsAPI's HuntManager firing the event, which broke. BD is
+            // present from raid start and fights via its own faction hostility (+ SAIN for behaviour).
+            TriggerId = "",
+            TriggerName = "",
             Supports = new List<BossSupport>(),
         };
     }
@@ -641,15 +640,15 @@ public class Mod(
                 SpawnMode = new List<string> { "regular", "pve" },
                 DependKarma = false,
                 DependKarmaPVE = false,
-                // HUNT FIX: the bot only gets MoreBotsAPI's hunt component if its runtime
-                // SpawnParams.Id_spawn contains "hunt" (HuntManager.OnBotCreated). That field is
-                // populated from the EVENT trigger, NOT from SptId. So we spawn via the "hunt"
-                // botEvent (which MoreBotsAPI fires at raid start in HuntManager.InitRaid) exactly
-                // the way UNTAR/BD do — TriggerName "botEvent" + TriggerId "hunt". SptId above is
-                // just our own label; it never reaches Id_spawn, which is why setting "hunt" there
-                // did nothing. With this, Fixers roam + seek the enemy roles the plugin registered.
-                TriggerId = "hunt",
-                TriggerName = "botEvent",
+                // SPAWN MECHANISM: empty trigger = a NORMAL boss-wave that fires at RAID START
+                // based on BossChance (Time = -1), going through SPT core's boss spawner (robust).
+                // We no longer use the "hunt" botEvent trigger: that coupled FSO's spawn to
+                // MoreBotsAPI's HuntManager.InitRaid firing the event, and a MoreBots update
+                // stopped firing it for our waves — so NOTHING spawned. Aggression/seek behaviour
+                // is now provided by SAIN's per-tier curve (better than the hunt component), and
+                // FSO stay friendly to the player via FsoAllyPatches (role-based, spawn-independent).
+                TriggerId = "",
+                TriggerName = "",
                 Supports = _supports,
             };
         }
