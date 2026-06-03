@@ -1,7 +1,0 @@
-2026-06-02 23:38:51.881 -04:00|0.16.9.0.40087|Info|spatial-audio|Success initialize BetterAudio 
-2026-06-02 23:39:54.438 -04:00|0.16.9.0.40087|Info|spatial-audio|Target audio quality = high 32 
-2026-06-02 23:39:54.438 -04:00|0.16.9.0.40087|Info|spatial-audio|SpatialAudioSystem Initialized 
-2026-06-02 23:41:30.229 -04:00|0.16.9.0.40087|Info|spatial-audio|Current DSP buffer length: 1024, buffers num: 4 
-2026-06-02 23:41:30.744 -04:00|0.16.9.0.40087|Info|spatial-audio|ReverbPluginChecker enabled: True, check cooldown: 0.3 
-2026-06-02 23:41:30.744 -04:00|0.16.9.0.40087|Info|spatial-audio|Ambient Audio System successful init 
-2026-06-02 23:44:08.859 -04:00|0.16.9.0.40087|Info|spatial-audio|ReverbPluginChecker enabled: False, check cooldown: 0.3 
