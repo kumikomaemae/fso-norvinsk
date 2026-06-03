@@ -1,0 +1,35 @@
+[2026-06-02 23:35:26] ==== Launcher Started ====
+[2026-06-02 23:35:26][Info] Using launcher config at: C:\Games\SPT\SPT\user\launcher\config.json
+[2026-06-02 23:35:27][DEV_MODE][Info] Running in dev mode, not resetting
+[2026-06-02 23:35:27][DEV_MODE][Info] Connected to server: https://100.68.29.73:6969 - SPT MatchingVersion: 4.0.13
+[2026-06-02 23:35:32][DEV_MODE][Info] Connected to server: https://100.68.29.73:6969 - SPT MatchingVersion: 4.0.13
+[2026-06-02 23:35:47][DEV_MODE][Info] Account Registered: FSOTest 6a1fa113b41e7d14d8f4cc44
+[2026-06-02 23:35:51][DEV_MODE][Info] >>> Launching Game
+[2026-06-02 23:35:51][DEV_MODE][Info] >>> Account: FSOTest
+[2026-06-02 23:35:51][DEV_MODE][Info] >>> Server : https://100.68.29.73:6969
+[2026-06-02 23:35:51][DEV_MODE][Info] [LaunchGame] spt-core.dll version: 4.0.13
+[2026-06-02 23:35:51][DEV_MODE][Info] [LaunchGame] Installed in Live :: NO
+[2026-06-02 23:35:51][DEV_MODE][Info] [LaunchGame] Setup Game Files ...
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\Logs
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\Logs\log_2026.06.03_3-11-38_0.16.9.0.40087
+[2026-06-02 23:35:51][DEV_MODE][Info] [LaunchGame] Game Validation   :: OK
+[2026-06-02 23:35:51][DEV_MODE][Info] [LaunchGame] Wipe profile requested
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\files
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\files\banners
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\files\prestige
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\files\prestige\reward
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\files\prestige\reward\big
+[2026-06-02 23:35:51][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\files\prestige\reward\small
+[2026-06-02 23:35:52][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\live
+[2026-06-02 23:35:52][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\live\Clothing
+[2026-06-02 23:35:52][DEV_MODE][Info] Recursive Removal: C:\Games\SPT\SPT\user\sptappdata\live\PlayerIcons
+[2026-06-02 23:35:52][DEV_MODE][Info] [LaunchGame] Valid Game Path   :: OK
+[2026-06-02 23:35:52][DEV_MODE][Info] [LaunchGame] Applying Patch    :: OK
+[2026-06-02 23:35:52][DEV_MODE][Info] [LaunchGame] Game process started
+[2026-06-02 23:45:05][DEV_MODE][Info] [Settings] Copying logs to clipboard ...
+[2026-06-02 23:45:05][DEV_MODE][Debug] file to copy :: C:\Games\SPT\SPT\user\logs\launcher.log
+[2026-06-02 23:45:05][DEV_MODE][Debug] file to copy :: C:\Games\SPT\SPT\user\profiles\6a1fa113b41e7d14d8f4cc44.json
+[2026-06-02 23:45:05][DEV_MODE][Debug] file to copy :: C:\Games\SPT\SPT\user\logs\spt\spt20260602.log
+[2026-06-02 23:45:05][DEV_MODE][Debug] file to copy :: C:\Games\SPT\BepInEx\LogOutput.log
+[2026-06-02 23:45:05][DEV_MODE][Info] [Settings] 4 log/s copied to clipboard
