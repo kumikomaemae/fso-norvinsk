@@ -1,5 +1,0 @@
-2026-06-02 23:36:39.476 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "WeaponRuger57/ruger57_barrel.bundle" has dependency "assets/system/effects/smoke" that was not found in manifest 
-2026-06-02 23:36:39.476 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "magazine_ddm4_extended.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
-2026-06-02 23:36:39.476 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "magazine_ddm4_fde.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
-2026-06-02 23:36:39.479 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "magazine_ddm4_fde_extended.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
-2026-06-02 23:36:39.479 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "magazine_ddm4.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
