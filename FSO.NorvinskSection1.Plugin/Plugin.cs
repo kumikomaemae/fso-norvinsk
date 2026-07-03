@@ -10,6 +10,7 @@ namespace FSO.NorvinskSection1.Plugin
     /// BepInEx/patchers/) still handles registering the custom WildSpawnType values.
     /// </summary>
     [BepInPlugin(PluginGuid, PluginName, PluginVersion)]
+    [BepInDependency(OrbitCompat.OrbitGuid, BepInDependency.DependencyFlags.SoftDependency)]
     public class Plugin : BaseUnityPlugin
     {
         public const string PluginGuid = "com.fso.norvinsksection1.plugin";
@@ -26,7 +27,7 @@ namespace FSO.NorvinskSection1.Plugin
             new FsoBotSpawnCatcher().Enable();
             new FsoPreventEnemyController().Enable();
             new FsoPreventEnemyGroup().Enable();
-
+            OrbitCompat.Apply(Logger);
             Log.LogWarning("FSO: Norvinsk Section 1 ally plugin loaded.");
         }
     }
