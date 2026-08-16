@@ -1,0 +1,23 @@
+{
+  // Project Soppo — SOPMOD II registration
+  // ---------------------------------------------------------------
+  // Enabled: master switch. false = mod loads but registers nothing.
+  "Enabled": true,
+
+  // UnlockByDefault: both Redline Ranger suites arrive already owned
+  // (they appear at Ragman's clothing service, wearable immediately).
+  "UnlockByDefault": true,
+
+  // AddRagmanOffers: list the suites at Ragman's clothing service.
+  // Keep true — this is what makes them visible/selectable in the UI.
+  "AddRagmanOffers": true,
+
+  // PriceRoubles: 0 = free. Set a price (e.g. 314000) if you want the
+  // ceremony of buying her outfit. Ignored for ownership when
+  // UnlockByDefault is true, but still shown by the UI.
+  "EnableVoice": true,
+  "PriceRoubles": 0,
+
+  // Sides that can wear/select Soppo. Usec+Bear covers both PMCs.
+  "Sides": [ "Usec", "Bear" ]
+}

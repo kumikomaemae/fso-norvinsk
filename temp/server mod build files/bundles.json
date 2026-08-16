@@ -1,0 +1,9 @@
+{
+  "manifest": [
+    { "key": "assets/content/characters/soppo/soppo_body.bundle" },
+    { "key": "assets/content/characters/soppo/soppo_leg.bundle" },
+    { "key": "assets/content/characters/soppo/soppo_hands.bundle" },
+    { "key": "assets/content/characters/soppo/soppo_head.bundle" },
+    { "key": "assets/content/audio/phrases/soppo_voice.bundle" }
+  ]
+}

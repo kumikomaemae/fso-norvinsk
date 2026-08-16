@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AssemblyName>Soppo.Character.Server</AssemblyName>
+    <RootNamespace>Soppo.Character.Server</RootNamespace>
+    <Version>0.1.0</Version>
+    <Authors>Mae</Authors>
+    <Description>Project Soppo — SOPMOD II (GFL2 Redline Ranger) as playable EFT character customization: head at creation, body/hands/feet suites at Ragman. Server-only; bundles via native BundleLoader.</Description>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <SPTServerPath>C:\Games\SPT</SPTServerPath>
+    <NoWarn>$(NoWarn);CS0618</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.13" />
+    <PackageReference Include="SPTarkov.Common" Version="4.0.13" />
+    <PackageReference Include="SPTarkov.DI" Version="4.0.13" />
+  </ItemGroup>
+
+  <!--
+    Auto-deploy after every successful build: DLL + config.jsonc (if new) + bundles.json
+    into SPT's mods folder. The bundles/ folder itself is copied only if missing, so the
+    four .bundle files you place there survive rebuilds untouched.
+  -->
+  <Target Name="DeployToSPT" AfterTargets="Build">
+    <PropertyGroup>
+      <DeployDir>$(SPTServerPath)\user\mods\$(AssemblyName)</DeployDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(DeployDir)" />
+    <MakeDir Directories="$(DeployDir)\bundles\assets\content\characters\soppo" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DeployDir)" />
+    <Copy SourceFiles="$(ProjectDir)config.jsonc" DestinationFolder="$(DeployDir)" Condition="!Exists('$(DeployDir)\config.jsonc')" />
+    <Copy SourceFiles="$(ProjectDir)bundles.json" DestinationFolder="$(DeployDir)" />
+    <Message Text="--- Deployed $(AssemblyName).dll (+ manifest) to $(DeployDir). Place the four .bundle files under bundles\assets\content\characters\soppo\ ---" Importance="high" />
+  </Target>
+
+</Project>

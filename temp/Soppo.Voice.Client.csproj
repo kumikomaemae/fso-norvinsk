@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net471</TargetFramework>
+    <AssemblyName>Soppo.Voice.Client</AssemblyName>
+    <RootNamespace>Soppo.Voice.Client</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <Version>1.0.0</Version>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <!-- point this at your SPT game folder (the one containing EscapeFromTarkov.exe) -->
+    <SPTPath>C:\Games\SPT</SPTPath>
+    <ManagedPath>$(SPTPath)\EscapeFromTarkov_Data\Managed</ManagedPath>
+    <BepInExPath>$(SPTPath)\BepInEx</BepInExPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp"><HintPath>$(ManagedPath)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedPath)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AssetBundleModule"><HintPath>$(ManagedPath)\UnityEngine.AssetBundleModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(ManagedPath)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="BepInEx"><HintPath>$(BepInExPath)\core\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BepInExPath)\core\0Harmony.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+
+  <Target Name="DeployToBepInEx" AfterTargets="Build">
+    <PropertyGroup>
+      <DeployDir>$(BepInExPath)\plugins\SoppoVoice</DeployDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(DeployDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(DeployDir)" />
+    <Message Text="--- Deployed $(AssemblyName).dll to $(DeployDir). Place soppo_voice.bundle beside it. ---" Importance="high" />
+  </Target>
+
+</Project>

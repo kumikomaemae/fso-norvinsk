@@ -1,0 +1,9 @@
+{
+  "manifest": [
+    { "key": "assets/content/characters/soppo/soppo_body.bundle",  "dependencyKeys": [ "shaders", "cubemaps" ] },
+    { "key": "assets/content/characters/soppo/soppo_leg.bundle",   "dependencyKeys": [ "shaders", "cubemaps" ] },
+    { "key": "assets/content/characters/soppo/soppo_hands.bundle", "dependencyKeys": [ "shaders", "cubemaps" ] },
+    { "key": "assets/content/characters/soppo/soppo_head.bundle",  "dependencyKeys": [ "shaders", "cubemaps" ] },
+    { "key": "assets/content/audio/phrases/soppo_voice.bundle",    "dependencyKeys": [] }
+  ]
+}
