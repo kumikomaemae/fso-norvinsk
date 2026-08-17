@@ -1,0 +1,10 @@
+{
+	"name": "builtin_shader",
+	"author": "kmyuhkyuk,alias",
+	"version": "1.6.0",
+	"sptVersion": "3.9.0",
+	"license": "MIT",
+	"devdependences": {},
+	"main": "src/builtin_shader.js",
+	"isBundleMod": true
+}

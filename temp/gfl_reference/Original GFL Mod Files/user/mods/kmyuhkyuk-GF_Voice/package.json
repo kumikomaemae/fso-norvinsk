@@ -1,0 +1,10 @@
+{
+	"name": "GF_Voice",
+	"author": "kmyuhkyuk,alias",
+	"version": "1.6.0",
+	"sptVersion": "3.9.0",
+	"license": "GNU LGPLv3",
+	"devdependences": {},
+	"main": "src/GF_Voice.js",
+	"isBundleMod": true
+}

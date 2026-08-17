@@ -1,0 +1,24 @@
+{
+	"manifest": [
+		{
+			"key": "assets/content/audio/phrases/groza_audio.bundle",
+			"dependencyKeys": []
+		},
+		{
+			"key": "assets/content/audio/phrases/groza_voice.bundle",
+			"dependencyKeys": [
+				"assets/content/audio/phrases/groza_audio.bundle"
+			]
+		},
+		{
+			"key": "assets/content/audio/phrases/lenna_audio.bundle",
+			"dependencyKeys": []
+		},
+		{
+			"key": "assets/content/audio/phrases/lenna_voice.bundle",
+			"dependencyKeys": [
+				"assets/content/audio/phrases/lenna_audio.bundle"
+			]
+		}
+	]
+}

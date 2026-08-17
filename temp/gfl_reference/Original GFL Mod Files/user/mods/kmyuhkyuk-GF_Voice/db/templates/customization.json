@@ -1,0 +1,28 @@
+{
+    "GrozaVoice11111111111111": {
+        "_id": "GrozaVoice11111111111111",
+        "_name": "Groza",
+        "_parent": "5fc100cf95572123ae738483",
+        "_props": {
+            "Description": "Groza",
+            "Name": "Groza",
+            "Prefab": "Groza",
+            "ShortName": "Groza",
+            "Side": ["Bear", "Usec"]
+        },
+        "_type": "Item"
+    },
+    "LennaVoice11111111111111": {
+        "_id": "LennaVoice11111111111111",
+        "_name": "Lenna",
+        "_parent": "5fc100cf95572123ae738483",
+        "_props": {
+            "Description": "Lenna",
+            "Name": "Lenna",
+            "Prefab": "Lenna",
+            "ShortName": "Lenna",
+            "Side": ["Bear", "Usec"]
+        },
+        "_type": "Item"
+    }
+}

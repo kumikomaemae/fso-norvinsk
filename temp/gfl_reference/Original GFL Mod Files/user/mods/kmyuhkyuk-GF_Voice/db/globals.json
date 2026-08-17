@@ -1,0 +1,16 @@
+{
+    "config": {
+        "Customization": {
+            "CustomizationVoice": [{
+                "isNotRandom": true,
+                "side": ["Bear", "Usec"],
+                "voice": "Groza"
+            },{
+                "isNotRandom": true,
+                "side": ["Bear", "Usec"],
+                "voice": "Lenna"
+            }
+        ]
+        }
+    }
+}
