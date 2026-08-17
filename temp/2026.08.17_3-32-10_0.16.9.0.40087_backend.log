@@ -1,0 +1,170 @@
+2026-08-16 23:34:06.006 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [1]: URL: https://100.68.29.73:6969/client/menu/locale/en, crc: .  
+2026-08-16 23:34:06.064 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [1]: URL: https://100.68.29.73:6969/client/menu/locale/en, crc: , responseText: . 
+2026-08-16 23:34:06.079 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [2]: URL: https://100.68.29.73:6969/client/game/mode, crc: .  
+2026-08-16 23:34:06.130 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [2]: URL: https://100.68.29.73:6969/client/game/mode, crc: , responseText: . 
+2026-08-16 23:34:06.134 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [3]: URL: https://100.68.29.73:6969/client/game/start, crc: .  
+2026-08-16 23:34:06.164 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [3]: URL: https://100.68.29.73:6969/client/game/start, crc: , responseText: . 
+2026-08-16 23:34:06.213 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [4]: URL: https://100.68.29.73:6969/client/game/version/validate, crc: .  
+2026-08-16 23:34:06.264 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [4]: URL: https://100.68.29.73:6969/client/game/version/validate, crc: , responseText: . 
+2026-08-16 23:34:06.264 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [5]: URL: https://100.68.29.73:6969/client/languages, crc: .  
+2026-08-16 23:34:06.297 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [5]: URL: https://100.68.29.73:6969/client/languages, crc: , responseText: . 
+2026-08-16 23:34:06.311 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [6]: URL: https://100.68.29.73:6969/client/game/config, crc: .  
+2026-08-16 23:34:06.373 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [6]: URL: https://100.68.29.73:6969/client/game/config, crc: , responseText: . 
+2026-08-16 23:34:06.392 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [7]: URL: https://100.68.29.73:6969/client/items, crc: .  
+2026-08-16 23:34:21.722 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [7]: URL: https://100.68.29.73:6969/client/items, crc: , responseText: . 
+2026-08-16 23:34:21.753 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [8]: URL: https://100.68.29.73:6969/client/customization, crc: .  
+2026-08-16 23:34:21.753 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [9]: URL: https://100.68.29.73:6969/client/globals, crc: .  
+2026-08-16 23:34:21.753 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [10]: URL: https://100.68.29.73:6969/client/trading/api/traderSettings, crc: .  
+2026-08-16 23:34:21.753 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [11]: URL: https://100.68.29.73:6969/client/prestige/list, crc: .  
+2026-08-16 23:34:21.753 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [12]: URL: https://100.68.29.73:6969/client/settings, crc: .  
+2026-08-16 23:34:21.874 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [11]: URL: https://100.68.29.73:6969/client/prestige/list, crc: , responseText: . 
+2026-08-16 23:34:21.908 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [10]: URL: https://100.68.29.73:6969/client/trading/api/traderSettings, crc: , responseText: . 
+2026-08-16 23:34:21.982 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [12]: URL: https://100.68.29.73:6969/client/settings, crc: , responseText: . 
+2026-08-16 23:34:22.099 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [8]: URL: https://100.68.29.73:6969/client/customization, crc: , responseText: . 
+2026-08-16 23:34:22.110 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [13]: URL: https://100.68.29.73:6969/client/customization/storage, crc: .  
+2026-08-16 23:34:22.166 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [13]: URL: https://100.68.29.73:6969/client/customization/storage, crc: , responseText: . 
+2026-08-16 23:34:22.449 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [9]: URL: https://100.68.29.73:6969/client/globals, crc: , responseText: . 
+2026-08-16 23:34:22.465 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [15]: URL: https://100.68.29.73:6969/client/game/profile/list, crc: .  
+2026-08-16 23:34:22.465 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [14]: URL: https://100.68.29.73:6969/client/dialogue, crc: .  
+2026-08-16 23:34:23.838 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [15]: URL: https://100.68.29.73:6969/client/game/profile/list, crc: , responseText: . 
+2026-08-16 23:34:24.094 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [16]: URL: https://100.68.29.73:6969/client/locale/en, crc: .  
+2026-08-16 23:34:24.598 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [14]: URL: https://100.68.29.73:6969/client/dialogue, crc: , responseText: . 
+2026-08-16 23:34:24.664 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [16]: URL: https://100.68.29.73:6969/client/locale/en, crc: , responseText: . 
+2026-08-16 23:34:24.732 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [17]: URL: https://100.68.29.73:6969/client/game/profile/nickname/reserved, crc: .  
+2026-08-16 23:34:24.785 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [17]: URL: https://100.68.29.73:6969/client/game/profile/nickname/reserved, crc: , responseText: . 
+2026-08-16 23:34:24.827 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [18]: URL: https://100.68.29.73:6969/client/game/profile/nickname/validate, crc: .  
+2026-08-16 23:34:24.883 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [18]: URL: https://100.68.29.73:6969/client/game/profile/nickname/validate, crc: , responseText: . 
+2026-08-16 23:34:46.256 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [19]: URL: https://100.68.29.73:6969/client/game/profile/create, crc: .  
+2026-08-16 23:34:46.572 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [19]: URL: https://100.68.29.73:6969/client/game/profile/create, crc: , responseText: . 
+2026-08-16 23:34:46.589 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [20]: URL: https://100.68.29.73:6969/client/customization/storage, crc: .  
+2026-08-16 23:34:46.639 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [20]: URL: https://100.68.29.73:6969/client/customization/storage, crc: , responseText: . 
+2026-08-16 23:34:46.639 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [21]: URL: https://100.68.29.73:6969/client/game/profile/list, crc: .  
+2026-08-16 23:34:46.822 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [21]: URL: https://100.68.29.73:6969/client/game/profile/list, crc: , responseText: . 
+2026-08-16 23:34:46.863 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [22]: URL: https://100.68.29.73:6969/client/game/profile/select, crc: .  
+2026-08-16 23:34:46.906 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [22]: URL: https://100.68.29.73:6969/client/game/profile/select, crc: , responseText: . 
+2026-08-16 23:34:47.791 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [23]: URL: https://100.68.29.73:6969/client/items/prices/54cb50c76803fa8b248b4571, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [24]: URL: https://100.68.29.73:6969/client/items/prices/54cb57776803fa99248b456e, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [25]: URL: https://100.68.29.73:6969/client/items/prices/579dc571d53a0658a154fbec, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [26]: URL: https://100.68.29.73:6969/client/items/prices/58330581ace78e27b8b10cee, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [27]: URL: https://100.68.29.73:6969/client/items/prices/5935c25fb3acc3127c3d8cd9, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [28]: URL: https://100.68.29.73:6969/client/items/prices/5a7c2eca46aef81a7ca2145d, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [29]: URL: https://100.68.29.73:6969/client/items/prices/5ac3b934156ae10c4430e83c, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [30]: URL: https://100.68.29.73:6969/client/items/prices/5c0647fdd443bc2504c2d371, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [31]: URL: https://100.68.29.73:6969/client/items/prices/638f541a29ffd1183d187f57, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [32]: URL: https://100.68.29.73:6969/client/items/prices/656f0f98d80a697f855d34b1, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [33]: URL: https://100.68.29.73:6969/client/items/prices/6617beeaa9cfa777ca915b7c, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [34]: URL: https://100.68.29.73:6969/client/items/prices/668aaff35fd574b6dcc4a686, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [35]: URL: https://100.68.29.73:6969/client/items/prices/66bf757f27d0b097db0acea5, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [36]: URL: https://100.68.29.73:6969/client/items/prices/66eeef8b2a166b73dc0671e8, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [37]: URL: https://100.68.29.73:6969/client/items/prices/674964e1ff0cf3b00b461857, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [38]: URL: https://100.68.29.73:6969/client/items/prices/674964e72eae32de73a09d41, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [39]: URL: https://100.68.29.73:6969/client/items/prices/67b7b52a4767af842e0521d0, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [40]: URL: https://100.68.29.73:6969/client/items/prices/6864e812f9fe664cb8b8e152, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [41]: URL: https://100.68.29.73:6969/client/items/prices/68b96623ca01bc95211d3de9, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [42]: URL: https://100.68.29.73:6969/client/items/prices/69325b507cd59da087ad2912, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [43]: URL: https://100.68.29.73:6969/client/items/prices/699f89c757994beece5cf7e1, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [44]: URL: https://100.68.29.73:6969/client/items/prices/69eccbae0764116786033c2e, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [45]: URL: https://100.68.29.73:6969/client/items/prices/69eeef7b2a166b73dc0771e8, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [46]: URL: https://100.68.29.73:6969/client/items/prices/6a0b92d2e760e1f5a2d430e7, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [47]: URL: https://100.68.29.73:6969/client/items/prices/6a46d0015741594c414e4401, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [48]: URL: https://100.68.29.73:6969/client/items/prices/7ae62098d17b14de9e3dd4bc, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [50]: URL: https://100.68.29.73:6969/client/items/prices/bd3a8b28356d9c6509966546, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [49]: URL: https://100.68.29.73:6969/client/items/prices/a1b2c3d4e5f6a7b8c9d0e1f2, crc: .  
+2026-08-16 23:34:47.793 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [51]: URL: https://100.68.29.73:6969/client/profile/status, crc: .  
+2026-08-16 23:34:48.084 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [23]: URL: https://100.68.29.73:6969/client/items/prices/54cb50c76803fa8b248b4571, crc: , responseText: . 
+2026-08-16 23:34:48.084 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [24]: URL: https://100.68.29.73:6969/client/items/prices/54cb57776803fa99248b456e, crc: , responseText: . 
+2026-08-16 23:34:48.084 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [25]: URL: https://100.68.29.73:6969/client/items/prices/579dc571d53a0658a154fbec, crc: , responseText: . 
+2026-08-16 23:34:48.084 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [27]: URL: https://100.68.29.73:6969/client/items/prices/5935c25fb3acc3127c3d8cd9, crc: , responseText: . 
+2026-08-16 23:34:48.218 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [34]: URL: https://100.68.29.73:6969/client/items/prices/668aaff35fd574b6dcc4a686, crc: , responseText: . 
+2026-08-16 23:34:48.218 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [35]: URL: https://100.68.29.73:6969/client/items/prices/66bf757f27d0b097db0acea5, crc: , responseText: . 
+2026-08-16 23:34:48.234 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [36]: URL: https://100.68.29.73:6969/client/items/prices/66eeef8b2a166b73dc0671e8, crc: , responseText: . 
+2026-08-16 23:34:48.234 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [37]: URL: https://100.68.29.73:6969/client/items/prices/674964e1ff0cf3b00b461857, crc: , responseText: . 
+2026-08-16 23:34:48.284 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [39]: URL: https://100.68.29.73:6969/client/items/prices/67b7b52a4767af842e0521d0, crc: , responseText: . 
+2026-08-16 23:34:48.284 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [38]: URL: https://100.68.29.73:6969/client/items/prices/674964e72eae32de73a09d41, crc: , responseText: . 
+2026-08-16 23:34:48.334 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [41]: URL: https://100.68.29.73:6969/client/items/prices/68b96623ca01bc95211d3de9, crc: , responseText: . 
+2026-08-16 23:34:48.334 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [40]: URL: https://100.68.29.73:6969/client/items/prices/6864e812f9fe664cb8b8e152, crc: , responseText: . 
+2026-08-16 23:34:48.385 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [43]: URL: https://100.68.29.73:6969/client/items/prices/699f89c757994beece5cf7e1, crc: , responseText: . 
+2026-08-16 23:34:48.385 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [42]: URL: https://100.68.29.73:6969/client/items/prices/69325b507cd59da087ad2912, crc: , responseText: . 
+2026-08-16 23:34:48.556 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [44]: URL: https://100.68.29.73:6969/client/items/prices/69eccbae0764116786033c2e, crc: , responseText: . 
+2026-08-16 23:34:48.556 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [45]: URL: https://100.68.29.73:6969/client/items/prices/69eeef7b2a166b73dc0771e8, crc: , responseText: . 
+2026-08-16 23:34:48.589 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [46]: URL: https://100.68.29.73:6969/client/items/prices/6a0b92d2e760e1f5a2d430e7, crc: , responseText: . 
+2026-08-16 23:34:48.590 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [47]: URL: https://100.68.29.73:6969/client/items/prices/6a46d0015741594c414e4401, crc: , responseText: . 
+2026-08-16 23:34:48.639 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [48]: URL: https://100.68.29.73:6969/client/items/prices/7ae62098d17b14de9e3dd4bc, crc: , responseText: . 
+2026-08-16 23:34:48.639 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [50]: URL: https://100.68.29.73:6969/client/items/prices/bd3a8b28356d9c6509966546, crc: , responseText: . 
+2026-08-16 23:34:48.639 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [51]: URL: https://100.68.29.73:6969/client/profile/status, crc: , responseText: . 
+2026-08-16 23:34:48.703 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [49]: URL: https://100.68.29.73:6969/client/items/prices/a1b2c3d4e5f6a7b8c9d0e1f2, crc: , responseText: . 
+2026-08-16 23:34:48.757 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [28]: URL: https://100.68.29.73:6969/client/items/prices/5a7c2eca46aef81a7ca2145d, crc: , responseText: . 
+2026-08-16 23:34:48.757 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [26]: URL: https://100.68.29.73:6969/client/items/prices/58330581ace78e27b8b10cee, crc: , responseText: . 
+2026-08-16 23:34:48.808 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [30]: URL: https://100.68.29.73:6969/client/items/prices/5c0647fdd443bc2504c2d371, crc: , responseText: . 
+2026-08-16 23:34:48.808 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [29]: URL: https://100.68.29.73:6969/client/items/prices/5ac3b934156ae10c4430e83c, crc: , responseText: . 
+2026-08-16 23:34:48.845 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [32]: URL: https://100.68.29.73:6969/client/items/prices/656f0f98d80a697f855d34b1, crc: , responseText: . 
+2026-08-16 23:34:48.845 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [31]: URL: https://100.68.29.73:6969/client/items/prices/638f541a29ffd1183d187f57, crc: , responseText: . 
+2026-08-16 23:34:48.845 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [52]: URL: https://100.68.29.73:6969/client/handbook/templates, crc: .  
+2026-08-16 23:34:48.879 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [33]: URL: https://100.68.29.73:6969/client/items/prices/6617beeaa9cfa777ca915b7c, crc: , responseText: . 
+2026-08-16 23:34:49.011 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [52]: URL: https://100.68.29.73:6969/client/handbook/templates, crc: , responseText: . 
+2026-08-16 23:34:52.713 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [53]: URL: https://100.68.29.73:6969/client/builds/list, crc: .  
+2026-08-16 23:34:52.858 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [53]: URL: https://100.68.29.73:6969/client/builds/list, crc: , responseText: . 
+2026-08-16 23:34:58.565 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [54]: URL: https://100.68.29.73:6969/client/notifier/channel/create, crc: .  
+2026-08-16 23:34:58.565 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [55]: URL: https://100.68.29.73:6969/client/profile/status, crc: .  
+2026-08-16 23:34:58.565 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [56]: URL: https://100.68.29.73:6969/client/weather, crc: .  
+2026-08-16 23:34:58.565 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [57]: URL: https://100.68.29.73:6969/client/locale/en, crc: .  
+2026-08-16 23:34:58.565 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [58]: URL: https://100.68.29.73:6969/client/locations, crc: .  
+2026-08-16 23:34:58.620 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [55]: URL: https://100.68.29.73:6969/client/profile/status, crc: , responseText: . 
+2026-08-16 23:34:58.620 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [54]: URL: https://100.68.29.73:6969/client/notifier/channel/create, crc: , responseText: . 
+2026-08-16 23:34:58.655 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [56]: URL: https://100.68.29.73:6969/client/weather, crc: , responseText: . 
+2026-08-16 23:34:59.320 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [57]: URL: https://100.68.29.73:6969/client/locale/en, crc: , responseText: . 
+2026-08-16 23:34:59.383 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [59]: URL: https://100.68.29.73:6969/client/hideout/areas, crc: .  
+2026-08-16 23:34:59.383 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [60]: URL: https://100.68.29.73:6969/client/hideout/qte/list, crc: .  
+2026-08-16 23:34:59.383 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [61]: URL: https://100.68.29.73:6969/client/hideout/settings, crc: .  
+2026-08-16 23:34:59.383 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [62]: URL: https://100.68.29.73:6969/client/hideout/production/recipes, crc: .  
+2026-08-16 23:34:59.383 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [63]: URL: https://100.68.29.73:6969/client/hideout/customization/offer/list, crc: .  
+2026-08-16 23:34:59.473 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [59]: URL: https://100.68.29.73:6969/client/hideout/areas, crc: , responseText: . 
+2026-08-16 23:34:59.575 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [60]: URL: https://100.68.29.73:6969/client/hideout/qte/list, crc: , responseText: . 
+2026-08-16 23:34:59.575 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [61]: URL: https://100.68.29.73:6969/client/hideout/settings, crc: , responseText: . 
+2026-08-16 23:34:59.696 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [62]: URL: https://100.68.29.73:6969/client/hideout/production/recipes, crc: , responseText: . 
+2026-08-16 23:34:59.713 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [63]: URL: https://100.68.29.73:6969/client/hideout/customization/offer/list, crc: , responseText: . 
+2026-08-16 23:34:59.713 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [58]: URL: https://100.68.29.73:6969/client/locations, crc: , responseText: . 
+2026-08-16 23:35:01.252 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [64]: URL: https://100.68.29.73:6969/client/server/list, crc: .  
+2026-08-16 23:35:01.252 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [65]: URL: https://100.68.29.73:6969/client/match/group/current, crc: .  
+2026-08-16 23:35:01.252 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [67]: URL: https://100.68.29.73:6969/client/friend/list, crc: .  
+2026-08-16 23:35:01.252 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [68]: URL: https://100.68.29.73:6969/client/friend/request/list/inbox, crc: .  
+2026-08-16 23:35:01.252 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [69]: URL: https://100.68.29.73:6969/client/friend/request/list/outbox, crc: .  
+2026-08-16 23:35:01.252 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [66]: URL: https://100.68.29.73:6969/client/mail/dialog/list, crc: .  
+2026-08-16 23:35:01.252 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [70]: URL: https://100.68.29.73:6969/client/quest/list, crc: .  
+2026-08-16 23:35:01.785 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [64]: URL: https://100.68.29.73:6969/client/server/list, crc: , responseText: . 
+2026-08-16 23:35:01.806 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [65]: URL: https://100.68.29.73:6969/client/match/group/current, crc: , responseText: . 
+2026-08-16 23:35:01.806 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [67]: URL: https://100.68.29.73:6969/client/friend/list, crc: , responseText: . 
+2026-08-16 23:35:01.810 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [68]: URL: https://100.68.29.73:6969/client/friend/request/list/inbox, crc: , responseText: . 
+2026-08-16 23:35:01.810 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [69]: URL: https://100.68.29.73:6969/client/friend/request/list/outbox, crc: , responseText: . 
+2026-08-16 23:35:01.810 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [66]: URL: https://100.68.29.73:6969/client/mail/dialog/list, crc: , responseText: . 
+2026-08-16 23:35:01.810 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [71]: URL: https://100.68.29.73:6969/client/mail/dialog/info, crc: .  
+2026-08-16 23:35:01.874 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [71]: URL: https://100.68.29.73:6969/client/mail/dialog/info, crc: , responseText: . 
+2026-08-16 23:35:04.326 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [70]: URL: https://100.68.29.73:6969/client/quest/list, crc: , responseText: . 
+2026-08-16 23:35:04.423 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [72]: URL: https://100.68.29.73:6969/client/achievement/statistic, crc: .  
+2026-08-16 23:35:04.492 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [72]: URL: https://100.68.29.73:6969/client/achievement/statistic, crc: , responseText: . 
+2026-08-16 23:35:04.492 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [73]: URL: https://100.68.29.73:6969/client/achievement/list, crc: .  
+2026-08-16 23:35:04.642 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [73]: URL: https://100.68.29.73:6969/client/achievement/list, crc: , responseText: . 
+2026-08-16 23:35:04.722 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [74]: URL: https://100.68.29.73:6969/client/repeatalbeQuests/activityPeriods, crc: .  
+2026-08-16 23:35:05.274 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [74]: URL: https://100.68.29.73:6969/client/repeatalbeQuests/activityPeriods, crc: , responseText: . 
+2026-08-16 23:35:05.337 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [75]: URL: https://100.68.29.73:6969/client/survey, crc: .  
+2026-08-16 23:35:05.391 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [75]: URL: https://100.68.29.73:6969/client/survey, crc: , responseText: . 
+2026-08-16 23:35:13.969 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [76]: URL: https://100.68.29.73:6969/client/checkVersion, crc: .  
+2026-08-16 23:35:13.969 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [77]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/54cb50c76803fa8b248b4571, crc: .  
+2026-08-16 23:35:13.969 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [78]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5935c25fb3acc3127c3d8cd9, crc: .  
+2026-08-16 23:35:13.969 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [79]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/58330581ace78e27b8b10cee, crc: .  
+2026-08-16 23:35:14.708 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [76]: URL: https://100.68.29.73:6969/client/checkVersion, crc: , responseText: . 
+2026-08-16 23:35:14.773 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [77]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/54cb50c76803fa8b248b4571, crc: , responseText: . 
+2026-08-16 23:35:14.820 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [78]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5935c25fb3acc3127c3d8cd9, crc: , responseText: . 
+2026-08-16 23:35:14.928 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [79]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/58330581ace78e27b8b10cee, crc: , responseText: . 
+2026-08-16 23:35:16.560 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [80]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5ac3b934156ae10c4430e83c, crc: .  
+2026-08-16 23:35:16.610 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [80]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5ac3b934156ae10c4430e83c, crc: , responseText: . 
+2026-08-16 23:35:17.459 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [81]: URL: https://100.68.29.73:6969/client/trading/customization/5ac3b934156ae10c4430e83c/usec/offers, crc: .  
+2026-08-16 23:35:17.526 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [81]: URL: https://100.68.29.73:6969/client/trading/customization/5ac3b934156ae10c4430e83c/usec/offers, crc: , responseText: . 
+2026-08-16 23:35:19.150 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [82]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5a7c2eca46aef81a7ca2145d, crc: .  
+2026-08-16 23:35:19.336 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [82]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5a7c2eca46aef81a7ca2145d, crc: , responseText: . 
+2026-08-16 23:35:48.654 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [83]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: .  
+2026-08-16 23:35:48.802 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [83]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: , responseText: . 
+2026-08-16 23:35:51.348 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [84]: URL: https://100.68.29.73:6969/client/match/group/invite/cancel-all, crc: .  
+2026-08-16 23:35:51.381 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [84]: URL: https://100.68.29.73:6969/client/match/group/invite/cancel-all, crc: , responseText: . 
+2026-08-16 23:35:51.398 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [85]: URL: https://100.68.29.73:6969/client/game/logout, crc: .  
+2026-08-16 23:35:51.465 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [85]: URL: https://100.68.29.73:6969/client/game/logout, crc: , responseText: . 

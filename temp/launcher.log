@@ -1,0 +1,8 @@
+[2026-08-16 23:37:21] ==== Launcher Started ====
+[2026-08-16 23:37:21][Info] Using launcher config at: C:\Games\SPT\SPT\user\launcher\config.json
+[2026-08-16 23:37:22][DEV_MODE][Info] Running in dev mode, not resetting
+[2026-08-16 23:37:26][DEV_MODE][Info] [Settings] Copying logs to clipboard ...
+[2026-08-16 23:37:26][DEV_MODE][Debug] file to copy :: C:\Games\SPT\SPT\user\logs\launcher.log
+[2026-08-16 23:37:26][DEV_MODE][Debug] file to copy :: C:\Games\SPT\SPT\user\logs\spt\spt20260816.log
+[2026-08-16 23:37:26][DEV_MODE][Debug] file to copy :: C:\Games\SPT\BepInEx\LogOutput.log
+[2026-08-16 23:37:26][DEV_MODE][Info] [Settings] 3 log/s copied to clipboard

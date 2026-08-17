@@ -1,0 +1,2479 @@
+2026-08-16 11:23:30.091 -04:00|0.16.9.0.40087|Info|application|Application awaken, updateQueue:'Update' 
+2026-08-16 11:23:30.091 -04:00|0.16.9.0.40087|Info|application|Assert.raiseExceptions:'True' 
+2026-08-16 11:23:30.091 -04:00|0.16.9.0.40087|Info|application|Application obfuscation succeed. 
+2026-08-16 11:23:30.721 -04:00|0.16.9.0.40087|Info|application|driveType:SSD swapDriveType:SSD 
+2026-08-16 11:23:33.969 -04:00|0.16.9.0.40087|Info|application|NVIDIA Reflex is available on this machine, Status: NvReflex_OK. 
+2026-08-16 11:23:40.208 -04:00|0.16.9.0.40087|Error|Default|Loading EFTHardSettings synchronously can cause CPU spikes. Please load it asynchronously using EFTHardSettings.Load before accessing Instance. 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/eyewear/oakley_holbrook/holbrook_blk.bundle" has dependency "holbrook_glass_shared" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "dd_magazine_extended_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/ate_hhv_helmet/helmet_hhv_tan.bundle" has dependency "helmet_ate_hhv_common" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_mcblk.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "dd_magazine_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_mcalp.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "mods/ak/Pic_Adapter_for_AK.bundle" has dependency "cab-1dc8d26be8722a766953ce9d8a444e8c" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "mods/ak/Pic_Adapter_for_AK.bundle" has dependency "cab-bbf13a8cb4c78fcb606eec94701adda6" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "mods/ak/Pic_Adapter_for_AK.bundle" has dependency "cab-92f737866f97db787c6e7d22c895a41e" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "WeaponRuger57/ruger57_barrel.bundle" has dependency "assets/system/effects/smoke" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Mods/PistolGrips/b5_p22_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Attachments/Foregrips/foregrip_all_dd_vfg_fde_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "dd_magazine_fde_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Attachments/Foregrips/foregrip_all_dd_vfg_gry_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.853 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Mods/Foregrips/kac_finger_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/ate_hhv_helmet/helmet_hhv_wraith.bundle" has dependency "helmet_ate_hhv_common" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Mods/PistolGrips/b5_p22_fde_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_aor2.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/eyewear/oakley_holbrook/holbrook_prpl.bundle" has dependency "holbrook_glass_shared" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_mc.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "dd_magazine_fde_extended_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_odrab.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_desert_night.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Attachments/Foregrips/foregrip_all_dd_vfg_blk_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 11:25:18.859 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/fast_xp_untar.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 11:25:25.084 -04:00|0.16.9.0.40087|Info|application|Game settings:
+{
+  "Language": "en",
+  "SelectedMemberCategory": "Unheard",
+  "QuickSlotsVisibility": "Autohide",
+  "StaminaVisibility": "Autohide",
+  "HealthVisibility": "Autohide",
+  "HealthColor": "WhiteToRed",
+  "NotificationTransportType": "Default",
+  "ConnectionType": "Default",
+  "HighlightScope": "All",
+  "FieldOfView": 75,
+  "HeadBobbing": 1.0,
+  "AutoEmptyWorkingSet": false,
+  "SetAffinityToLogicalCores": true,
+  "EnableHideoutPreload": false,
+  "StreamerModeEnabled": false,
+  "BlockGroupInvites": false,
+  "ItemQuickUseMode": "InRaidAndInLobby",
+  "PriorityWindowMode": "Auto",
+  "AutoVaultingMode": "Hotkey",
+  "ContinuousHealMode": "Disabled",
+  "QuestItemNotificationMode": "Enabled",
+  "WishlistNotificationsType": "All",
+  "AutoAddToWishlist": "AllHideout",
+  "MalfunctionVisability": true,
+  "TradingIntermediateScreen": false,
+  "RagfairLinesCount": 15,
+  "EnvironmentUiType": "FactoryEnvironmentUiType",
+  "TacticalInputMode": "Press"
+} 
+2026-08-16 11:25:25.084 -04:00|0.16.9.0.40087|Info|application|Sound settings:
+{
+  "OverallVolume": 10,
+  "InterfaceVolume": 10,
+  "ChatVolume": 0,
+  "MusicVolume": 2,
+  "HideoutVolume": 3,
+  "MusicOnRaidEnd": true,
+  "BinauralSound": true,
+  "VoipEnabled": false,
+  "VoipDevice": "Microphone (USB Condenser Microphone)",
+  "VoiceChatVolume": 100,
+  "MicrophoneSensitivity": 4,
+  "DenoiseAmount": "Moderate"
+} 
+2026-08-16 11:25:25.084 -04:00|0.16.9.0.40087|Info|application|PostFx settings:
+{
+  "EnablePostFx": false,
+  "Brightness": 0,
+  "Saturation": 0,
+  "Clarity": 0,
+  "Colorfulness": 0,
+  "LumaSharpen": 0,
+  "AdaptiveSharpen": 0,
+  "ColorFilterType": "Jason",
+  "Intensity": 50,
+  "ColorBlindnessType": "None",
+  "ColorBlindnessIntensity": 0
+} 
+2026-08-16 11:25:25.084 -04:00|0.16.9.0.40087|Info|application|Graphics settings:
+{
+  "Stored": [
+    {
+      "Index": 0,
+      "FullScreenResolution": {
+        "Width": 2560,
+        "Height": 1440
+      },
+      "FullScreenAspectRatio": {
+        "X": 16,
+        "Y": 9
+      },
+      "WindowResolution": {
+        "Width": 2560,
+        "Height": 1440
+      },
+      "WindowAspectRatio": {
+        "X": 16,
+        "Y": 9
+      }
+    }
+  ],
+  "DisplaySettings": {
+    "Display": 0,
+    "FullScreenMode": 1,
+    "Resolution": {
+      "Width": 2560,
+      "Height": 1440
+    },
+    "AspectRatio": {
+      "X": 16,
+      "Y": 9
+    }
+  },
+  "GraphicsQuality": 2,
+  "ShadowsQuality": 3,
+  "TextureQuality": 2,
+  "CloudsQuality": "Low",
+  "SDMode": null,
+  "VSync": false,
+  "LobbyFramerate": 60,
+  "GameFramerate": 144,
+  "DisableGameFramerateLimit": true,
+  "SuperSampling": "Off",
+  "AnisotropicFiltering": "ForceEnable",
+  "OverallVisibility": 3000.0,
+  "LodBias": 2.0,
+  "MipStreamingBufferSize": 48,
+  "MipStreamingIOCount": 1024,
+  "Ssao": "HighQuality",
+  "Sharpen": 0.6,
+  "SSR": "High",
+  "AntiAliasing": "TAA_Low",
+  "NVidiaReflex": "Off",
+  "HighQualityFog": false,
+  "GrassShadow": true,
+  "ChromaticAberrations": true,
+  "Noise": true,
+  "ZBlur": true,
+  "HighQualityColor": true,
+  "MipStreaming": false,
+  "SdTarkovStreets": false,
+  "VolumetricLight": false,
+  "DLSSMode": "Off",
+  "FSR2Mode": "Off",
+  "FSR3Mode": "Off",
+  "DLSSPreset": "Default",
+  "InApplyDisplaySettingsProcess": false,
+  "DLSSEnabled": false,
+  "FSR2Enabled": false,
+  "FSR3Enabled": false,
+  "ShadowDistance": 80.0,
+  "SuperSamplingFactor": 1.0
+} 
+2026-08-16 11:25:25.084 -04:00|0.16.9.0.40087|Info|application|Control settings:
+{
+  "InvertedXAxis": false,
+  "InvertedYAxis": false,
+  "MouseSensitivity": 0.7,
+  "MouseAimingSensitivity": 0.5,
+  "DoubleClickTimeout": 0.3,
+  "OpticSensitivity": 1.0,
+  "axisBindings": [
+    {
+      "axisName": "MoveX",
+      "pairs": [
+        {
+          "positive": {
+            "keyCode": [
+              "D"
+            ]
+          },
+          "negative": {
+            "keyCode": [
+              "A"
+            ]
+          }
+        },
+        {
+          "positive": {
+            "keyCode": []
+          },
+          "negative": {
+            "keyCode": []
+          }
+        }
+      ]
+    },
+    {
+      "axisName": "MoveY",
+      "pairs": [
+        {
+          "positive": {
+            "keyCode": [
+              "W"
+            ]
+          },
+          "negative": {
+            "keyCode": [
+              "S"
+            ]
+          }
+        },
+        {
+          "positive": {
+            "keyCode": []
+          },
+          "negative": {
+            "keyCode": []
+          }
+        }
+      ]
+    },
+    {
+      "axisName": "TurnX",
+      "pairs": [
+        {
+          "positive": {
+            "isAxis": true,
+            "keyCode": [],
+            "axisName": "Mouse X",
+            "positiveAxis": true,
+            "sensitivity": 5.0
+          },
+          "negative": {
+            "isAxis": true,
+            "keyCode": [],
+            "axisName": "Mouse X",
+            "sensitivity": 5.0
+          }
+        },
+        {
+          "positive": {
+            "keyCode": []
+          },
+          "negative": {
+            "keyCode": []
+          }
+        }
+      ]
+    },
+    {
+      "axisName": "TurnY",
+      "pairs": [
+        {
+          "positive": {
+            "isAxis": true,
+            "keyCode": [],
+            "axisName": "Mouse Y",
+            "sensitivity": 5.0
+          },
+          "negative": {
+            "isAxis": true,
+            "keyCode": [],
+            "axisName": "Mouse Y",
+            "positiveAxis": true,
+            "sensitivity": 5.0
+          }
+        },
+        {
+          "positive": {
+            "keyCode": []
+          },
+          "negative": {
+            "keyCode": []
+          }
+        }
+      ]
+    },
+    {
+      "axisName": "LookX",
+      "pairs": [
+        {
+          "positive": {
+            "isAxis": true,
+            "keyCode": [],
+            "axisName": "Mouse X",
+            "positiveAxis": true,
+            "sensitivity": 5.0
+          },
+          "negative": {
+            "isAxis": true,
+            "keyCode": [],
+            "axisName": "Mouse X",
+            "sensitivity": 5.0
+          }
+        },
+        {
+          "positive": {
+            "keyCode": []
+          },
+          "negative": {
+            "keyCode": []
+          }
+        }
+      ]
+    },
+    {
+      "axisName": "LookY",
+      "pairs": [
+        {
+          "positive": {
+            "isAxis": true,
+            "keyCode": [],
+            "axisName": "Mouse Y",
+            "sensitivity": 5.0
+          },
+          "negative": {
+            "isAxis": true,
+            "keyCode": [],
+            "axisName": "Mouse Y",
+            "positiveAxis": true,
+            "sensitivity": 5.0
+          }
+        },
+        {
+          "positive": {
+            "keyCode": []
+          },
+          "negative": {
+            "keyCode": []
+          }
+        }
+      ]
+    },
+    {
+      "axisName": "LeanX",
+      "pairs": [
+        {
+          "positive": {
+            "keyCode": [
+              "D",
+              "LeftAlt"
+            ],
+            "positiveAxis": true,
+            "sensitivity": 5.0
+          },
+          "negative": {
+            "keyCode": [
+              "A",
+              "LeftAlt"
+            ],
+            "positiveAxis": true,
+            "sensitivity": 5.0
+          }
+        },
+        {
+          "positive": {
+            "keyCode": []
+          },
+          "negative": {
+            "keyCode": []
+          }
+        }
+      ]
+    }
+  ],
+  "keyBindings": [
+    {
+      "keyName": "LeanLockRight",
+      "variants": [
+        {
+          "keyCode": [
+            "E"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "LeanLockLeft",
+      "variants": [
+        {
+          "keyCode": [
+            "Q"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "Walk",
+      "variants": [
+        {
+          "keyCode": [
+            "CapsLock"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Sprint",
+      "variants": [
+        {
+          "keyCode": [
+            "LeftShift"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Jump",
+      "variants": [
+        {
+          "keyCode": [
+            "Space"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "Vaulting",
+      "variants": [
+        {
+          "keyCode": [
+            "Space"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "Duck",
+      "variants": [
+        {
+          "keyCode": [
+            "LeftControl"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Prone",
+      "variants": [
+        {
+          "keyCode": [
+            "X"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "StepRight",
+      "variants": [
+        {
+          "keyCode": [
+            "E",
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "StepLeft",
+      "variants": [
+        {
+          "keyCode": [
+            "Q",
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "BlindShootAbove",
+      "variants": [
+        {
+          "keyCode": [
+            "W",
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "BlindShootRight",
+      "variants": [
+        {
+          "keyCode": [
+            "S",
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "NextWalkPose",
+      "variants": [
+        {
+          "isAxis": true,
+          "keyCode": [
+            "C"
+          ],
+          "axisName": "Mouse Scroll",
+          "positiveAxis": true
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PreviousWalkPose",
+      "variants": [
+        {
+          "isAxis": true,
+          "keyCode": [
+            "C"
+          ],
+          "axisName": "Mouse Scroll"
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "LeftStance",
+      "variants": [
+        {
+          "keyCode": []
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Next",
+      "variants": [
+        {
+          "isAxis": true,
+          "keyCode": [],
+          "axisName": "Mouse Scroll",
+          "positiveAxis": true
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Previous",
+      "variants": [
+        {
+          "isAxis": true,
+          "keyCode": [],
+          "axisName": "Mouse Scroll"
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "WeaponMounting",
+      "variants": [
+        {
+          "keyCode": [
+            "V"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Shoot",
+      "variants": [
+        {
+          "keyCode": [
+            "Mouse0"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "Aim",
+      "variants": [
+        {
+          "keyCode": [
+            "Mouse1"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "ReloadWeapon",
+      "variants": [
+        {
+          "keyCode": [
+            "R"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "QuickReloadWeapon",
+      "variants": [
+        {
+          "keyCode": [
+            "R"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "DoubleClick"
+    },
+    {
+      "keyName": "ShootingMode",
+      "variants": [
+        {
+          "keyCode": [
+            "B"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ForceAutoWeaponMode",
+      "variants": [
+        {
+          "keyCode": [
+            "B"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "DoubleClick"
+    },
+    {
+      "keyName": "CheckFireMode",
+      "variants": [
+        {
+          "keyCode": [
+            "B",
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "NextMagazine",
+      "variants": [
+        {
+          "isAxis": true,
+          "keyCode": [
+            "R"
+          ],
+          "axisName": "Mouse Scroll",
+          "positiveAxis": true
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PreviousMagazine",
+      "variants": [
+        {
+          "isAxis": true,
+          "keyCode": [
+            "R"
+          ],
+          "axisName": "Mouse Scroll"
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "UnloadMagazine",
+      "variants": [
+        {
+          "keyCode": [
+            "R",
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "CheckAmmo",
+      "variants": [
+        {
+          "keyCode": [
+            "R"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "CheckChamber",
+      "variants": [
+        {
+          "keyCode": [
+            "Mouse3"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ChamberUnload",
+      "variants": [
+        {
+          "keyCode": [
+            "Mouse4"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ChangeAimScope",
+      "variants": [
+        {
+          "keyCode": [
+            "Mouse2"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ChangeAimScopeMagnification",
+      "variants": [
+        {
+          "keyCode": [
+            "Mouse1",
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "OpticCalibrationSwitchUp",
+      "variants": [
+        {
+          "keyCode": [
+            "PageUp"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "OpticCalibrationSwitchDown",
+      "variants": [
+        {
+          "keyCode": [
+            "PageDown"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ScopeZoomIn",
+      "variants": [
+        {
+          "isAxis": true,
+          "keyCode": [
+            "LeftAlt"
+          ],
+          "axisName": "Mouse Scroll",
+          "positiveAxis": true
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ScopeZoomOut",
+      "variants": [
+        {
+          "isAxis": true,
+          "keyCode": [
+            "LeftAlt"
+          ],
+          "axisName": "Mouse Scroll"
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ExamineWeapon",
+      "variants": [
+        {
+          "keyCode": [
+            "L"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "FoldStock",
+      "variants": [
+        {
+          "keyCode": [
+            "L",
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ToggleBipods",
+      "variants": [
+        {
+          "keyCode": [
+            "V",
+            "LeftControl"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PrimaryWeaponFirst",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha2"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PrimaryWeaponSecond",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha3"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Knife",
+      "variants": [
+        {
+          "keyCode": [
+            "U"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "SecondaryWeapon",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha1"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "QuickSecondaryWeapon",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha1"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "DoubleClick"
+    },
+    {
+      "keyName": "QuickKnife",
+      "variants": [
+        {
+          "keyCode": [
+            "U"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "DoubleClick"
+    },
+    {
+      "keyName": "ThrowGrenade",
+      "variants": [
+        {
+          "keyCode": [
+            "G"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ToggleGoggles",
+      "variants": [
+        {
+          "keyCode": [
+            "N"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ToggleVoip",
+      "variants": [
+        {
+          "keyCode": []
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PushToTalk",
+      "variants": [
+        {
+          "keyCode": [
+            "K"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "Tactical",
+      "variants": [
+        {
+          "keyCode": [
+            "T"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "NextTacticalDevice",
+      "variants": [
+        {
+          "keyCode": [
+            "T",
+            "LeftControl"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ToggleHeadLight",
+      "variants": [
+        {
+          "keyCode": [
+            "H"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "SwitchHeadLight",
+      "variants": [
+        {
+          "keyCode": [
+            "H",
+            "LeftControl"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "ToggleTacticalInteraction",
+      "variants": [
+        {
+          "keyCode": [
+            "T",
+            "B"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Nidnod",
+      "variants": [
+        {
+          "keyCode": []
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "WatchTime",
+      "variants": [
+        {
+          "keyCode": [
+            "O"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Interact",
+      "variants": [
+        {
+          "keyCode": [
+            "F"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "ThrowItem",
+      "variants": [
+        {
+          "keyCode": [
+            "Delete"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "DropBackpack",
+      "variants": [
+        {
+          "keyCode": [
+            "Z"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "DoubleClick"
+    },
+    {
+      "keyName": "Breath",
+      "variants": [
+        {
+          "keyCode": [
+            "LeftAlt"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Mumble",
+      "variants": [
+        {
+          "keyCode": [
+            "Y"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "DoubleClick"
+    },
+    {
+      "keyName": "MumbleDropdown",
+      "variants": [
+        {
+          "keyCode": [
+            "Y"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Continuous"
+    },
+    {
+      "keyName": "MumbleQuick",
+      "variants": [
+        {
+          "keyCode": [
+            "Y"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "WatchTimerAndExits",
+      "variants": [
+        {
+          "keyCode": [
+            "O"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "DoubleClick"
+    },
+    {
+      "keyName": "Inventory",
+      "variants": [
+        {
+          "keyCode": [
+            "Tab"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Slot4",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha4"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "Slot5",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha5"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "Slot6",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha6"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "Slot7",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha7"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "Slot8",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha8"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "Slot9",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha9"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "Slot0",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha0"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "MakeScreenshot",
+      "variants": [
+        {
+          "keyCode": [
+            "SysReq"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ToggleInfo",
+      "variants": [
+        {
+          "keyCode": [
+            "I"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "Console",
+      "variants": [
+        {
+          "keyCode": [
+            "BackQuote"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ChangePointOfView",
+      "variants": [
+        {
+          "keyCode": [
+            "Home"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "TogglePinMode",
+      "variants": [
+        {
+          "keyCode": [
+            "P"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ToggleLockMode",
+      "variants": [
+        {
+          "keyCode": [
+            "L"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PressThrowGrenade",
+      "variants": [
+        {
+          "keyCode": [
+            "G"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    },
+    {
+      "keyName": "PressSlot4",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha4"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PressSlot5",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha5"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PressSlot6",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha6"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PressSlot7",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha7"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PressSlot8",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha8"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PressSlot9",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha9"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "PressSlot0",
+      "variants": [
+        {
+          "keyCode": [
+            "Alpha0"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Press"
+    },
+    {
+      "keyName": "ReleaseTactical",
+      "variants": [
+        {
+          "keyCode": [
+            "T"
+          ]
+        },
+        {
+          "keyCode": []
+        }
+      ],
+      "pressType": "Release"
+    }
+  ]
+} 
+2026-08-16 11:25:26.911 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [1]: URL: https://100.68.29.73:6969/client/menu/locale/en, crc: .  
+2026-08-16 11:25:26.969 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [1]: URL: https://100.68.29.73:6969/client/menu/locale/en, crc: , responseText: . 
+2026-08-16 11:25:26.984 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [2]: URL: https://100.68.29.73:6969/client/game/mode, crc: .  
+2026-08-16 11:25:27.035 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [2]: URL: https://100.68.29.73:6969/client/game/mode, crc: , responseText: . 
+2026-08-16 11:25:27.035 -04:00|0.16.9.0.40087|Info|application|Session mode: Pve 
+2026-08-16 11:25:27.035 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [3]: URL: https://100.68.29.73:6969/client/game/start, crc: .  
+2026-08-16 11:25:27.101 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [3]: URL: https://100.68.29.73:6969/client/game/start, crc: , responseText: . 
+2026-08-16 11:25:27.151 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [4]: URL: https://100.68.29.73:6969/client/game/version/validate, crc: .  
+2026-08-16 11:25:27.202 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [4]: URL: https://100.68.29.73:6969/client/game/version/validate, crc: , responseText: . 
+2026-08-16 11:25:27.205 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [5]: URL: https://100.68.29.73:6969/client/languages, crc: .  
+2026-08-16 11:25:27.235 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [5]: URL: https://100.68.29.73:6969/client/languages, crc: , responseText: . 
+2026-08-16 11:25:27.235 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [6]: URL: https://100.68.29.73:6969/client/game/config, crc: .  
+2026-08-16 11:25:27.302 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [6]: URL: https://100.68.29.73:6969/client/game/config, crc: , responseText: . 
+2026-08-16 11:25:27.321 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [7]: URL: https://100.68.29.73:6969/client/items, crc: .  
+2026-08-16 11:25:41.326 -04:00|0.16.9.0.40087|Error|Default|Incorrect Enum value Head at armorColliders[1], fallback to EBodyPartColliderType.HeadCommon 
+2026-08-16 11:25:41.326 -04:00|0.16.9.0.40087|Error|Default|Incorrect Enum value Head at armorColliders[1], fallback to EBodyPartColliderType.HeadCommon 
+2026-08-16 11:25:41.608 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [7]: URL: https://100.68.29.73:6969/client/items, crc: , responseText: . 
+2026-08-16 11:25:41.641 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [8]: URL: https://100.68.29.73:6969/client/customization, crc: .  
+2026-08-16 11:25:41.690 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [9]: URL: https://100.68.29.73:6969/client/globals, crc: .  
+2026-08-16 11:25:41.690 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [10]: URL: https://100.68.29.73:6969/client/trading/api/traderSettings, crc: .  
+2026-08-16 11:25:41.690 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [11]: URL: https://100.68.29.73:6969/client/prestige/list, crc: .  
+2026-08-16 11:25:41.690 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [12]: URL: https://100.68.29.73:6969/client/settings, crc: .  
+2026-08-16 11:25:41.772 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [10]: URL: https://100.68.29.73:6969/client/trading/api/traderSettings, crc: , responseText: . 
+2026-08-16 11:25:41.827 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [11]: URL: https://100.68.29.73:6969/client/prestige/list, crc: , responseText: . 
+2026-08-16 11:25:41.915 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [12]: URL: https://100.68.29.73:6969/client/settings, crc: , responseText: . 
+2026-08-16 11:25:41.998 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [8]: URL: https://100.68.29.73:6969/client/customization, crc: , responseText: . 
+2026-08-16 11:25:42.009 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [13]: URL: https://100.68.29.73:6969/client/customization/storage, crc: .  
+2026-08-16 11:25:42.065 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [13]: URL: https://100.68.29.73:6969/client/customization/storage, crc: , responseText: . 
+2026-08-16 11:25:42.362 -04:00|0.16.9.0.40087|Error|Default|Item deserialization error: No slot with id Helmet_eyes found in 65711b706d197c216005b31c Name for item 6750ddab1240bc5086eed8af 
+2026-08-16 11:25:42.362 -04:00|0.16.9.0.40087|Error|Default|Item deserialization error: No slot with id Helmet_jaw found in 65711bc79eb8c145180dbba1 Name for item 6750ddabc5decc7ed1390ec3 
+2026-08-16 11:25:42.362 -04:00|0.16.9.0.40087|Error|Default|Item deserialization error: No slot with id Helmet_eyes found in 65711b706d197c216005b31c Name for item 6750ddb2b986fbec94a31896 
+2026-08-16 11:25:42.362 -04:00|0.16.9.0.40087|Error|Default|Item deserialization error: No slot with id Helmet_jaw found in 65711bc79eb8c145180dbba1 Name for item 6750ddb32e0d58542ce3285f 
+2026-08-16 11:25:42.362 -04:00|0.16.9.0.40087|Error|Default|Item deserialization error: No slot with id Soft_armor_left found in 6570e5674cc0d2ab1e05edbb Name for item 6750dc09c24a3b9d5427e055 
+2026-08-16 11:25:42.362 -04:00|0.16.9.0.40087|Error|Default|Item deserialization error: No slot with id soft_armor_right found in 6570e59b0b57c03ec90b970e Name for item 6750dc0b76c4612d5aaea756 
+2026-08-16 11:25:42.398 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [9]: URL: https://100.68.29.73:6969/client/globals, crc: , responseText: . 
+2026-08-16 11:25:42.430 -04:00|0.16.9.0.40087|Error|Default|Item presets is already contains key: 68b4b52f1a1ff2a6c49ac5be 
+2026-08-16 11:25:42.430 -04:00|0.16.9.0.40087|Error|Default|Item presets is already contains key: 68b4b52f1a1ff2a6c49ac5be 
+2026-08-16 11:25:42.430 -04:00|0.16.9.0.40087|Error|Default|Item presets is already contains key: 6928b6bf523e7af9a6ed2cec 
+2026-08-16 11:25:42.430 -04:00|0.16.9.0.40087|Error|Default|Item presets is already contains key: 6930cde327aa0ba2c16d3d01 
+2026-08-16 11:25:42.430 -04:00|0.16.9.0.40087|Error|Default|Item presets is already contains key: 5a7ae0c351dfba0017554310 
+2026-08-16 11:25:42.430 -04:00|0.16.9.0.40087|Error|Default|Item presets is already contains key: 5ea03f7400685063ec28bfa8 
+2026-08-16 11:25:42.430 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [15]: URL: https://100.68.29.73:6969/client/game/profile/list, crc: .  
+2026-08-16 11:25:42.430 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [14]: URL: https://100.68.29.73:6969/client/dialogue, crc: .  
+2026-08-16 11:25:42.871 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [15]: URL: https://100.68.29.73:6969/client/game/profile/list, crc: , responseText: . 
+2026-08-16 11:25:42.963 -04:00|0.16.9.0.40087|Info|application|SelectProfile ProfileId:6a80648d077baad6086273e1 AccountId:1061764 
+2026-08-16 11:25:42.963 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [16]: URL: https://100.68.29.73:6969/client/game/profile/select, crc: .  
+2026-08-16 11:25:43.031 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [16]: URL: https://100.68.29.73:6969/client/game/profile/select, crc: , responseText: . 
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [14]: URL: https://100.68.29.73:6969/client/dialogue, crc: , responseText: . 
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [17]: URL: https://100.68.29.73:6969/client/items/prices/54cb50c76803fa8b248b4571, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [18]: URL: https://100.68.29.73:6969/client/items/prices/54cb57776803fa99248b456e, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [19]: URL: https://100.68.29.73:6969/client/items/prices/579dc571d53a0658a154fbec, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [20]: URL: https://100.68.29.73:6969/client/items/prices/58330581ace78e27b8b10cee, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [21]: URL: https://100.68.29.73:6969/client/items/prices/5935c25fb3acc3127c3d8cd9, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [22]: URL: https://100.68.29.73:6969/client/items/prices/5a7c2eca46aef81a7ca2145d, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [23]: URL: https://100.68.29.73:6969/client/items/prices/5ac3b934156ae10c4430e83c, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [24]: URL: https://100.68.29.73:6969/client/items/prices/5c0647fdd443bc2504c2d371, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [25]: URL: https://100.68.29.73:6969/client/items/prices/638f541a29ffd1183d187f57, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [26]: URL: https://100.68.29.73:6969/client/items/prices/656f0f98d80a697f855d34b1, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [27]: URL: https://100.68.29.73:6969/client/items/prices/6617beeaa9cfa777ca915b7c, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [28]: URL: https://100.68.29.73:6969/client/items/prices/668aaff35fd574b6dcc4a686, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [29]: URL: https://100.68.29.73:6969/client/items/prices/66bf757f27d0b097db0acea5, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [30]: URL: https://100.68.29.73:6969/client/items/prices/66eeef8b2a166b73dc0671e8, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [31]: URL: https://100.68.29.73:6969/client/items/prices/674964e1ff0cf3b00b461857, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [33]: URL: https://100.68.29.73:6969/client/items/prices/67b7b52a4767af842e0521d0, crc: .  
+2026-08-16 11:25:43.733 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [32]: URL: https://100.68.29.73:6969/client/items/prices/674964e72eae32de73a09d41, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [34]: URL: https://100.68.29.73:6969/client/items/prices/6864e812f9fe664cb8b8e152, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [35]: URL: https://100.68.29.73:6969/client/items/prices/68b96623ca01bc95211d3de9, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [36]: URL: https://100.68.29.73:6969/client/items/prices/69325b507cd59da087ad2912, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [37]: URL: https://100.68.29.73:6969/client/items/prices/699f89c757994beece5cf7e1, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [38]: URL: https://100.68.29.73:6969/client/items/prices/69eccbae0764116786033c2e, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [39]: URL: https://100.68.29.73:6969/client/items/prices/69eeef7b2a166b73dc0771e8, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [40]: URL: https://100.68.29.73:6969/client/items/prices/6a0b92d2e760e1f5a2d430e7, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [41]: URL: https://100.68.29.73:6969/client/items/prices/6a46d0015741594c414e4401, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [42]: URL: https://100.68.29.73:6969/client/items/prices/7ae62098d17b14de9e3dd4bc, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [43]: URL: https://100.68.29.73:6969/client/items/prices/a1b2c3d4e5f6a7b8c9d0e1f2, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [44]: URL: https://100.68.29.73:6969/client/items/prices/bd3a8b28356d9c6509966546, crc: .  
+2026-08-16 11:25:43.736 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [45]: URL: https://100.68.29.73:6969/client/profile/status, crc: .  
+2026-08-16 11:25:44.185 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [18]: URL: https://100.68.29.73:6969/client/items/prices/54cb57776803fa99248b456e, crc: , responseText: . 
+2026-08-16 11:25:44.185 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [17]: URL: https://100.68.29.73:6969/client/items/prices/54cb50c76803fa8b248b4571, crc: , responseText: . 
+2026-08-16 11:25:44.235 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [19]: URL: https://100.68.29.73:6969/client/items/prices/579dc571d53a0658a154fbec, crc: , responseText: . 
+2026-08-16 11:25:44.235 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [20]: URL: https://100.68.29.73:6969/client/items/prices/58330581ace78e27b8b10cee, crc: , responseText: . 
+2026-08-16 11:25:44.285 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [21]: URL: https://100.68.29.73:6969/client/items/prices/5935c25fb3acc3127c3d8cd9, crc: , responseText: . 
+2026-08-16 11:25:44.285 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [22]: URL: https://100.68.29.73:6969/client/items/prices/5a7c2eca46aef81a7ca2145d, crc: , responseText: . 
+2026-08-16 11:25:44.335 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [24]: URL: https://100.68.29.73:6969/client/items/prices/5c0647fdd443bc2504c2d371, crc: , responseText: . 
+2026-08-16 11:25:44.335 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [23]: URL: https://100.68.29.73:6969/client/items/prices/5ac3b934156ae10c4430e83c, crc: , responseText: . 
+2026-08-16 11:25:44.384 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [25]: URL: https://100.68.29.73:6969/client/items/prices/638f541a29ffd1183d187f57, crc: , responseText: . 
+2026-08-16 11:25:44.384 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [26]: URL: https://100.68.29.73:6969/client/items/prices/656f0f98d80a697f855d34b1, crc: , responseText: . 
+2026-08-16 11:25:44.418 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [28]: URL: https://100.68.29.73:6969/client/items/prices/668aaff35fd574b6dcc4a686, crc: , responseText: . 
+2026-08-16 11:25:44.418 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [27]: URL: https://100.68.29.73:6969/client/items/prices/6617beeaa9cfa777ca915b7c, crc: , responseText: . 
+2026-08-16 11:25:44.469 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [29]: URL: https://100.68.29.73:6969/client/items/prices/66bf757f27d0b097db0acea5, crc: , responseText: . 
+2026-08-16 11:25:44.469 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [30]: URL: https://100.68.29.73:6969/client/items/prices/66eeef8b2a166b73dc0671e8, crc: , responseText: . 
+2026-08-16 11:25:44.518 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [31]: URL: https://100.68.29.73:6969/client/items/prices/674964e1ff0cf3b00b461857, crc: , responseText: . 
+2026-08-16 11:25:44.518 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [33]: URL: https://100.68.29.73:6969/client/items/prices/67b7b52a4767af842e0521d0, crc: , responseText: . 
+2026-08-16 11:25:44.552 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [32]: URL: https://100.68.29.73:6969/client/items/prices/674964e72eae32de73a09d41, crc: , responseText: . 
+2026-08-16 11:25:44.568 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [34]: URL: https://100.68.29.73:6969/client/items/prices/6864e812f9fe664cb8b8e152, crc: , responseText: . 
+2026-08-16 11:25:44.601 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [35]: URL: https://100.68.29.73:6969/client/items/prices/68b96623ca01bc95211d3de9, crc: , responseText: . 
+2026-08-16 11:25:44.601 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [36]: URL: https://100.68.29.73:6969/client/items/prices/69325b507cd59da087ad2912, crc: , responseText: . 
+2026-08-16 11:25:44.651 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [37]: URL: https://100.68.29.73:6969/client/items/prices/699f89c757994beece5cf7e1, crc: , responseText: . 
+2026-08-16 11:25:44.651 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [38]: URL: https://100.68.29.73:6969/client/items/prices/69eccbae0764116786033c2e, crc: , responseText: . 
+2026-08-16 11:25:44.702 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [40]: URL: https://100.68.29.73:6969/client/items/prices/6a0b92d2e760e1f5a2d430e7, crc: , responseText: . 
+2026-08-16 11:25:44.702 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [39]: URL: https://100.68.29.73:6969/client/items/prices/69eeef7b2a166b73dc0771e8, crc: , responseText: . 
+2026-08-16 11:25:44.751 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [41]: URL: https://100.68.29.73:6969/client/items/prices/6a46d0015741594c414e4401, crc: , responseText: . 
+2026-08-16 11:25:44.751 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [42]: URL: https://100.68.29.73:6969/client/items/prices/7ae62098d17b14de9e3dd4bc, crc: , responseText: . 
+2026-08-16 11:25:44.751 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [45]: URL: https://100.68.29.73:6969/client/profile/status, crc: , responseText: . 
+2026-08-16 11:25:44.806 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [43]: URL: https://100.68.29.73:6969/client/items/prices/a1b2c3d4e5f6a7b8c9d0e1f2, crc: , responseText: . 
+2026-08-16 11:25:44.806 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [44]: URL: https://100.68.29.73:6969/client/items/prices/bd3a8b28356d9c6509966546, crc: , responseText: . 
+2026-08-16 11:25:44.806 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [46]: URL: https://100.68.29.73:6969/client/handbook/templates, crc: .  
+2026-08-16 11:25:45.046 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [46]: URL: https://100.68.29.73:6969/client/handbook/templates, crc: , responseText: . 
+2026-08-16 11:25:45.420 -04:00|0.16.9.0.40087|Error|Default|Slot with id mod_stock has not been found on 6a81d6790f3abf694d001297(weapon_glock_glock_17_gen3_9x19) 
+2026-08-16 11:25:47.435 -04:00|0.16.9.0.40087|Error|Default|Slot with id mod_stock has not been found on 6a81d67b0f3abf694d003470(weapon_glock_glock_17_gen3_9x19) 
+2026-08-16 11:25:49.076 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [47]: URL: https://100.68.29.73:6969/client/builds/list, crc: .  
+2026-08-16 11:25:49.212 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [47]: URL: https://100.68.29.73:6969/client/builds/list, crc: , responseText: . 
+2026-08-16 11:25:51.467 -04:00|0.16.9.0.40087|Error|Default|Slot with id mod_stock has not been found on 6a81d67f0f3abf694d005649(weapon_glock_glock_17_gen3_9x19) 
+2026-08-16 11:25:53.539 -04:00|0.16.9.0.40087|Error|Default|Slot with id mod_stock has not been found on 6a81d6810f3abf694d007822(weapon_glock_glock_17_gen3_9x19) 
+2026-08-16 11:25:55.316 -04:00|0.16.9.0.40087|Error|Default|Slot with id mod_stock has not been found on 6a81d6830f3abf694d0099fb(weapon_glock_glock_17_gen3_9x19) 
+2026-08-16 11:25:56.930 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [48]: URL: https://100.68.29.73:6969/client/notifier/channel/create, crc: .  
+2026-08-16 11:25:56.930 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [49]: URL: https://100.68.29.73:6969/client/profile/status, crc: .  
+2026-08-16 11:25:56.930 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [50]: URL: https://100.68.29.73:6969/client/weather, crc: .  
+2026-08-16 11:25:56.930 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [51]: URL: https://100.68.29.73:6969/client/locale/en, crc: .  
+2026-08-16 11:25:56.930 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [52]: URL: https://100.68.29.73:6969/client/locations, crc: .  
+2026-08-16 11:25:56.975 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [48]: URL: https://100.68.29.73:6969/client/notifier/channel/create, crc: , responseText: . 
+2026-08-16 11:25:56.989 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [49]: URL: https://100.68.29.73:6969/client/profile/status, crc: , responseText: . 
+2026-08-16 11:25:56.989 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [50]: URL: https://100.68.29.73:6969/client/weather, crc: , responseText: . 
+2026-08-16 11:25:57.632 -04:00|0.16.9.0.40087|Error|Default|JetMaterial == null 
+2026-08-16 11:25:57.780 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [51]: URL: https://100.68.29.73:6969/client/locale/en, crc: , responseText: . 
+2026-08-16 11:25:57.794 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/activate object 
+2026-08-16 11:25:57.794 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/defend object 
+2026-08-16 11:25:57.794 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/event/activating object 
+2026-08-16 11:25:57.794 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/event/can activate object 
+2026-08-16 11:25:57.794 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/event/defend object 
+2026-08-16 11:25:57.794 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: laboratory 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e253fd13347b5a6305306 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e253fd13347b5a6305306 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e253fd13347b5a6305306 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e25e7c4fe58df2d30530a name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e25e7c4fe58df2d30530a shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e25e7c4fe58df2d30530a description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e26261115cb8e9d30530c name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e26261115cb8e9d30530c shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e26261115cb8e9d30530c description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e4358d460e95167305310 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e4358d460e95167305310 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e4358d460e95167305310 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e43430b6f88f8d230530e name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e43430b6f88f8d230530e shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e43430b6f88f8d230530e description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a1087fe49f3a17012a302ef name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a1087fe49f3a17012a302ef shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a1087fe49f3a17012a302ef description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b66c1ad901f6b852f55a name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b66c1ad901f6b852f55a shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b66c1ad901f6b852f55a description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b6fac0c2827bb252f55e name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b6fac0c2827bb252f55e shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b6fac0c2827bb252f55e description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b78858b039730552f561 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b78858b039730552f561 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b78858b039730552f561 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b82392962a745e52f564 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b82392962a745e52f564 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b82392962a745e52f564 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b867bc3d46c41552f566 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b867bc3d46c41552f566 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b867bc3d46c41552f566 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a2b0cc78dcf9203554cd53d name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a2b0cc78dcf9203554cd53d shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a2b0cc78dcf9203554cd53d description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f FailMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68561cd4801134be939e11f6 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68561cd4801134be939e11f6 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68561cd4801134be939e11f6 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68561cd4801134be939e11f6 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 FailMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 AcceptPlayerMessage 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 DeclinePlayerMessage 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 CompletePlayerMessage 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 Note 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 AcceptPlayerMessage 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 DeclinePlayerMessage 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 CompletePlayerMessage 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 Note 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686c25d281071c45d2f8aa44 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686c25d281071c45d2f8aa44 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686c25d281071c45d2f8aa44 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686c25d281071c45d2f8aa44 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686dd4f871840e292fbd1a14 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686dd4f871840e292fbd1a14 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686dd4f871840e292fbd1a14 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686dd4f871840e292fbd1a14 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6870170d18b94df2e8700ba0 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6870170d18b94df2e8700ba0 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6870170d18b94df2e8700ba0 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6870170d18b94df2e8700ba0 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6877096d5299037a1c4b7b2f Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6877096d5299037a1c4b7b2f Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6877096d5299037a1c4b7b2f StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6877096d5299037a1c4b7b2f SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68784cf8dbe00560604d51e1 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68784cf8dbe00560604d51e1 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68784cf8dbe00560604d51e1 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68784cf8dbe00560604d51e1 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6879a0da60f8d8a90e632755 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6879a0da60f8d8a90e632755 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6879a0da60f8d8a90e632755 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6879a0da60f8d8a90e632755 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694dc176d149fc1d52000003 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694dc176d149fc1d52000003 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694dc176d149fc1d52000003 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687314e1ee500b06711955a2 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687314e1ee500b06711955a2 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687314e1ee500b06711955a2 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687314e1ee500b06711955a2 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 FailMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 CompletePlayerMessage 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686051774a290eb6f216471f Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686051774a290eb6f216471f Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686051774a290eb6f216471f StartedMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686051774a290eb6f216471f SuccessMessageText 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6910b4469b3fa14d813de155 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6910b4469b3fa14d813de155 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 693c94e3b993b9416d6501a3 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 693c94e3b993b9416d6501a3 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e0d8851fee79757682ca4 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e0d8851fee79757682ca4 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e0fdb0984faf074682ca8 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e0fdb0984faf074682ca8 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e1063088b36b489682cac name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e1063088b36b489682cac description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e10ca6b29ea7d14682cb0 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e10ca6b29ea7d14682cb0 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e110ec53e29d1d4682cb4 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e110ec53e29d1d4682cb4 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e114418e06664c0682cb8 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e114418e06664c0682cb8 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e fullName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e firstName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e nickName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e location 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6841cdb93de393b52dd49865 Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6841cdb93de393b52dd49865 Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6841cc541c407f8aa0e4f62b Name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6841cc541c407f8aa0e4f62b Description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aef name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aef shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aef description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af1 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af1 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af1 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af2 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af2 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af2 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af3 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af3 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af3 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af4 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af4 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af4 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af5 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af5 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af5 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af6 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af6 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af6 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af7 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af7 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af7 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af9 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af9 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af9 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afa name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afa shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afa description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afb name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afb shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afb description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afc name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afc shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afc description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afd name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afd shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afd description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afe name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afe shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afe description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aff name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aff shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aff description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6807e54dc5a45c5443154a29 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6807e54dc5a45c5443154a29 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6807e54dc5a45c5443154a29 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68084891d93e159932d7e326 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68084891d93e159932d7e326 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68084891d93e159932d7e326 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 680e8d81e16a7caa3dd10730 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 680e8d81e16a7caa3dd10730 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 680e8d81e16a7caa3dd10730 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68170b2cb595bf820b60571a name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68170b2cb595bf820b60571a shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68170b2cb595bf820b60571a description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69352d5c409abe93d29321e4 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69352d5c409abe93d29321e4 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69352d5c409abe93d29321e4 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681baec29eb1732a417bd7dd name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681baec29eb1732a417bd7dd shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681baec29eb1732a417bd7dd description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bb00c7fecf6d490b2fb3c name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bb00c7fecf6d490b2fb3c shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bb00c7fecf6d490b2fb3c description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bcd300480896883303f71 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bcd300480896883303f71 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bcd300480896883303f71 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69364a368a4b47eeaf9ba4a3 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69364a368a4b47eeaf9ba4a3 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69364a368a4b47eeaf9ba4a3 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 0c22fc270f59b28c064e1232 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 0c22fc270f59b28c064e1232 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 0c22fc270f59b28c064e1232 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 9543bbe8083934dc3b1b1330 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 9543bbe8083934dc3b1b1330 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 9543bbe8083934dc3b1b1330 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: c29f11b2e63a089916739c96 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: c29f11b2e63a089916739c96 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: c29f11b2e63a089916739c96 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 12403f74773f49be6a2d84b7 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 12403f74773f49be6a2d84b7 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 12403f74773f49be6a2d84b7 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: ae9e418fd5d4c4eec4a0e6ea name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: ae9e418fd5d4c4eec4a0e6ea shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: ae9e418fd5d4c4eec4a0e6ea description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 440de5d056825485a0cf3a19 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 440de5d056825485a0cf3a19 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 440de5d056825485a0cf3a19 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6925918065a41e6b1e02a7d7 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6925918065a41e6b1e02a7d7 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6925918065a41e6b1e02a7d7 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 2eabd4da4ab194eb168e72d3 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 2eabd4da4ab194eb168e72d3 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 2eabd4da4ab194eb168e72d3 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c10fa06c00c483c58537a name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c10fa06c00c483c58537a shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c10fa06c00c483c58537a description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c1a420c8342338269dd86 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c1a420c8342338269dd86 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c1a420c8342338269dd86 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681c17948a6e3fb72e221390 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681c17948a6e3fb72e221390 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681c17948a6e3fb72e221390 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d117c2b345ac614614bf8 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d117c2b345ac614614bf8 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d117c2b345ac614614bf8 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d124d70b2418646a80fa3 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d124d70b2418646a80fa3 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d124d70b2418646a80fa3 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1395a5c2308fdcbcda92 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1395a5c2308fdcbcda92 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1395a5c2308fdcbcda92 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1448a0a20c9db8861321 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1448a0a20c9db8861321 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1448a0a20c9db8861321 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1ef3db9fe57ea08ed67a name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1ef3db9fe57ea08ed67a shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1ef3db9fe57ea08ed67a description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2b9736545ba7dfd0847a name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2b9736545ba7dfd0847a shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2b9736545ba7dfd0847a description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b65 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b65 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b65 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b67 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b67 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b67 description 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2d053de2e15f8b0b5081 name 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2d053de2e15f8b0b5081 shortName 
+2026-08-16 11:25:57.800 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2d053de2e15f8b0b5081 description 
+2026-08-16 11:25:57.884 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [53]: URL: https://100.68.29.73:6969/client/hideout/areas, crc: .  
+2026-08-16 11:25:57.884 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [54]: URL: https://100.68.29.73:6969/client/hideout/qte/list, crc: .  
+2026-08-16 11:25:57.884 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [55]: URL: https://100.68.29.73:6969/client/hideout/settings, crc: .  
+2026-08-16 11:25:57.884 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [56]: URL: https://100.68.29.73:6969/client/hideout/production/recipes, crc: .  
+2026-08-16 11:25:57.884 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [57]: URL: https://100.68.29.73:6969/client/hideout/customization/offer/list, crc: .  
+2026-08-16 11:25:58.101 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [53]: URL: https://100.68.29.73:6969/client/hideout/areas, crc: , responseText: . 
+2026-08-16 11:25:58.200 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [54]: URL: https://100.68.29.73:6969/client/hideout/qte/list, crc: , responseText: . 
+2026-08-16 11:25:58.200 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [55]: URL: https://100.68.29.73:6969/client/hideout/settings, crc: , responseText: . 
+2026-08-16 11:25:58.450 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [56]: URL: https://100.68.29.73:6969/client/hideout/production/recipes, crc: , responseText: . 
+2026-08-16 11:25:58.467 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [57]: URL: https://100.68.29.73:6969/client/hideout/customization/offer/list, crc: , responseText: . 
+2026-08-16 11:25:58.517 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [52]: URL: https://100.68.29.73:6969/client/locations, crc: , responseText: . 
+2026-08-16 11:25:59.106 -04:00|0.16.9.0.40087|Debug|application|totalMemoryBeforeCleanUp 1932.676 
+2026-08-16 11:25:59.106 -04:00|0.16.9.0.40087|Debug|application|GC::Collect 
+2026-08-16 11:25:59.643 -04:00|0.16.9.0.40087|Debug|application|GC::Collect Aggressive 
+2026-08-16 11:26:00.716 -04:00|0.16.9.0.40087|Debug|application|collectedMemoryGB -0.00390625 
+2026-08-16 11:26:00.716 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [58]: URL: https://100.68.29.73:6969/client/server/list, crc: .  
+2026-08-16 11:26:00.716 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [59]: URL: https://100.68.29.73:6969/client/match/group/current, crc: .  
+2026-08-16 11:26:00.716 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [61]: URL: https://100.68.29.73:6969/client/friend/list, crc: .  
+2026-08-16 11:26:00.716 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [62]: URL: https://100.68.29.73:6969/client/friend/request/list/inbox, crc: .  
+2026-08-16 11:26:00.721 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [63]: URL: https://100.68.29.73:6969/client/friend/request/list/outbox, crc: .  
+2026-08-16 11:26:00.721 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [60]: URL: https://100.68.29.73:6969/client/mail/dialog/list, crc: .  
+2026-08-16 11:26:00.721 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [64]: URL: https://100.68.29.73:6969/client/quest/list, crc: .  
+2026-08-16 11:26:00.854 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [58]: URL: https://100.68.29.73:6969/client/server/list, crc: , responseText: . 
+2026-08-16 11:26:00.854 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [59]: URL: https://100.68.29.73:6969/client/match/group/current, crc: , responseText: . 
+2026-08-16 11:26:00.854 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [62]: URL: https://100.68.29.73:6969/client/friend/request/list/inbox, crc: , responseText: . 
+2026-08-16 11:26:00.854 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [63]: URL: https://100.68.29.73:6969/client/friend/request/list/outbox, crc: , responseText: . 
+2026-08-16 11:26:00.854 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [61]: URL: https://100.68.29.73:6969/client/friend/list, crc: , responseText: . 
+2026-08-16 11:26:00.854 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [60]: URL: https://100.68.29.73:6969/client/mail/dialog/list, crc: , responseText: . 
+2026-08-16 11:26:00.920 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [64]: URL: https://100.68.29.73:6969/client/quest/list, crc: , responseText: . 
+2026-08-16 11:26:00.930 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [65]: URL: https://100.68.29.73:6969/client/achievement/statistic, crc: .  
+2026-08-16 11:26:00.986 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [65]: URL: https://100.68.29.73:6969/client/achievement/statistic, crc: , responseText: . 
+2026-08-16 11:26:00.986 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [66]: URL: https://100.68.29.73:6969/client/achievement/list, crc: .  
+2026-08-16 11:26:01.120 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [66]: URL: https://100.68.29.73:6969/client/achievement/list, crc: , responseText: . 
+2026-08-16 11:26:01.165 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [67]: URL: https://100.68.29.73:6969/client/repeatalbeQuests/activityPeriods, crc: .  
+2026-08-16 11:26:01.217 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [67]: URL: https://100.68.29.73:6969/client/repeatalbeQuests/activityPeriods, crc: , responseText: . 
+2026-08-16 11:26:01.221 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [68]: URL: https://100.68.29.73:6969/client/survey, crc: .  
+2026-08-16 11:26:01.267 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [68]: URL: https://100.68.29.73:6969/client/survey, crc: , responseText: . 
+2026-08-16 11:26:03.492 -04:00|0.16.9.0.40087|Error|Default|JetMaterial == null 
+2026-08-16 11:26:10.326 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.326 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.326 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.355 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.355 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.355 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.371 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.371 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.405 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:10.405 -04:00|0.16.9.0.40087|Error|Default|CollisionMeshData couldn't be created because the mesh has been marked as non-accessible. Mesh asset path "" Mesh name "default"
+ 
+2026-08-16 11:26:11.051 -04:00|0.16.9.0.40087|Error|Default|JetMaterial == null 
+2026-08-16 11:26:12.368 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [69]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: .  
+2026-08-16 11:26:12.435 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [69]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: , responseText: . 
+2026-08-16 11:26:25.561 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object
+  at (wrapper dynamic-method) EFT.UI.ScrollTrigger.DMD<EFT.UI.ScrollTrigger::OnScroll>(EFT.UI.ScrollTrigger,UnityEngine.EventSystems.PointerEventData)
+  at UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IScrollHandler handler, UnityEngine.EventSystems.BaseEventData eventData) [0x00007] in <76ec1fc119664eb3af8df7d79290060a>:0 
+  at UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) [0x00067] in <76ec1fc119664eb3af8df7d79290060a>:0 
+2026-08-16 11:26:25.561 -04:00|0.16.9.0.40087|Error|Default|NullReferenceException: Object reference not set to an instance of an object
+(wrapper dynamic-method) EFT.UI.ScrollTrigger.DMD<EFT.UI.ScrollTrigger::OnScroll>(EFT.UI.ScrollTrigger,UnityEngine.EventSystems.PointerEventData)
+UnityEngine.EventSystems.ExecuteEvents.Execute (UnityEngine.EventSystems.IScrollHandler handler, UnityEngine.EventSystems.BaseEventData eventData) (at <76ec1fc119664eb3af8df7d79290060a>:0)
+UnityEngine.EventSystems.ExecuteEvents.Execute[T] (UnityEngine.GameObject target, UnityEngine.EventSystems.BaseEventData eventData, UnityEngine.EventSystems.ExecuteEvents+EventFunction`1[T1] functor) (at <76ec1fc119664eb3af8df7d79290060a>:0)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+Class412:LogException(Exception, Object)
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+2026-08-16 11:26:27.380 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [70]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: .  
+2026-08-16 11:26:27.430 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [70]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: , responseText: . 
+2026-08-16 11:26:58.718 -04:00|0.16.9.0.40087|Error|Default|No bundle found for voice Soppo 
+2026-08-16 11:26:58.718 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle key is null or empty 
+2026-08-16 11:26:58.718 -04:00|0.16.9.0.40087|Error|Default|No bundle found for voice Soppo 
+2026-08-16 11:26:58.718 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle key is null or empty 
+2026-08-16 11:26:58.718 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component Voice on object  
+2026-08-16 11:26:58.718 -04:00|0.16.9.0.40087|Error|Default|Voice asset Soppo not found! Voice won't be played on select. 
+2026-08-16 11:27:11.921 -04:00|0.16.9.0.40087|Error|Default|No bundle found for voice Soppo 
+2026-08-16 11:27:11.921 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle key is null or empty 
+2026-08-16 11:27:11.921 -04:00|0.16.9.0.40087|Error|Default|No bundle found for voice Soppo 
+2026-08-16 11:27:11.921 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle key is null or empty 
+2026-08-16 11:27:11.921 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component Voice on object  
+2026-08-16 11:27:11.921 -04:00|0.16.9.0.40087|Error|Default|Voice asset Soppo not found! Voice won't be played on select. 
+2026-08-16 11:27:11.921 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.Collections.Generic.KeyNotFoundException: The given key 'Soppo' was not present in the dictionary.
+  at System.Collections.Generic.Dictionary`2[TKey,TValue].get_Item (TKey key) [0x0001e] in <8ce0bd04a7a04b4b9395538239d3fdd8>:0 
+  at GClass899.method_1 (System.String voiceName, EPhraseTrigger trigger) [0x00009] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at GClass899.TakeVoice (System.String voiceName, EPhraseTrigger trigger) [0x000ef] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at GClass3792.PlayVoice (System.String voiceName) [0x00071] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:27:12.723 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [71]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: .  
+2026-08-16 11:27:12.773 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [71]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: , responseText: . 
+2026-08-16 11:27:18.202 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [72]: URL: https://100.68.29.73:6969/client/locale/en, crc: .  
+2026-08-16 11:27:18.728 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [72]: URL: https://100.68.29.73:6969/client/locale/en, crc: , responseText: . 
+2026-08-16 11:27:18.728 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/activate object 
+2026-08-16 11:27:18.728 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/defend object 
+2026-08-16 11:27:18.728 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/event/activating object 
+2026-08-16 11:27:18.728 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/event/can activate object 
+2026-08-16 11:27:18.728 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: arena/widgets/event/defend object 
+2026-08-16 11:27:18.728 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: laboratory 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e253fd13347b5a6305306 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e253fd13347b5a6305306 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e253fd13347b5a6305306 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e25e7c4fe58df2d30530a name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e25e7c4fe58df2d30530a shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e25e7c4fe58df2d30530a description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e26261115cb8e9d30530c name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e26261115cb8e9d30530c shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e26261115cb8e9d30530c description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e4358d460e95167305310 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e4358d460e95167305310 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e4358d460e95167305310 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e43430b6f88f8d230530e name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e43430b6f88f8d230530e shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a0e43430b6f88f8d230530e description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a1087fe49f3a17012a302ef name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a1087fe49f3a17012a302ef shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a1087fe49f3a17012a302ef description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b66c1ad901f6b852f55a name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b66c1ad901f6b852f55a shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b66c1ad901f6b852f55a description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b6fac0c2827bb252f55e name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b6fac0c2827bb252f55e shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b6fac0c2827bb252f55e description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b78858b039730552f561 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b78858b039730552f561 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b78858b039730552f561 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b82392962a745e52f564 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b82392962a745e52f564 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b82392962a745e52f564 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b867bc3d46c41552f566 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b867bc3d46c41552f566 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a10b867bc3d46c41552f566 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a2b0cc78dcf9203554cd53d name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a2b0cc78dcf9203554cd53d shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6a2b0cc78dcf9203554cd53d description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687b616db015c21f329bf45f FailMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68561cd4801134be939e11f6 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68561cd4801134be939e11f6 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68561cd4801134be939e11f6 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68561cd4801134be939e11f6 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 FailMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 AcceptPlayerMessage 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 DeclinePlayerMessage 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 CompletePlayerMessage 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6833b8bc6f8ce71072c4e703 Note 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 AcceptPlayerMessage 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 DeclinePlayerMessage 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 CompletePlayerMessage 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 683645245a1c12488166b1a5 Note 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686c25d281071c45d2f8aa44 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686c25d281071c45d2f8aa44 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686c25d281071c45d2f8aa44 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686c25d281071c45d2f8aa44 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686dd4f871840e292fbd1a14 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686dd4f871840e292fbd1a14 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686dd4f871840e292fbd1a14 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686dd4f871840e292fbd1a14 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6870170d18b94df2e8700ba0 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6870170d18b94df2e8700ba0 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6870170d18b94df2e8700ba0 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6870170d18b94df2e8700ba0 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6877096d5299037a1c4b7b2f Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6877096d5299037a1c4b7b2f Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6877096d5299037a1c4b7b2f StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6877096d5299037a1c4b7b2f SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68784cf8dbe00560604d51e1 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68784cf8dbe00560604d51e1 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68784cf8dbe00560604d51e1 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68784cf8dbe00560604d51e1 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6879a0da60f8d8a90e632755 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6879a0da60f8d8a90e632755 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6879a0da60f8d8a90e632755 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6879a0da60f8d8a90e632755 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694dc176d149fc1d52000003 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694dc176d149fc1d52000003 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694dc176d149fc1d52000003 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687314e1ee500b06711955a2 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687314e1ee500b06711955a2 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687314e1ee500b06711955a2 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 687314e1ee500b06711955a2 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 FailMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 CompletePlayerMessage 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6873248b615c003311ebb292 SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686051774a290eb6f216471f Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686051774a290eb6f216471f Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686051774a290eb6f216471f StartedMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 686051774a290eb6f216471f SuccessMessageText 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6910b4469b3fa14d813de155 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6910b4469b3fa14d813de155 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 693c94e3b993b9416d6501a3 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 693c94e3b993b9416d6501a3 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e0d8851fee79757682ca4 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e0d8851fee79757682ca4 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e0fdb0984faf074682ca8 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e0fdb0984faf074682ca8 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e1063088b36b489682cac name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e1063088b36b489682cac description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e10ca6b29ea7d14682cb0 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e10ca6b29ea7d14682cb0 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e110ec53e29d1d4682cb4 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e110ec53e29d1d4682cb4 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e114418e06664c0682cb8 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 694e114418e06664c0682cb8 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e fullName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e firstName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e nickName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69eccbae0764116786033c2e location 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6841cdb93de393b52dd49865 Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6841cdb93de393b52dd49865 Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6841cc541c407f8aa0e4f62b Name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6841cc541c407f8aa0e4f62b Description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aef name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aef shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aef description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af1 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af1 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af1 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af2 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af2 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af2 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af3 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af3 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af3 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af4 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af4 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af4 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af5 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af5 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af5 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af6 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af6 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af6 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af7 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af7 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af7 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af9 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af9 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017af9 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afa name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afa shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afa description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afb name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afb shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afb description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afc name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afc shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afc description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afd name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afd shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afd description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afe name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afe shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017afe description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aff name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aff shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017aff description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6807e54dc5a45c5443154a29 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6807e54dc5a45c5443154a29 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6807e54dc5a45c5443154a29 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68084891d93e159932d7e326 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68084891d93e159932d7e326 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68084891d93e159932d7e326 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 680e8d81e16a7caa3dd10730 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 680e8d81e16a7caa3dd10730 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 680e8d81e16a7caa3dd10730 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68170b2cb595bf820b60571a name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68170b2cb595bf820b60571a shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 68170b2cb595bf820b60571a description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69352d5c409abe93d29321e4 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69352d5c409abe93d29321e4 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69352d5c409abe93d29321e4 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681baec29eb1732a417bd7dd name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681baec29eb1732a417bd7dd shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681baec29eb1732a417bd7dd description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bb00c7fecf6d490b2fb3c name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bb00c7fecf6d490b2fb3c shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bb00c7fecf6d490b2fb3c description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bcd300480896883303f71 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bcd300480896883303f71 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681bcd300480896883303f71 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69364a368a4b47eeaf9ba4a3 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69364a368a4b47eeaf9ba4a3 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 69364a368a4b47eeaf9ba4a3 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 0c22fc270f59b28c064e1232 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 0c22fc270f59b28c064e1232 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 0c22fc270f59b28c064e1232 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 9543bbe8083934dc3b1b1330 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 9543bbe8083934dc3b1b1330 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 9543bbe8083934dc3b1b1330 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: c29f11b2e63a089916739c96 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: c29f11b2e63a089916739c96 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: c29f11b2e63a089916739c96 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 12403f74773f49be6a2d84b7 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 12403f74773f49be6a2d84b7 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 12403f74773f49be6a2d84b7 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: ae9e418fd5d4c4eec4a0e6ea name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: ae9e418fd5d4c4eec4a0e6ea shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: ae9e418fd5d4c4eec4a0e6ea description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 440de5d056825485a0cf3a19 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 440de5d056825485a0cf3a19 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 440de5d056825485a0cf3a19 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6925918065a41e6b1e02a7d7 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6925918065a41e6b1e02a7d7 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6925918065a41e6b1e02a7d7 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 2eabd4da4ab194eb168e72d3 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 2eabd4da4ab194eb168e72d3 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 2eabd4da4ab194eb168e72d3 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c10fa06c00c483c58537a name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c10fa06c00c483c58537a shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c10fa06c00c483c58537a description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c1a420c8342338269dd86 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c1a420c8342338269dd86 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 669c1a420c8342338269dd86 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681c17948a6e3fb72e221390 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681c17948a6e3fb72e221390 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681c17948a6e3fb72e221390 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d117c2b345ac614614bf8 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d117c2b345ac614614bf8 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d117c2b345ac614614bf8 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d124d70b2418646a80fa3 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d124d70b2418646a80fa3 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d124d70b2418646a80fa3 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1395a5c2308fdcbcda92 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1395a5c2308fdcbcda92 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1395a5c2308fdcbcda92 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1448a0a20c9db8861321 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1448a0a20c9db8861321 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1448a0a20c9db8861321 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1ef3db9fe57ea08ed67a name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1ef3db9fe57ea08ed67a shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d1ef3db9fe57ea08ed67a description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2b9736545ba7dfd0847a name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2b9736545ba7dfd0847a shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2b9736545ba7dfd0847a description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b65 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b65 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b65 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b67 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b67 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 6761b213607f9a6f79017b67 description 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2d053de2e15f8b0b5081 name 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2d053de2e15f8b0b5081 shortName 
+2026-08-16 11:27:18.742 -04:00|0.16.9.0.40087|Error|Default|<b>Locale</b>. Trying to add duplicate: 681d2d053de2e15f8b0b5081 description 
+2026-08-16 11:27:22.398 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [73]: URL: https://100.68.29.73:6969/client/checkVersion, crc: .  
+2026-08-16 11:27:22.398 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [74]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/54cb50c76803fa8b248b4571, crc: .  
+2026-08-16 11:27:22.398 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [76]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/58330581ace78e27b8b10cee, crc: .  
+2026-08-16 11:27:22.398 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [75]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5935c25fb3acc3127c3d8cd9, crc: .  
+2026-08-16 11:27:22.673 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [73]: URL: https://100.68.29.73:6969/client/checkVersion, crc: , responseText: . 
+2026-08-16 11:27:22.856 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [74]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/54cb50c76803fa8b248b4571, crc: , responseText: . 
+2026-08-16 11:27:22.893 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [76]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/58330581ace78e27b8b10cee, crc: , responseText: . 
+2026-08-16 11:27:23.126 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [75]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5935c25fb3acc3127c3d8cd9, crc: , responseText: . 
+2026-08-16 11:27:24.264 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.NullReferenceException: Object reference not set to an instance of an object
+  at GClass926.RenderModel (EFT.InventoryLogic.Item item, GClass924`2+SpriteFactory[TItem,TIcon] spriteFactory) [0x00429] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at GClass924`2[T,U].method_1 (U icon, T item, XYCellSizeStruct size, System.Boolean saveToFile, System.Boolean requireZeroMip) [0x000f4] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:27:27.373 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [77]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5ac3b934156ae10c4430e83c, crc: .  
+2026-08-16 11:27:27.423 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [77]: URL: https://100.68.29.73:6969/client/trading/api/getTraderAssort/5ac3b934156ae10c4430e83c, crc: , responseText: . 
+2026-08-16 11:27:29.635 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [78]: URL: https://100.68.29.73:6969/client/trading/customization/5ac3b934156ae10c4430e83c/usec/offers, crc: .  
+2026-08-16 11:27:29.730 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [78]: URL: https://100.68.29.73:6969/client/trading/customization/5ac3b934156ae10c4430e83c/usec/offers, crc: , responseText: . 
+2026-08-16 11:27:29.730 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:34.149 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:34.149 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:34.149 -04:00|0.16.9.0.40087|Error|Default|Something went wrong! Sprite for -1393136112 was not created! 
+2026-08-16 11:27:39.060 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:39.100 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:39.100 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component EFT.Visual.LoddedSkin on object  
+2026-08-16 11:27:39.100 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.ArgumentException: The Object you want to instantiate is null.
+  at (wrapper dynamic-method) EFT.PlayerBody.DMD<EFT.PlayerBody::Init>(EFT.PlayerBody,GClass2197,EFT.InventoryLogic.InventoryEquipment,BindableStateClass<EFT.InventoryLogic.Item>,int,EFT.EPlayerSide,string,System.Collections.Generic.Dictionary`2<EFT.InventoryLogic.EquipmentSlot, UnityEngine.Transform>,bool)
+  at EFT.UI.PlayerModelLoader.method_1 (LastPlayerStateClass playerVisual, GClass2197 filteredCustomization, EFT.InventoryLogic.Item weapon, UnityEngine.Transform parent, UnityEngine.Vector3 position, System.Int32 layer, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x0008f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelLoader.Load (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Single animatorDeltatime, IViewFilter customizationFilter, EFT.UI.ProgressSpinner progressSpinner, System.Threading.CancellationToken ct, UnityEngine.Vector3 position, UnityEngine.Transform parent, System.Int32 layer, System.Boolean animateWeapon, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x001a0] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0017f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (EFT.Profile profile, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0008c] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:27:48.830 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:48.842 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:48.842 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component EFT.Visual.LoddedSkin on object  
+2026-08-16 11:27:48.842 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.ArgumentException: The Object you want to instantiate is null.
+  at (wrapper dynamic-method) EFT.PlayerBody.DMD<EFT.PlayerBody::Init>(EFT.PlayerBody,GClass2197,EFT.InventoryLogic.InventoryEquipment,BindableStateClass<EFT.InventoryLogic.Item>,int,EFT.EPlayerSide,string,System.Collections.Generic.Dictionary`2<EFT.InventoryLogic.EquipmentSlot, UnityEngine.Transform>,bool)
+  at EFT.UI.PlayerModelLoader.method_1 (LastPlayerStateClass playerVisual, GClass2197 filteredCustomization, EFT.InventoryLogic.Item weapon, UnityEngine.Transform parent, UnityEngine.Vector3 position, System.Int32 layer, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x0008f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelLoader.Load (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Single animatorDeltatime, IViewFilter customizationFilter, EFT.UI.ProgressSpinner progressSpinner, System.Threading.CancellationToken ct, UnityEngine.Vector3 position, UnityEngine.Transform parent, System.Int32 layer, System.Boolean animateWeapon, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x001a0] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0017f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (EFT.Profile profile, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0008c] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:27:49.557 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:49.575 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:49.575 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component EFT.Visual.LoddedSkin on object  
+2026-08-16 11:27:49.575 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.ArgumentException: The Object you want to instantiate is null.
+  at (wrapper dynamic-method) EFT.PlayerBody.DMD<EFT.PlayerBody::Init>(EFT.PlayerBody,GClass2197,EFT.InventoryLogic.InventoryEquipment,BindableStateClass<EFT.InventoryLogic.Item>,int,EFT.EPlayerSide,string,System.Collections.Generic.Dictionary`2<EFT.InventoryLogic.EquipmentSlot, UnityEngine.Transform>,bool)
+  at EFT.UI.PlayerModelLoader.method_1 (LastPlayerStateClass playerVisual, GClass2197 filteredCustomization, EFT.InventoryLogic.Item weapon, UnityEngine.Transform parent, UnityEngine.Vector3 position, System.Int32 layer, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x0008f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelLoader.Load (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Single animatorDeltatime, IViewFilter customizationFilter, EFT.UI.ProgressSpinner progressSpinner, System.Threading.CancellationToken ct, UnityEngine.Vector3 position, UnityEngine.Transform parent, System.Int32 layer, System.Boolean animateWeapon, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x001a0] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0017f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (EFT.Profile profile, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0008c] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:27:49.996 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:50.015 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:27:50.015 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component EFT.Visual.LoddedSkin on object  
+2026-08-16 11:27:50.015 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.ArgumentException: The Object you want to instantiate is null.
+  at (wrapper dynamic-method) EFT.PlayerBody.DMD<EFT.PlayerBody::Init>(EFT.PlayerBody,GClass2197,EFT.InventoryLogic.InventoryEquipment,BindableStateClass<EFT.InventoryLogic.Item>,int,EFT.EPlayerSide,string,System.Collections.Generic.Dictionary`2<EFT.InventoryLogic.EquipmentSlot, UnityEngine.Transform>,bool)
+  at EFT.UI.PlayerModelLoader.method_1 (LastPlayerStateClass playerVisual, GClass2197 filteredCustomization, EFT.InventoryLogic.Item weapon, UnityEngine.Transform parent, UnityEngine.Vector3 position, System.Int32 layer, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x0008f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelLoader.Load (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Single animatorDeltatime, IViewFilter customizationFilter, EFT.UI.ProgressSpinner progressSpinner, System.Threading.CancellationToken ct, UnityEngine.Vector3 position, UnityEngine.Transform parent, System.Int32 layer, System.Boolean animateWeapon, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x001a0] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0017f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (EFT.Profile profile, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0008c] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:28:15.138 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [79]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: .  
+2026-08-16 11:28:15.275 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:28:15.275 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [79]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: , responseText: . 
+2026-08-16 11:28:15.510 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:28:15.510 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component EFT.Visual.LoddedSkin on object  
+2026-08-16 11:28:15.510 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.ArgumentException: The Object you want to instantiate is null.
+  at (wrapper dynamic-method) EFT.PlayerBody.DMD<EFT.PlayerBody::Init>(EFT.PlayerBody,GClass2197,EFT.InventoryLogic.InventoryEquipment,BindableStateClass<EFT.InventoryLogic.Item>,int,EFT.EPlayerSide,string,System.Collections.Generic.Dictionary`2<EFT.InventoryLogic.EquipmentSlot, UnityEngine.Transform>,bool)
+  at EFT.UI.PlayerModelLoader.method_1 (LastPlayerStateClass playerVisual, GClass2197 filteredCustomization, EFT.InventoryLogic.Item weapon, UnityEngine.Transform parent, UnityEngine.Vector3 position, System.Int32 layer, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x0008f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelLoader.Load (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Single animatorDeltatime, IViewFilter customizationFilter, EFT.UI.ProgressSpinner progressSpinner, System.Threading.CancellationToken ct, UnityEngine.Vector3 position, UnityEngine.Transform parent, System.Int32 layer, System.Boolean animateWeapon, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x001a0] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0017f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:28:17.849 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:28:17.917 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:28:17.917 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component EFT.Visual.LoddedSkin on object  
+2026-08-16 11:28:17.917 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.ArgumentException: The Object you want to instantiate is null.
+  at (wrapper dynamic-method) EFT.PlayerBody.DMD<EFT.PlayerBody::Init>(EFT.PlayerBody,GClass2197,EFT.InventoryLogic.InventoryEquipment,BindableStateClass<EFT.InventoryLogic.Item>,int,EFT.EPlayerSide,string,System.Collections.Generic.Dictionary`2<EFT.InventoryLogic.EquipmentSlot, UnityEngine.Transform>,bool)
+  at EFT.UI.PlayerModelLoader.method_1 (LastPlayerStateClass playerVisual, GClass2197 filteredCustomization, EFT.InventoryLogic.Item weapon, UnityEngine.Transform parent, UnityEngine.Vector3 position, System.Int32 layer, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x0008f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelLoader.Load (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Single animatorDeltatime, IViewFilter customizationFilter, EFT.UI.ProgressSpinner progressSpinner, System.Threading.CancellationToken ct, UnityEngine.Vector3 position, UnityEngine.Transform parent, System.Int32 layer, System.Boolean animateWeapon, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x001a0] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0017f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:28:21.495 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:28:21.495 -04:00|0.16.9.0.40087|Error|assetBundle|Error: Bundle assets/content/characters/soppo/soppo_leg.bundle not found in manifest 
+2026-08-16 11:28:21.495 -04:00|0.16.9.0.40087|Error|Default|Error: could not find component EFT.Visual.LoddedSkin on object  
+2026-08-16 11:28:21.495 -04:00|0.16.9.0.40087|Error|Default| 
+EXCEPTION: System.ArgumentException: The Object you want to instantiate is null.
+  at (wrapper dynamic-method) EFT.PlayerBody.DMD<EFT.PlayerBody::Init>(EFT.PlayerBody,GClass2197,EFT.InventoryLogic.InventoryEquipment,BindableStateClass<EFT.InventoryLogic.Item>,int,EFT.EPlayerSide,string,System.Collections.Generic.Dictionary`2<EFT.InventoryLogic.EquipmentSlot, UnityEngine.Transform>,bool)
+  at EFT.UI.PlayerModelLoader.method_1 (LastPlayerStateClass playerVisual, GClass2197 filteredCustomization, EFT.InventoryLogic.Item weapon, UnityEngine.Transform parent, UnityEngine.Vector3 position, System.Int32 layer, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x0008f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelLoader.Load (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Single animatorDeltatime, IViewFilter customizationFilter, EFT.UI.ProgressSpinner progressSpinner, System.Threading.CancellationToken ct, UnityEngine.Vector3 position, UnityEngine.Transform parent, System.Int32 layer, System.Boolean animateWeapon, System.Collections.Generic.Dictionary`2[TKey,TValue] alternativeBones, System.Boolean enableBottomShadow) [0x001a0] in <ad47400a25db462cbf0a531df654c3c3>:0 
+  at EFT.UI.PlayerModelView.Show (LastPlayerStateClass playerVisual, EFT.InventoryLogic.InventoryController inventoryController, System.Action onCreated, System.Single update, System.Nullable`1[T] position, System.Boolean animateWeapon) [0x0017f] in <ad47400a25db462cbf0a531df654c3c3>:0 
+2026-08-16 11:28:27.794 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [80]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: .  
+2026-08-16 11:28:27.861 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [80]: URL: https://100.68.29.73:6969/client/game/profile/items/moving, crc: , responseText: . 
+2026-08-16 11:28:27.872 -04:00|0.16.9.0.40087|Error|Default|Failed to reset _animator for asset id 506788372 
+2026-08-16 11:28:27.872 -04:00|0.16.9.0.40087|Error|Default|Cant reset animator state: Game object with animator is inactive weapon_mossberg_590a1_12g_container.bundle 
+2026-08-16 11:28:31.360 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [81]: URL: https://100.68.29.73:6969/client/match/group/invite/cancel-all, crc: .  
+2026-08-16 11:28:31.402 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [81]: URL: https://100.68.29.73:6969/client/match/group/invite/cancel-all, crc: , responseText: . 
+2026-08-16 11:28:31.418 -04:00|0.16.9.0.40087|Info|backend|---> Request HTTPS, id [82]: URL: https://100.68.29.73:6969/client/game/logout, crc: .  
+2026-08-16 11:28:31.452 -04:00|0.16.9.0.40087|Info|backend|<--- Response HTTPS, id [82]: URL: https://100.68.29.73:6969/client/game/logout, crc: , responseText: . 
+2026-08-16 11:28:31.478 -04:00|0.16.9.0.40087|Error|Default|Can't set affinity mask. Error code: 122 

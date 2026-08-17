@@ -1,0 +1,28 @@
+2026-08-16 23:33:57.929 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/eyewear/oakley_holbrook/holbrook_blk.bundle" has dependency "holbrook_glass_shared" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "dd_magazine_extended_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/ate_hhv_helmet/helmet_hhv_tan.bundle" has dependency "helmet_ate_hhv_common" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_mcblk.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "dd_magazine_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_mcalp.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "mods/ak/Pic_Adapter_for_AK.bundle" has dependency "cab-1dc8d26be8722a766953ce9d8a444e8c" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "mods/ak/Pic_Adapter_for_AK.bundle" has dependency "cab-bbf13a8cb4c78fcb606eec94701adda6" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "mods/ak/Pic_Adapter_for_AK.bundle" has dependency "cab-92f737866f97db787c6e7d22c895a41e" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "WeaponRuger57/ruger57_barrel.bundle" has dependency "assets/system/effects/smoke" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Mods/PistolGrips/b5_p22_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Attachments/Foregrips/foregrip_all_dd_vfg_fde_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "dd_magazine_fde_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Attachments/Foregrips/foregrip_all_dd_vfg_gry_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Mods/Foregrips/kac_finger_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/ate_hhv_helmet/helmet_hhv_wraith.bundle" has dependency "helmet_ate_hhv_common" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Mods/PistolGrips/b5_p22_fde_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_aor2.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/eyewear/oakley_holbrook/holbrook_prpl.bundle" has dependency "holbrook_glass_shared" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_mc.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "dd_magazine_fde_extended_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_odrab.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/helmet_fast_xp_cover_desert_night.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Attachments/Foregrips/foregrip_all_dd_vfg_blk_socom.bundle" has dependency "commonassets/physics/physicsmaterials.bundle" that was not found in manifest 
+2026-08-16 23:33:57.930 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle "Headwear/helmets/opscore_xp/fast_xp_untar.bundle" has dependency "fast_xp_shared" that was not found in manifest 
+2026-08-16 23:34:48.725 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle key is null or empty 
+2026-08-16 23:34:52.858 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle key is null or empty 
+2026-08-16 23:34:52.858 -04:00|0.16.9.0.40087|Error|assetBundle|Bundle key is null or empty 
